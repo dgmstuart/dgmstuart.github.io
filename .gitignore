@@ -1,4 +1,5 @@
 _site
 .sass-cache
 .code-highlighter-cache
+.deploy
 .jekyll-metadata
