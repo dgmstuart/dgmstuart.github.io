@@ -8,6 +8,7 @@ description: >
 url: "http://dgmstuart.github.io"
 twitter_username: dgmstuart
 github_username:  dgmstuart
+disqus_shortname: dgmscode
 
 # Build settings
 markdown: kramdown
