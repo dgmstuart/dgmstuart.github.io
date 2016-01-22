@@ -6,9 +6,139 @@
 </description>
     <link>http://dgmstuart.github.io/</link>
     <atom:link href="http://dgmstuart.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Jan 2016 00:24:40 +0000</pubDate>
-    <lastBuildDate>Fri, 22 Jan 2016 00:24:40 +0000</lastBuildDate>
+    <pubDate>Fri, 22 Jan 2016 01:02:04 +0000</pubDate>
+    <lastBuildDate>Fri, 22 Jan 2016 01:02:04 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Migrating From Octopress 2 to 3</title>
+        <description>&lt;p&gt;I’ve just migrated this blog from Octopress 2 to 3 and since &lt;a href=&quot;https://github.com/octopress/octoress/issues/29&quot;&gt;there doesn’t seem to be a definitive migration guide yet&lt;/a&gt; (and inspired by a similar post by &lt;a href=&quot;http://samwize.com/2015/09/30/migrating-octopress-2-to-octopress-3/&quot;&gt;@samwize&lt;/a&gt;)
+I wanted to share what I did.&lt;/p&gt;
+
+&lt;p&gt;This was done with Octopress 3.0.11 and Jekyll 3.0.2. You can see the &lt;a href=&quot;https://github.com/dgmstuart/blog_source/commits/master&quot;&gt;actual
+commits on github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The approach is to create a new Octopress 3 blog from scratch, import the exising content, and configure a few things to make that existing content work.&lt;/p&gt;
+
+&lt;h2 id=&quot;set-up-a-new-blog&quot;&gt;Set up a new blog&lt;/h2&gt;
+
+&lt;p&gt;First I need to make sure I have the latest version of Octopress available on my machine:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gem update octopress
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now I can make a new blog:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ octopress new blog
+New jekyll site installed in /Users/dxwduncan/dev/Personal/blog.
+Added Octopress scaffold:
+ + _templates/
+ +   draft
+ +   page
+ +   post
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Looking at what that’s given us, some of the directories are familar from the &lt;code&gt;source&lt;/code&gt; directory of Octopress 2 sites (e.g. &lt;code&gt;_posts&lt;/code&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.
+├── _config.yml
+├── _includes
+│   ├── footer.html
+│   ├── head.html
+│   ├── header.html
+│   ├── icon-github.html
+│   ├── icon-github.svg
+│   ├── icon-twitter.html
+│   └── icon-twitter.svg
+├── _layouts
+│   ├── default.html
+│   ├── page.html
+│   └── post.html
+├── _posts
+│   └── 2016-01-21-welcome-to-jekyll.markdown
+├── _sass
+│   ├── _base.scss
+│   ├── _layout.scss
+│   └── _syntax-highlighting.scss
+├── _templates
+│   ├── draft
+│   ├── page
+│   └── post
+├── about.md
+├── css
+│   └── main.scss
+├── feed.xml
+└── index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I can now preview the site:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd blog
+$ jekyll serve
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here’s what we get:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/content/jekyll_new.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;configuring-gems&quot;&gt;Configuring gems&lt;/h2&gt;
+
+&lt;p&gt;Now I want to add a Gemfile (&lt;code&gt;bundle init&lt;/code&gt;) to manage the versions of Jekyll and Octopress:&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;~/Gemfile&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://rubygems.org&amp;quot;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt; &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;jekyll&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;~&amp;gt; 3.0.2&amp;#39;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;4&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt; &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;5&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:jekyll_plugins&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;6&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;octopress&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;~&amp;gt; 3.0.11&amp;#39;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;7&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now I can start copying over my content. I only have posts and a couple of associated images:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cp -r ../blog_old/source/_posts ./_posts
+$ mkdir images
+$ cp -r ../blog_old/source/images/content ./images/content
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;N.B. the new blog structure doesn’t have an images directory by default&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Now trying to run &lt;code&gt;jekyll serve&lt;/code&gt; I get an error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Liquid Exception: Liquid syntax error: Unknown tag &#39;codeblock&#39; in /Users/dxwduncan/dev/Personal/blog/_posts/2014-02-07-getting-to-grips-with-postgres.markdown
+jekyll 3.0.2 | Error:  Liquid syntax error: Unknown tag &#39;codeblock&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is because I’m using the &lt;a href=&quot;https://github.com/octopress/codeblock&quot;&gt;codeblock&lt;/a&gt; octopress plugin. There are a couple of different ways of &lt;a href=&quot;https://jekyllrb.com/docs/plugins/&quot;&gt;adding plugins to jekyll&lt;/a&gt; but the one which makes most sense to me is to put them in the &lt;code&gt;Gemfile&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here’s the plugins part of my gemfile after adding the required plugins:&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;~/Gemfile&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:jekyll_plugins&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;octopress&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;~&amp;gt; 3.0.11&amp;#39;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;octopress-codeblock&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;~&amp;gt; 1.0&amp;#39;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;4&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;octopress-image-tag&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;~&amp;gt; 1.1&amp;#39;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;5&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Install them with &lt;code&gt;bundle install&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Codeblock adds a &lt;code&gt;.code-highlighter-cache&lt;/code&gt; which needs to be added to the &lt;code&gt;.gitignore&lt;/code&gt; which Octopress created for me.&lt;/p&gt;
+
+&lt;h2 id=&quot;deployment&quot;&gt;Deployment&lt;/h2&gt;
+
+&lt;p&gt;Now that I’ve got a working Octopress blog, I can rely on the &lt;a href=&quot;https://github.com/octopress/octopress#deploying-your-site&quot;&gt;standard
+deployment
+instructions&lt;/a&gt;.
+This is pretty nice now!&lt;/p&gt;
+
+&lt;h2 id=&quot;making-it-all-look-nice&quot;&gt;Making it all look nice&lt;/h2&gt;
+
+&lt;p&gt;Now that all the content is imported it’s just a case of editing the &lt;code&gt;config.yml&lt;/code&gt; file (very minimal compared to the Octopress 2 default) and tweaking the templates.&lt;/p&gt;
+
+&lt;p&gt;It doesn’t look like there’s any obvious way to re-use Octopress 2 themes directly - I suppose it would be possible to copy the styles and templates into the right places, but I fancy a change of look anyway so I’m off to have a look at some Jekyll themes. I hope you’ve found this useful.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 22 Jan 2016 00:40:02 +0000</pubDate>
+        <link>http://dgmstuart.github.io/2016/01/22/migrating-from-octopress-2-to-3.html</link>
+        <guid isPermaLink="true">http://dgmstuart.github.io/2016/01/22/migrating-from-octopress-2-to-3.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Some tools for faster blogging in Octopress</title>
@@ -745,29 +875,6 @@ entropy or order&lt;/li&gt;
         <pubDate>Fri, 13 Mar 2015 14:00:28 +0000</pubDate>
         <link>http://dgmstuart.github.io/bathruby/liveblog/2015/03/13/katrina-owen-at-bathruby-here-be-dragons.html</link>
         <guid isPermaLink="true">http://dgmstuart.github.io/bathruby/liveblog/2015/03/13/katrina-owen-at-bathruby-here-be-dragons.html</guid>
-        
-        
-        <category>bathruby</category>
-        
-        <category>liveblog</category>
-        
-      </item>
-    
-      <item>
-        <title>Live-coding music at BathRuby</title>
-        <description>&lt;p&gt;&lt;em&gt;I’m at &lt;a href=&quot;http://2015.bathruby.org/&quot;&gt;Bath Ruby 2015&lt;/a&gt;, live blogging some of the
-talks&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Amazing demo of using &lt;a href=&quot;http://sonic-pi.net/&quot;&gt;Sonic-pi&lt;/a&gt; to make music live:
-by &lt;a href=&quot;https://twitter.com/xavriley&quot;&gt;Xavier Riley&lt;/a&gt;&lt;/p&gt;
-
-&lt;iframe src=&quot;https://vine.co/v/O9jBg0wY3Ti/embed/simple&quot; width=&quot;600&quot; height=&quot;600&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
-&lt;script src=&quot;https://platform.vine.co/static/scripts/embed.js&quot;&gt;&lt;/script&gt;
-
-</description>
-        <pubDate>Fri, 13 Mar 2015 12:34:18 +0000</pubDate>
-        <link>http://dgmstuart.github.io/bathruby/liveblog/2015/03/13/live-coding-music-at-bathruby.html</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/bathruby/liveblog/2015/03/13/live-coding-music-at-bathruby.html</guid>
         
         
         <category>bathruby</category>
