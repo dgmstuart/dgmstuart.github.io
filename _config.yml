@@ -10,6 +10,8 @@ twitter_username: dgmstuart
 github_username:  dgmstuart
 disqus_shortname: dgmscode
 
+google_analytics_code: UA-44436648-5
+
 # Build settings
 markdown: kramdown
 
