@@ -12,3 +12,6 @@ disqus_shortname: dgmscode
 
 # Build settings
 markdown: kramdown
+
+# Octopress 2-style permalink:
+permalink: /blog/:year/:month/:day/:title/
