@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
-  <meta name="description" content="This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails  with a little WordPress
-">
+  <title>Tim Nash at WordCamp London - Beyond Unit Tests</title>
+  <meta name="description" content="I’m at WordCamp London - live-bloggingsome of the talks">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://dgmstuart.github.io/about/">
+  <link rel="canonical" href="http://dgmstuart.github.io/blog/2015/03/22/tim-nash-at-wordcamp-london-beyond-unit-tests/">
   <link rel="alternate" type="application/rss+xml" title="dgms code" href="http://dgmstuart.github.io/feed.xml">
   <link href='/stylesheets/all-24a1f2993bca9d72370c74b5f9520ea3.css' media='all' rel='stylesheet' type='text/css'>
 </head>
@@ -54,39 +53,85 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title" itemprop="name headline">Tim Nash at WordCamp London - Beyond Unit Tests</h1>
+    <p class="post-meta"><time datetime="2015-03-22T12:17:20+00:00" itemprop="datePublished">Mar 22, 2015</time></p>
   </header>
 
-  <div class="post-content">
-    <p>Hello, I’m Duncan, and I can talk to both people and
-computers.</p>
+  <div class="post-content" itemprop="articleBody">
+    <p><em>I’m at <a href="http://london.wordcamp.org/2015/">WordCamp London</a> - live-blogging
+some of the talks</em></p>
 
-<p>I’m the Technical Architect at <a href="https://www.dxw.com/">dxw</a>.
-That title means different things at different companies, but at dxw it means
-I spend most of my time in Vim writing code, and the rest of my time time talking
-to customers and end users about what we should be building.</p>
+<p><a href="https://twitter.com/tnash">Tim Nash</a></p>
 
-<p>I’ve been involved in making software and websites for a while. You can find out about
-that on <a href="https://www.linkedin.com/in/duncangmstuart">LinkedIn</a> or check out my
-shiny responsive <a href="https://dgmstuart.github.io/dgms_cv/">CV</a>.</p>
-
-<p>You’ll can find me on other social networks too, like <a href="https://twitter.com/dgmstuart">twitter</a>, and <a href="https://www.instagram.com/dgmstuart/">instagram</a>.</p>
-
-<p>In my spare time I’m mostly swing dancing and rebuilding <a href="http://www.swingoutlondon.co.uk/">Swing Out
-London</a>.</p>
-
-<p>I’m very interested in the whole teaching kids to code thing. I volunteer some Saturdays
-at <a href="http://www.wizziewizzie.org/">Wizzie Wizzie Computer Coding Club</a>
-and I run a meetup for
-<a href="http://www.meetup.com/People-teaching-kids-to-code-in-London/">People teaching kids to code in London</a>.</p>
-
-<p>If you’d like to get in touch try me on <a href="https://twitter.com/dgmstuart">twitter</a> first.</p>
+<ul>
+  <li>Strategy for handling a tight deadline: Piles of acceptance tests</li>
+  <li>Disagreement between different languages on what unit tests mean</li>
+  <li>Focus on tools and concepts not methodology</li>
+  <li><a href="http://codeception.com/">Codececption</a> - does a lot of things, mocking etc.
+php testing framework</li>
+  <li>Acceptance testing: commands like <code>amOnPage</code>, <code>see</code>, <code>fillField</code></li>
+  <li>Define scenarios: login, fill in form and submit etc.</li>
+  <li>Generates reports in: console, html, xml (Ick!)</li>
+  <li>Can use different drivers: WebDriver (fast, headless, no js, basically does the equivalend of cURL), Selenium (Slow, but drives the actual browser: can be hard to set up), PhantomJS (headless, runs js)</li>
+  <li>Functional testing: sits alongside acceptance testing
+    <ul>
+      <li>Test the interactions between units - integrations</li>
+      <li>Ignore UI and JS - make posts directly: don’t emulate the browser - just
+call endpoints (incl. ajax) directly</li>
+      <li>Can also be used to test apis/rss, cli, sending email, can also test
+xml-rpc</li>
+    </ul>
+  </li>
+  <li>We’ll be interacting with the database, so we need to set up and tear down
+data
+    <ul>
+      <li>WP-Browser handles these database interactions (i.e. you can directly
+insert data)</li>
+      <li>Approach for setup and teardown: you can run a shell script before and
+after a codeception test, so setup wp-cli scripts to do the database
+setup and teardown</li>
+    </ul>
+  </li>
+  <li>Re-usable code in Codeception: Step objects (collections of related steps to DRY up tests?)
+    <ul>
+      <li>Helpers, Modules</li>
+    </ul>
+  </li>
+  <li>Refactoring strategy: Acceptance tests allow you to refactor your unit tests
+with confidence, (which allows you to refactor your code with confidence)</li>
+  <li>Question: How to not couple the tests to e.g. the names of field names
+    <ul>
+      <li>Strategy: create a page object which wraps up those IDs, so that you
+only have one point where you need to change these</li>
+      <li>Makes it slightly harder for non-developers to do the changes <em>(does it though??)</em>,
+but makes it much more maintainable</li>
+    </ul>
+  </li>
+</ul>
 
   </div>
 
+  <section class="disqus">
+  <div id="disqus_thread"></div>
+  <script>
+     var disqus_config = function () {
+       this.page.url = 'http://dgmstuart.github.io/blog/2015/03/22/tim-nash-at-wordcamp-london-beyond-unit-tests/'; 
+       this.page.identifier = 'http://dgmstuart.github.io/blog/2015/03/22/tim-nash-at-wordcamp-london-beyond-unit-tests/';
+     };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+
+      s.src = '//dgmscode.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</section>
 </article>
 
       </div>

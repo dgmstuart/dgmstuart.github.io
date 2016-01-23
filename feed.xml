@@ -6,8 +6,8 @@
 </description>
     <link>http://dgmstuart.github.io/</link>
     <atom:link href="http://dgmstuart.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Jan 2016 01:02:04 +0000</pubDate>
-    <lastBuildDate>Fri, 22 Jan 2016 01:02:04 +0000</lastBuildDate>
+    <pubDate>Sat, 23 Jan 2016 00:09:46 +0000</pubDate>
+    <lastBuildDate>Sat, 23 Jan 2016 00:09:46 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -134,9 +134,15 @@ This is pretty nice now!&lt;/p&gt;
 &lt;p&gt;It doesn’t look like there’s any obvious way to re-use Octopress 2 themes directly - I suppose it would be possible to copy the styles and templates into the right places, but I fancy a change of look anyway so I’m off to have a look at some Jekyll themes. I hope you’ve found this useful.&lt;/p&gt;
 </description>
         <pubDate>Fri, 22 Jan 2016 00:40:02 +0000</pubDate>
-        <link>http://dgmstuart.github.io/2016/01/22/migrating-from-octopress-2-to-3.html</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/2016/01/22/migrating-from-octopress-2-to-3.html</guid>
+        <link>http://dgmstuart.github.io/blog/2016/01/22/migrating-from-octopress-2-to-3/</link>
+        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2016/01/22/migrating-from-octopress-2-to-3/</guid>
         
+        <category>octopress</category>
+        
+        <category>migration</category>
+        
+        
+        <category>octopress</category>
         
       </item>
     
@@ -234,13 +240,13 @@ find one of two words which are unique in the filename of your post and use that
 &lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;~/.profile&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;rgd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;rake gen_deploy&amp;#39;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
 </description>
         <pubDate>Fri, 27 Mar 2015 18:48:31 +0000</pubDate>
-        <link>http://dgmstuart.github.io/blogging/vim/octopress/2015/03/27/some-tools-for-faster-blogging-in-octopress.html</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/blogging/vim/octopress/2015/03/27/some-tools-for-faster-blogging-in-octopress.html</guid>
-        
+        <link>http://dgmstuart.github.io/blog/2015/03/27/some-tools-for-faster-blogging-in-octopress/</link>
+        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/27/some-tools-for-faster-blogging-in-octopress/</guid>
         
         <category>blogging</category>
         
         <category>vim</category>
+        
         
         <category>octopress</category>
         
@@ -280,15 +286,17 @@ assumed that this was intended to make multiline comments more readable. That
 sounds a bit silly now that I know :)&lt;/p&gt;
 </description>
         <pubDate>Fri, 27 Mar 2015 15:41:47 +0000</pubDate>
-        <link>http://dgmstuart.github.io/ruby/sublime/vim/2015/03/27/execute-ruby-code-inline-in-the-editor.html</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/ruby/sublime/vim/2015/03/27/execute-ruby-code-inline-in-the-editor.html</guid>
-        
+        <link>http://dgmstuart.github.io/blog/2015/03/27/execute-ruby-code-inline-in-the-editor/</link>
+        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/27/execute-ruby-code-inline-in-the-editor/</guid>
         
         <category>ruby</category>
         
         <category>sublime</category>
         
         <category>vim</category>
+        
+        
+        <category>tools</category>
         
       </item>
     
@@ -403,11 +411,11 @@ Always carry whiteboard markers and post-its when in a non-agile environment
   controls the backlog&lt;/p&gt;
 </description>
         <pubDate>Wed, 25 Mar 2015 09:55:22 +0000</pubDate>
-        <link>http://dgmstuart.github.io/agile/liveblog/2015/03/25/unboxed-event-notes.html</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/agile/liveblog/2015/03/25/unboxed-event-notes.html</guid>
-        
+        <link>http://dgmstuart.github.io/blog/2015/03/25/unboxed-event-notes/</link>
+        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/25/unboxed-event-notes/</guid>
         
         <category>agile</category>
+        
         
         <category>liveblog</category>
         
@@ -467,13 +475,13 @@ but makes it much more maintainable&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 22 Mar 2015 12:17:20 +0000</pubDate>
-        <link>http://dgmstuart.github.io/wordcamp%20london/testing/liveblog/2015/03/22/tim-nash-at-wordcamp-london-beyond-unit-tests.html</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/wordcamp%20london/testing/liveblog/2015/03/22/tim-nash-at-wordcamp-london-beyond-unit-tests.html</guid>
-        
+        <link>http://dgmstuart.github.io/blog/2015/03/22/tim-nash-at-wordcamp-london-beyond-unit-tests/</link>
+        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/22/tim-nash-at-wordcamp-london-beyond-unit-tests/</guid>
         
         <category>wordcamp london</category>
         
         <category>testing</category>
+        
         
         <category>liveblog</category>
         
@@ -603,15 +611,15 @@ marked as expired but not deleted until the new data is available (!)&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 22 Mar 2015 11:31:06 +0000</pubDate>
-        <link>http://dgmstuart.github.io/caching/wordpress/wordcamp%20london/liveblog/2015/03/22/mark-jaquith-at-wordcamp-london-cache-money-business.html</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/caching/wordpress/wordcamp%20london/liveblog/2015/03/22/mark-jaquith-at-wordcamp-london-cache-money-business.html</guid>
-        
+        <link>http://dgmstuart.github.io/blog/2015/03/22/mark-jaquith-at-wordcamp-london-cache-money-business/</link>
+        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/22/mark-jaquith-at-wordcamp-london-cache-money-business/</guid>
         
         <category>caching</category>
         
         <category>wordpress</category>
         
         <category>wordcamp london</category>
+        
         
         <category>liveblog</category>
         
@@ -716,11 +724,11 @@ experience than they do now&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 21 Mar 2015 15:18:00 +0000</pubDate>
-        <link>http://dgmstuart.github.io/wordcamp%20london/liveblog/2015/03/21/wp-london-bruce-lawson-responsive-images.html</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/wordcamp%20london/liveblog/2015/03/21/wp-london-bruce-lawson-responsive-images.html</guid>
-        
+        <link>http://dgmstuart.github.io/blog/2015/03/21/wp-london-bruce-lawson-responsive-images/</link>
+        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/21/wp-london-bruce-lawson-responsive-images/</guid>
         
         <category>wordcamp london</category>
+        
         
         <category>liveblog</category>
         
@@ -779,11 +787,11 @@ to the original object&lt;/li&gt;
 
 </description>
         <pubDate>Fri, 13 Mar 2015 16:38:05 +0000</pubDate>
-        <link>http://dgmstuart.github.io/bathruby/liveblog/2015/03/13/sandi-metz-nothing-is-something-at-bathruby.html</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/bathruby/liveblog/2015/03/13/sandi-metz-nothing-is-something-at-bathruby.html</guid>
-        
+        <link>http://dgmstuart.github.io/blog/2015/03/13/sandi-metz-nothing-is-something-at-bathruby/</link>
+        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/13/sandi-metz-nothing-is-something-at-bathruby/</guid>
         
         <category>bathruby</category>
+        
         
         <category>liveblog</category>
         
@@ -831,11 +839,11 @@ hulking exoskeleton of mathematics”&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 13 Mar 2015 14:53:54 +0000</pubDate>
-        <link>http://dgmstuart.github.io/bathruby/liveblog/2015/03/13/tom-stuart-a-lever-for-the-mind-at-bathruby.html</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/bathruby/liveblog/2015/03/13/tom-stuart-a-lever-for-the-mind-at-bathruby.html</guid>
-        
+        <link>http://dgmstuart.github.io/blog/2015/03/13/tom-stuart-a-lever-for-the-mind-at-bathruby/</link>
+        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/13/tom-stuart-a-lever-for-the-mind-at-bathruby/</guid>
         
         <category>bathruby</category>
+        
         
         <category>liveblog</category>
         
@@ -873,11 +881,13 @@ entropy or order&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 13 Mar 2015 14:00:28 +0000</pubDate>
-        <link>http://dgmstuart.github.io/bathruby/liveblog/2015/03/13/katrina-owen-at-bathruby-here-be-dragons.html</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/bathruby/liveblog/2015/03/13/katrina-owen-at-bathruby-here-be-dragons.html</guid>
-        
+        <link>http://dgmstuart.github.io/blog/2015/03/13/katrina-owen-at-bathruby-here-be-dragons/</link>
+        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/13/katrina-owen-at-bathruby-here-be-dragons/</guid>
         
         <category>bathruby</category>
+        
+        <category>liveblog</category>
+        
         
         <category>liveblog</category>
         

@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
-  <meta name="description" content="This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails  with a little WordPress
-">
+  <title>How your base PATH gets generated in OSX</title>
+  <meta name="description" content="On OSX and linux it seems to be fairly common practice to totally define the PATH in a.profile or .bashrc file. This gives total control over the order in wh...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://dgmstuart.github.io/about/">
+  <link rel="canonical" href="http://dgmstuart.github.io/blog/2015/02/23/how-your-base-path-gets-generated-in-osx/">
   <link rel="alternate" type="application/rss+xml" title="dgms code" href="http://dgmstuart.github.io/feed.xml">
   <link href='/stylesheets/all-24a1f2993bca9d72370c74b5f9520ea3.css' media='all' rel='stylesheet' type='text/css'>
 </head>
@@ -54,39 +53,68 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title" itemprop="name headline">How your base PATH gets generated in OSX</h1>
+    <p class="post-meta"><time datetime="2015-02-23T23:03:33+00:00" itemprop="datePublished">Feb 23, 2015</time></p>
   </header>
 
-  <div class="post-content">
-    <p>Hello, I’m Duncan, and I can talk to both people and
-computers.</p>
+  <div class="post-content" itemprop="articleBody">
+    <p>On OSX and linux it seems to be fairly common practice to totally define the <code>PATH</code> in a
+<code>.profile</code> or <code>.bashrc</code> file. This gives total control over the order in which
+various locations are searched through. Here’s the line from <a href="https://github.com/dgmstuart/dotfiles/blob/master/.profile">my .profile</a>:</p>
 
-<p>I’m the Technical Architect at <a href="https://www.dxw.com/">dxw</a>.
-That title means different things at different companies, but at dxw it means
-I spend most of my time in Vim writing code, and the rest of my time time talking
-to customers and end users about what we should be building.</p>
+<pre><code>export PATH=~/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin
+</code></pre>
 
-<p>I’ve been involved in making software and websites for a while. You can find out about
-that on <a href="https://www.linkedin.com/in/duncangmstuart">LinkedIn</a> or check out my
-shiny responsive <a href="https://dgmstuart.github.io/dgms_cv/">CV</a>.</p>
+<p>However, your <code>PATH</code> isn’t just set through <code>profile</code> and <code>rc</code> files: if you
+don’t build your path from scratch and you only ever append or prepend to it
+with statements like <code>export PATH=$PATH:some/other/stuff</code> then the OS helpfully
+sets your base <code>PATH</code> to something sensible.</p>
 
-<p>You’ll can find me on other social networks too, like <a href="https://twitter.com/dgmstuart">twitter</a>, and <a href="https://www.instagram.com/dgmstuart/">instagram</a>.</p>
+<p>It does this based on various files in <code>/etc</code> (at least on OSX):</p>
 
-<p>In my spare time I’m mostly swing dancing and rebuilding <a href="http://www.swingoutlondon.co.uk/">Swing Out
-London</a>.</p>
+<h2 id="etcpaths"><code>/etc/paths</code></h2>
 
-<p>I’m very interested in the whole teaching kids to code thing. I volunteer some Saturdays
-at <a href="http://www.wizziewizzie.org/">Wizzie Wizzie Computer Coding Club</a>
-and I run a meetup for
-<a href="http://www.meetup.com/People-teaching-kids-to-code-in-London/">People teaching kids to code in London</a>.</p>
+<p>This contains the list of the various binary directories which make up the core of your path:</p>
 
-<p>If you’d like to get in touch try me on <a href="https://twitter.com/dgmstuart">twitter</a> first.</p>
+<pre><code>/usr/local/bin
+/usr/bin
+/bin
+/usr/sbin
+/sbin
+</code></pre>
+
+<h2 id="etcpathsd"><code>/etc/paths.d</code></h2>
+
+<p>This contains a number of files which contain paths for various applications,
+again with one path element per line. I believe these are added to the <em>end</em> of
+the <code>PATH</code>. Mine includes a <code>git</code> file:</p>
+
+<pre><code>/usr/local/git/bin
+</code></pre>
 
   </div>
 
+  <section class="disqus">
+  <div id="disqus_thread"></div>
+  <script>
+     var disqus_config = function () {
+       this.page.url = 'http://dgmstuart.github.io/blog/2015/02/23/how-your-base-path-gets-generated-in-osx/'; 
+       this.page.identifier = 'http://dgmstuart.github.io/blog/2015/02/23/how-your-base-path-gets-generated-in-osx/';
+     };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+
+      s.src = '//dgmscode.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</section>
 </article>
 
       </div>

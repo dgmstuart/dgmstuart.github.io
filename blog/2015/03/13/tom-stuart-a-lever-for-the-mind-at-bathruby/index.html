@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
-  <meta name="description" content="This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails  with a little WordPress
-">
+  <title>Tom Stuart - 'A lever for the mind' at BathRuby</title>
+  <meta name="description" content="I’m at Bath Ruby 2015, live blogging some of thetalks">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://dgmstuart.github.io/about/">
+  <link rel="canonical" href="http://dgmstuart.github.io/blog/2015/03/13/tom-stuart-a-lever-for-the-mind-at-bathruby/">
   <link rel="alternate" type="application/rss+xml" title="dgms code" href="http://dgmstuart.github.io/feed.xml">
   <link href='/stylesheets/all-24a1f2993bca9d72370c74b5f9520ea3.css' media='all' rel='stylesheet' type='text/css'>
 </head>
@@ -54,39 +53,73 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title" itemprop="name headline">Tom Stuart - 'A lever for the mind' at BathRuby</h1>
+    <p class="post-meta"><time datetime="2015-03-13T14:53:54+00:00" itemprop="datePublished">Mar 13, 2015</time></p>
   </header>
 
-  <div class="post-content">
-    <p>Hello, I’m Duncan, and I can talk to both people and
-computers.</p>
+  <div class="post-content" itemprop="articleBody">
+    <p><em>I’m at <a href="http://2015.bathruby.org/">Bath Ruby 2015</a>, live blogging some of the
+talks</em></p>
 
-<p>I’m the Technical Architect at <a href="https://www.dxw.com/">dxw</a>.
-That title means different things at different companies, but at dxw it means
-I spend most of my time in Vim writing code, and the rest of my time time talking
-to customers and end users about what we should be building.</p>
+<p><img src="https://pbs.twimg.com/media/B__KM61WQAAyEr9.jpg:medium" alt="Slide photo by @trailsuite" /></p>
 
-<p>I’ve been involved in making software and websites for a while. You can find out about
-that on <a href="https://www.linkedin.com/in/duncangmstuart">LinkedIn</a> or check out my
-shiny responsive <a href="https://dgmstuart.github.io/dgms_cv/">CV</a>.</p>
+<p><em>Photo by <a href="https://twitter.com/trailsuite">@trailsuite</a></em></p>
 
-<p>You’ll can find me on other social networks too, like <a href="https://twitter.com/dgmstuart">twitter</a>, and <a href="https://www.instagram.com/dgmstuart/">instagram</a>.</p>
-
-<p>In my spare time I’m mostly swing dancing and rebuilding <a href="http://www.swingoutlondon.co.uk/">Swing Out
-London</a>.</p>
-
-<p>I’m very interested in the whole teaching kids to code thing. I volunteer some Saturdays
-at <a href="http://www.wizziewizzie.org/">Wizzie Wizzie Computer Coding Club</a>
-and I run a meetup for
-<a href="http://www.meetup.com/People-teaching-kids-to-code-in-London/">People teaching kids to code in London</a>.</p>
-
-<p>If you’d like to get in touch try me on <a href="https://twitter.com/dgmstuart">twitter</a> first.</p>
+<ul>
+  <li>Brains are just not very good at working with several complex ideas
+concurrently</li>
+  <li>Abstraction is our solution to this</li>
+  <li>Numbers are a <em>property</em> of sets (?) of things. It doesn’t matter how we
+arrange the things, or how big they are</li>
+  <li>We build other concepts on top of our idea of number: e.g. successor - a way
+to generate new numbers. gt/lt can be built from the idea of successors</li>
+  <li>These abstractions allow us to predict what would happen in reality when
+certain actions occur: we can do the ‘work’ in the ‘abstract world’ rather
+than doing it in the real world and observing the result.</li>
+  <li>Recognise patterns. Some patterns can be generalised to apply to whole
+classes of items (e.g. all natural numbers)</li>
+  <li>You don’t need to remember the details of <em>why</em> a particular formula works:
+it doesn’t matter: you can use it without understanding why it’s true</li>
+  <li>A <em>walk</em> across a graph is a sequence of visits from node to node along
+their adjacent edges</li>
+  <li>A <em>connected graph</em> is one where there exists a walk between any pair of notes</li>
+  <li>A <em>trail</em> is a walk which doesn’t repeat traversing edges</li>
+  <li>An <em>Euleurian trail</em> is a walk which visits every node and uses every edge</li>
+  <li>Mathematics: “spot patterns, build reusable abstractions”</li>
+  <li>Abstractions help us take complex things from the real world and reconstruct
+them in our heads so that we cal (?reason about them?)</li>
+  <li>Idea of the <em>honest</em> abstraction - the one which ‘honestly’ models your
+problem.</li>
+  <li>The <em>minimal</em> abstraction: start from nothing and only add the
+behaviours/ideas/operations which are strictly necessary</li>
+  <li>“the most exciting thing you can do with your brain is to strap it into the
+hulking exoskeleton of mathematics”</li>
+  <li>If you can write a program, you’re good at mathematics</li>
+</ul>
 
   </div>
 
+  <section class="disqus">
+  <div id="disqus_thread"></div>
+  <script>
+     var disqus_config = function () {
+       this.page.url = 'http://dgmstuart.github.io/blog/2015/03/13/tom-stuart-a-lever-for-the-mind-at-bathruby/'; 
+       this.page.identifier = 'http://dgmstuart.github.io/blog/2015/03/13/tom-stuart-a-lever-for-the-mind-at-bathruby/';
+     };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+
+      s.src = '//dgmscode.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</section>
 </article>
 
       </div>

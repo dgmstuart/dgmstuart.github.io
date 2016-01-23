@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
-  <meta name="description" content="This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails  with a little WordPress
-">
+  <title>WordCamp Europe 2014 notes - 2.4: Code Deodorant</title>
+  <meta name="description" content="I’m at WordCamp Europe in Sofia - taking rough notes on some of the talks">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://dgmstuart.github.io/about/">
+  <link rel="canonical" href="http://dgmstuart.github.io/blog/2014/09/28/wordcamp-europe-2014-notes-2-dot-4-code-deodorant/">
   <link rel="alternate" type="application/rss+xml" title="dgms code" href="http://dgmstuart.github.io/feed.xml">
   <link href='/stylesheets/all-24a1f2993bca9d72370c74b5f9520ea3.css' media='all' rel='stylesheet' type='text/css'>
 </head>
@@ -54,39 +53,65 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title" itemprop="name headline">WordCamp Europe 2014 notes - 2.4: Code Deodorant</h1>
+    <p class="post-meta"><time datetime="2014-09-28T10:27:07+01:00" itemprop="datePublished">Sep 28, 2014</time></p>
   </header>
 
-  <div class="post-content">
-    <p>Hello, I’m Duncan, and I can talk to both people and
-computers.</p>
+  <div class="post-content" itemprop="articleBody">
+    <p><em>I’m at <a href="http://2014.europe.wordcamp.org/">WordCamp Europe</a> in Sofia - taking rough notes on some of the talks</em></p>
 
-<p>I’m the Technical Architect at <a href="https://www.dxw.com/">dxw</a>.
-That title means different things at different companies, but at dxw it means
-I spend most of my time in Vim writing code, and the rest of my time time talking
-to customers and end users about what we should be building.</p>
+<p>Tom Nowell (cftp) http://2014.europe.wordcamp.org/session/tom-nowell/</p>
 
-<p>I’ve been involved in making software and websites for a while. You can find out about
-that on <a href="https://www.linkedin.com/in/duncangmstuart">LinkedIn</a> or check out my
-shiny responsive <a href="https://dgmstuart.github.io/dgms_cv/">CV</a>.</p>
-
-<p>You’ll can find me on other social networks too, like <a href="https://twitter.com/dgmstuart">twitter</a>, and <a href="https://www.instagram.com/dgmstuart/">instagram</a>.</p>
-
-<p>In my spare time I’m mostly swing dancing and rebuilding <a href="http://www.swingoutlondon.co.uk/">Swing Out
-London</a>.</p>
-
-<p>I’m very interested in the whole teaching kids to code thing. I volunteer some Saturdays
-at <a href="http://www.wizziewizzie.org/">Wizzie Wizzie Computer Coding Club</a>
-and I run a meetup for
-<a href="http://www.meetup.com/People-teaching-kids-to-code-in-London/">People teaching kids to code in London</a>.</p>
-
-<p>If you’d like to get in touch try me on <a href="https://twitter.com/dgmstuart">twitter</a> first.</p>
+<ul>
+  <li>Now when running vanilla WP without plugins you shouldn’t see any warnings, so all warnings are things you should pay attention to</li>
+  <li>’@’ swallows errors - hides them.</li>
+  <li><a href="http://codex.wordpress.org/Plugin_API/Action_Reference/pre_get_posts">pre_get_posts action</a> - useful for removing complexity: modifying queries before they get run</li>
+  <li>Law of Demeter “if you’re talking to something, only talk to the things directly adjacent to you”</li>
+  <li>No global variables - random ordering of tests can help to show up issues.</li>
+  <li>Tools for code quality:
+    <ul>
+      <li>php syntax checking - if your editor isn’t doing this you’re doing it wrong. PHP Storm does this</li>
+      <li><a href="https://github.com/squizlabs/PHP_CodeSniffer">php code sniffer</a> - give it coding standards - it’ll check them</li>
+      <li><a href="https://github.com/Halleck45/PhpMetrics">php Metrics</a></li>
+      <li>phpLOC - tells you how many lines, classes, namespaces, measure of code complexity</li>
+      <li><a href="https://github.com/phpmd/phpmd">php Mess detector</a> - fuzzy matching: helps detect typos and join up e.g. misspelled variables which might be the same thing</li>
+      <li>NPath &amp; Cyclomatic complexity - Cycl = number of points at which code may diverge, NPath is number of execution paths through the code.
+        <ul>
+          <li>NPath complexity is roughly equivalent to the number of unit tests that you need to have to fully test the function</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Lots of WP functions have incredibly large npath complexity - WP_Query::get_posts is insanely large. Even larger in WP 4.0
+    <ul>
+      <li>http://www.tomjn.com/390/wp_queryget_posts/</li>
+    </ul>
+  </li>
+</ul>
 
   </div>
 
+  <section class="disqus">
+  <div id="disqus_thread"></div>
+  <script>
+     var disqus_config = function () {
+       this.page.url = 'http://dgmstuart.github.io/blog/2014/09/28/wordcamp-europe-2014-notes-2-dot-4-code-deodorant/'; 
+       this.page.identifier = 'http://dgmstuart.github.io/blog/2014/09/28/wordcamp-europe-2014-notes-2-dot-4-code-deodorant/';
+     };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+
+      s.src = '//dgmscode.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</section>
 </article>
 
       </div>

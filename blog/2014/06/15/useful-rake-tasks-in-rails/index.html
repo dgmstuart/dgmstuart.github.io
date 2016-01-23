@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
-  <meta name="description" content="This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails  with a little WordPress
-">
+  <title>Useful rake tasks in Rails</title>
+  <meta name="description" content="When inside any directory with a Rakefile, you can bring up the list of available rake tasks with rake -T">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://dgmstuart.github.io/about/">
+  <link rel="canonical" href="http://dgmstuart.github.io/blog/2014/06/15/useful-rake-tasks-in-rails/">
   <link rel="alternate" type="application/rss+xml" title="dgms code" href="http://dgmstuart.github.io/feed.xml">
   <link href='/stylesheets/all-24a1f2993bca9d72370c74b5f9520ea3.css' media='all' rel='stylesheet' type='text/css'>
 </head>
@@ -54,39 +53,46 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title" itemprop="name headline">Useful rake tasks in Rails</h1>
+    <p class="post-meta"><time datetime="2014-06-15T15:55:16+01:00" itemprop="datePublished">Jun 15, 2014</time></p>
   </header>
 
-  <div class="post-content">
-    <p>Hello, I’m Duncan, and I can talk to both people and
-computers.</p>
+  <div class="post-content" itemprop="articleBody">
+    <p>When inside any directory with a <a href="https://github.com/jimweirich/rake">Rakefile</a>, you can bring up the list of available rake tasks with <code>rake -T</code></p>
 
-<p>I’m the Technical Architect at <a href="https://www.dxw.com/">dxw</a>.
-That title means different things at different companies, but at dxw it means
-I spend most of my time in Vim writing code, and the rest of my time time talking
-to customers and end users about what we should be building.</p>
+<p>In <a href="http://rubyonrails.org/">Rails</a> projects everyone is used to running rake tasks related to database migration and asset management, but here are some tasks I’ve found useful which you might not be aware of:</p>
 
-<p>I’ve been involved in making software and websites for a while. You can find out about
-that on <a href="https://www.linkedin.com/in/duncangmstuart">LinkedIn</a> or check out my
-shiny responsive <a href="https://dgmstuart.github.io/dgms_cv/">CV</a>.</p>
-
-<p>You’ll can find me on other social networks too, like <a href="https://twitter.com/dgmstuart">twitter</a>, and <a href="https://www.instagram.com/dgmstuart/">instagram</a>.</p>
-
-<p>In my spare time I’m mostly swing dancing and rebuilding <a href="http://www.swingoutlondon.co.uk/">Swing Out
-London</a>.</p>
-
-<p>I’m very interested in the whole teaching kids to code thing. I volunteer some Saturdays
-at <a href="http://www.wizziewizzie.org/">Wizzie Wizzie Computer Coding Club</a>
-and I run a meetup for
-<a href="http://www.meetup.com/People-teaching-kids-to-code-in-London/">People teaching kids to code in London</a>.</p>
-
-<p>If you’d like to get in touch try me on <a href="https://twitter.com/dgmstuart">twitter</a> first.</p>
+<ul>
+  <li><code>rake notes</code> - Lists all the comments in your application beginning with annotations like <code># TODO</code> and <code># FIXME</code></li>
+  <li><code>rake log:clear</code> - Clears out all of your log files (which can tend to get rather large if you’re regularly developing and running tests)</li>
+  <li><code>rake routes</code> - Prints out all the routes defined by your <code>config/routes.rb</code> file. Very useful for debugging</li>
+  <li><code>rake tmp:clear</code>/<code>rake tmp:create</code> - Clear out all your tempfiles (sessions, caches etc.) / create the folders for those tempfiles.</li>
+  <li><code>rake secret</code> - “Generate a cryptographically secure secret key” - the recommended way to generate the secret token for your applications, but useful anywhere you need a long random key</li>
+</ul>
 
   </div>
 
+  <section class="disqus">
+  <div id="disqus_thread"></div>
+  <script>
+     var disqus_config = function () {
+       this.page.url = 'http://dgmstuart.github.io/blog/2014/06/15/useful-rake-tasks-in-rails/'; 
+       this.page.identifier = 'http://dgmstuart.github.io/blog/2014/06/15/useful-rake-tasks-in-rails/';
+     };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+
+      s.src = '//dgmscode.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</section>
 </article>
 
       </div>

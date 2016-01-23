@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
-  <meta name="description" content="This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails  with a little WordPress
-">
+  <title>Pivotal talk: data-informed product decisions</title>
+  <meta name="description" content="http://www.meetup.com/Pivotal-Labs-Tech-Talks/events/213571202/">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://dgmstuart.github.io/about/">
+  <link rel="canonical" href="http://dgmstuart.github.io/blog/2014/10/22/pivotal-talk-data-driven-product-decisions/">
   <link rel="alternate" type="application/rss+xml" title="dgms code" href="http://dgmstuart.github.io/feed.xml">
   <link href='/stylesheets/all-24a1f2993bca9d72370c74b5f9520ea3.css' media='all' rel='stylesheet' type='text/css'>
 </head>
@@ -54,39 +53,104 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title" itemprop="name headline">Pivotal talk: data-informed product decisions</h1>
+    <p class="post-meta"><time datetime="2014-10-22T12:48:38+01:00" itemprop="datePublished">Oct 22, 2014</time></p>
   </header>
 
-  <div class="post-content">
-    <p>Hello, I’m Duncan, and I can talk to both people and
-computers.</p>
+  <div class="post-content" itemprop="articleBody">
+    <p>http://www.meetup.com/Pivotal-Labs-Tech-Talks/events/213571202/</p>
 
-<p>I’m the Technical Architect at <a href="https://www.dxw.com/">dxw</a>.
-That title means different things at different companies, but at dxw it means
-I spend most of my time in Vim writing code, and the rest of my time time talking
-to customers and end users about what we should be building.</p>
+<p>Marc Abraham. <a href="http://www.slideshare.net/abrahammarc1/102214-pivotal-labs-tech-talk">Slides</a></p>
 
-<p>I’ve been involved in making software and websites for a while. You can find out about
-that on <a href="https://www.linkedin.com/in/duncangmstuart">LinkedIn</a> or check out my
-shiny responsive <a href="https://dgmstuart.github.io/dgms_cv/">CV</a>.</p>
+<ul>
+  <li>First thing is to ask the right questions</li>
+  <li>Book - Lean Analytics</li>
+  <li>Articulate Assumptions about the benefits of your product,</li>
+  <li>Define Hypothesis: how will we know (in terms of hard metrics) if our assumptions are validated? What does success look like?</li>
+  <li>To start with, focus on one key metric</li>
+  <li>Behavioural plan - what do you want users to do - both to achieve user needs and business needs</li>
+  <li>You have a live product:
+    <ul>
+      <li>Is it meeting the hypothesis</li>
+    </ul>
+  </li>
+  <li>
+    <p>Product retrospectives: how are we doing with the product - what does the data tell us about how well it’s going?</p>
+  </li>
+  <li>Data-Driven vs Data Informed approaches
+    <ul>
+      <li>Data Driven:
+        <ul>
+          <li>Focus on one metric - collect lots of data (A/B, Multivariate tests etc. and understand whether what you’re doing is impacting that metric)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Data Informed
+    <ul>
+      <li>Data might not tell you whether it’s a good product idea full stop: might be a leap of faith
+        <ul>
+          <li>When you actually have an MVP, <em>then</em> you can start gathering data</li>
+        </ul>
+      </li>
+      <li>Plurality is the key: data is often just one aspect in data decisions</li>
+      <li>Talk - Adam Osiri (?) on Facebook’s data-informed approach</li>
+      <li>Data is important, bit other factors come into play: resources, competition, regulation, brand.</li>
+      <li>You can’t replace intuition or creative ideas with data</li>
+    </ul>
+  </li>
+  <li>
+    <p>5 key points:</p>
 
-<p>You’ll can find me on other social networks too, like <a href="https://twitter.com/dgmstuart">twitter</a>, and <a href="https://www.instagram.com/dgmstuart/">instagram</a>.</p>
-
-<p>In my spare time I’m mostly swing dancing and rebuilding <a href="http://www.swingoutlondon.co.uk/">Swing Out
-London</a>.</p>
-
-<p>I’m very interested in the whole teaching kids to code thing. I volunteer some Saturdays
-at <a href="http://www.wizziewizzie.org/">Wizzie Wizzie Computer Coding Club</a>
-and I run a meetup for
-<a href="http://www.meetup.com/People-teaching-kids-to-code-in-London/">People teaching kids to code in London</a>.</p>
-
-<p>If you’d like to get in touch try me on <a href="https://twitter.com/dgmstuart">twitter</a> first.</p>
+    <ol>
+      <li>Focus on the right questions</li>
+      <li>Data can’t replace intuition</li>
+      <li>Listen to the data and act accordingly
+        <ul>
+          <li>This is hard</li>
+          <li>e.g. data might say that your idea or your variation isn’t actually effective.</li>
+        </ul>
+      </li>
+      <li>Build and launch with data in mind
+        <ul>
+          <li>Include analytics in the user stories</li>
+          <li>Start thinking about your assumptions and hypotheses at the beginning of the product life cycle</li>
+          <li>as soon as you start working on the product you should be working with the analytics team/building data in from the ground up.</li>
+        </ul>
+      </li>
+      <li>Be clear about your hypotheses, sample size and timing.
+        <ul>
+          <li>how large a sample do you need before you can claim that your results are significant.</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>Final statement “Embrace the data - don’t fear it”</li>
+</ul>
 
   </div>
 
+  <section class="disqus">
+  <div id="disqus_thread"></div>
+  <script>
+     var disqus_config = function () {
+       this.page.url = 'http://dgmstuart.github.io/blog/2014/10/22/pivotal-talk-data-driven-product-decisions/'; 
+       this.page.identifier = 'http://dgmstuart.github.io/blog/2014/10/22/pivotal-talk-data-driven-product-decisions/';
+     };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+
+      s.src = '//dgmscode.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</section>
 </article>
 
       </div>
