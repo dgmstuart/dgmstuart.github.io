@@ -10,14 +10,14 @@ tags: [ruby, sublime, vim]
 I've often wondered how in Ruby screencasts they magically execute code inline
 in the editor, e.g. they type:
 
-```ruby
+{% codeblock lang:ruby %}
 [1, 2, 3].reverse # =>
-```
+{% endcodeblock %}
 
 ...and it magically becomes
-```ruby
+{% codeblock lang:ruby %}
 [1, 2, 3].reverse # => [3, 2, 1]
-```
+{% endcodeblock %}
 
 You can see how effective this is in action in
 [one of the sample episodes for Ruby Tapas](http://www.rubytapas.com/episodes/11-Method-and-Message)

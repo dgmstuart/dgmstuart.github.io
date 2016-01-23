@@ -62,7 +62,7 @@ Do-able with modulo math in the sql
 <a name="approach_3"></a>Approach 3: Generate instances
 ---------------------------------
 
-```ruby
+{% codeblock lang:ruby %}
 # app/models/event.rb
 has_many :event_seeds
 has_many :event_generators, through: :event_seeds
@@ -81,7 +81,7 @@ has_many :event_instances, through: :event_seed
 # app/models/event_instance.rb
 belongs_to :event_seed
 has_one :event, through: :event_seed
-```
+{% endcodeblock %}
 
 
 [new one](https://github.com/dgmstuart/swingoutlondon2/blob/daa4397f1e9d772a5b5302cdd369b81201c8ec84/db/schema.rb)

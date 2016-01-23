@@ -43,8 +43,9 @@ end
 
 Interestingly this leaves out the `focus` config options, which allow you to select specific specs to run, e.g:
 
-```ruby
+{% codeblock lang:ruby %}
 it "does a thing", :focus do
   #...
 end
+{% endcodeblock %}
 ```
