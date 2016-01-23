@@ -3,7 +3,8 @@ layout: post
 title: "Creating a new app on heroku really is stupidly easy"
 date: 2014-08-15 13:49:11 +0100
 comments: true
-categories: [Ruby, Rails, Heroku]
+categories: [ruby, rails]
+tags: [ruby, rails, heroku]
 ---
 
     heroku apps:create swingoutlondon2 --region eu

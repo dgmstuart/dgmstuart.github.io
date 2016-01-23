@@ -2,6 +2,8 @@
 layout: post
 title: "Migrating From Octopress 2 to 3"
 date: 2016-01-22T00:40:02+00:00
+category: octopress
+tags: [octopress, migration]
 ---
 
 I've just migrated this blog from Octopress 2 to 3 and since [there doesn't seem to be a definitive migration guide yet](https://github.com/octopress/octoress/issues/29) (and inspired by a similar post by [@samwize](http://samwize.com/2015/09/30/migrating-octopress-2-to-octopress-3/))

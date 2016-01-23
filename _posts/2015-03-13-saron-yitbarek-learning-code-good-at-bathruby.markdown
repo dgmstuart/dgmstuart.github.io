@@ -3,7 +3,8 @@ layout: post
 title: "Saron Yitbarek - Learning Code good (at BathRuby)"
 date: 2015-03-13 11:27:15 +0000
 comments: true
-categories: [bathruby, learning, liveblog]
+category: liveblog
+tags: [bathruby, learning]
 ---
 _I'm at [Bath Ruby 2015](http://2015.bathruby.org/), live blogging some of the
 talks_

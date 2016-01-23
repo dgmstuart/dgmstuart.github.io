@@ -3,7 +3,8 @@ layout: post
 title: "A better way of writing commit messages"
 date: 2014-06-23 23:52:20 +0100
 comments: true
-categories: [Development]
+category: tools
+tags: [development]
 ---
 I've always tended to write commit messages by answering the question "What did I do?", but I learned a different approach recently which tends to produce much more expressive commits, which are often more terse as well. Compare the following:
 

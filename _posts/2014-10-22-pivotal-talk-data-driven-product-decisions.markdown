@@ -3,7 +3,8 @@ layout: post
 title: "Pivotal talk: data-informed product decisions"
 date: 2014-10-22 12:48:38 +0100
 comments: true
-categories: [Talk, Products, Pivotal Talk, liveblog]
+category: liveblog
+tags: [talk, products, pivotal talk]
 ---
 http://www.meetup.com/Pivotal-Labs-Tech-Talks/events/213571202/
 

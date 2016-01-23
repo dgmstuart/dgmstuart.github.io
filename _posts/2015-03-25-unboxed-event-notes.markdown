@@ -3,7 +3,8 @@ layout: post
 title: "Unboxed Event notes: \"Unstick your digital products\""
 date: 2015-03-25 09:55:22 +0000
 comments: true
-categories: [agile, liveblog]
+category: liveblog
+tags: [agile]
 ---
 
 _I'm at a [speaker session from Unboxed consulting](https://www.eventbrite.co.uk/e/unstick-your-digital-products-rapidly-progress-a-complex-product-or-portfolio-of-stalled-products-tickets-15872783924)_

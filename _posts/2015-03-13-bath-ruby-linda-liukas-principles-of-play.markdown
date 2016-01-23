@@ -3,7 +3,8 @@ layout: post
 title: "Bath Ruby: Linda Liukas - principles of play"
 date: 2015-03-13 09:42:26 +0000
 comments: true
-categories: [ruby, bathruby, liveblog]
+category: liveblog
+tags: [ruby, bathruby]
 ---
 _I'm at [Bath Ruby 2015](http://2015.bathruby.org/), live blogging some of the
 talks_

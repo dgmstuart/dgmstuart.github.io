@@ -3,7 +3,8 @@ layout: post
 title: "How your base PATH gets generated in OSX"
 date: 2015-02-23 23:03:33 +0000
 comments: true
-categories: osx
+category: osx
+tags: [osx]
 ---
 On OSX and linux it seems to be fairly common practice to totally define the `PATH` in a
 `.profile` or `.bashrc` file. This gives total control over the order in which

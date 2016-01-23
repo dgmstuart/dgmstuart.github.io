@@ -3,7 +3,8 @@ layout: post
 title: "Katrina Owen at BathRuby: Here be Dragons"
 date: 2015-03-13 14:00:28 +0000
 comments: true
-categories: [bathruby, liveblog]
+category: liveblog
+tags: [bathruby, liveblog]
 ---
 
 _I'm at [Bath Ruby 2015](http://2015.bathruby.org/), live blogging some of the

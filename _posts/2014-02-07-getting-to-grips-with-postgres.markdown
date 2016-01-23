@@ -3,7 +3,8 @@ layout: post
 title: "Getting to grips with postgres"
 date: 2014-02-07 12:10:20 +0000
 comments: true
-categories: [Rails, Postgres, SOLDN]
+categories: [ruby, rails]
+tags: [ruby, rails, postgres, soldn]
 ---
 
 So, having generated my Rails app and selected postgres as the development database, I'm now faced with getting the damn thing running. On a Eurostar train (under the English channel) i.e. with no internet.

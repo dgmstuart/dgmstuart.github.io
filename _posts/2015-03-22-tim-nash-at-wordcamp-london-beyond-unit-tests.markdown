@@ -3,7 +3,8 @@ layout: post
 title: "Tim Nash at WordCamp London - Beyond Unit Tests"
 date: 2015-03-22 12:17:20 +0000
 comments: true
-categories: ["wordcamp london", testing, liveblog]
+category: liveblog
+tags: ["wordcamp london", testing]
 ---
 
 _I'm at [WordCamp London](http://london.wordcamp.org/2015/) - live-blogging

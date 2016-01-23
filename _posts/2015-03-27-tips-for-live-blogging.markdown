@@ -3,7 +3,8 @@ layout: post
 title: "Tips for live-blogging"
 date: 2015-03-27 20:40:14 +0000
 comments: true
-categories: [blogging, vim, octopress]
+category:
+tags: [blogging, vim, octopress]
 published: false
 ---
 

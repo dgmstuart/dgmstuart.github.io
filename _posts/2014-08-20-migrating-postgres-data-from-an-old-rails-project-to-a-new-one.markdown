@@ -3,7 +3,8 @@ layout: post
 title: "Migrating Postgres data from an old Rails project to a new one"
 date: 2014-08-20 23:29:31 +0100
 comments: true
-categories: [Ruby, Rails, Postgres, Heroku]
+categories: [ruby, rails]
+tags: [ruby, rails, postgres, heroku]
 ---
 TL;DR - this was my approach:
 

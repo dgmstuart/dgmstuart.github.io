@@ -3,7 +3,8 @@ layout: post
 title: "WordCamp London - Bruce Lawson - Responsive Images"
 date: 2015-03-21 15:18:00 +0000
 comments: true
-categories: ["wordcamp london", liveblog]
+category: liveblog
+tags: ["wordcamp london"]
 ---
 
 _I'm at [WordCamp London](http://london.wordcamp.org/2015/) - live-blogging

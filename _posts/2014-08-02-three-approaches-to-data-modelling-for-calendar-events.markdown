@@ -3,7 +3,8 @@ layout: post
 title: "Three approaches to data modelling for calendar events"
 date: 2014-08-02 00:39:30 +0100
 comments: true
-categories:
+category:
+tags: [design, "data modelling", ruby, rails]
 published: false
 ---
 {% img /images/content/soldn_data_model_sketch.jpg %}

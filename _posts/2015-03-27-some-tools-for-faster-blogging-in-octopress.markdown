@@ -3,7 +3,8 @@ layout: post
 title: "Some tools for faster blogging in Octopress"
 date: 2015-03-27 18:48:31 +0000
 comments: true
-categories: [blogging, vim, octopress]
+category: octopress
+tags: [blogging, vim]
 ---
 
 I've been to a number of conferences and talks recently and I've developed a habit

@@ -3,7 +3,8 @@ layout: post
 title: "Understanding all the crap in my OSX home directory"
 date: 2015-02-08 22:11:13 +0100
 comments: true
-categories: [git]
+category: git
+tags: [git]
 published: false
 ---
 

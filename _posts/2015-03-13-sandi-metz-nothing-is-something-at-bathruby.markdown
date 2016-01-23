@@ -3,7 +3,8 @@ layout: post
 title: "Sandi Metz: Nothing is Something - at BathRuby"
 date: 2015-03-13 16:38:05 +0000
 comments: true
-categories: [bathruby, liveblog]
+category: liveblog
+tags: [bathruby]
 ---
 
 _I'm at [Bath Ruby 2015](http://2015.bathruby.org/), live blogging some of the

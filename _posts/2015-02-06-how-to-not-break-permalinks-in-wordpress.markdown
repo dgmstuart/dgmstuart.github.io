@@ -3,7 +3,8 @@ layout: post
 title: "How to not break permalinks in WordPress"
 date: 2015-02-06 00:13:40 +0000
 comments: true
-categories: wordpress
+category: wordpress
+tags: [wordpress]
 ---
 I've written a blog post for [work](https://www.dxw.com/) about how much you can and can't mess around with urls in WordPress before old links stop working. It boils down to 5 rules:
 

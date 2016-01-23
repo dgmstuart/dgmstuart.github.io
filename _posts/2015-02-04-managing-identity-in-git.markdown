@@ -3,7 +3,8 @@ layout: post
 title: "Managing identity in git"
 date: 2015-02-04 00:17:21 +0000
 comments: true
-categories: git
+category: tools
+tags: [git]
 ---
 
 When using git, your commits are labelled with your name and email address.

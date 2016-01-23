@@ -3,7 +3,8 @@ layout: post
 title: "Execute ruby code inline in the editor"
 date: 2015-03-27 15:41:47 +0000
 comments: true
-categories: [ruby, sublime, vim]
+category: tools
+tags: [ruby, sublime, vim]
 ---
 
 I've often wondered how in Ruby screencasts they magically execute code inline
