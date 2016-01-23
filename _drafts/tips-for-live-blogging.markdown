@@ -5,7 +5,6 @@ date: 2015-03-27 20:40:14 +0000
 comments: true
 category:
 tags: [blogging, vim, octopress]
-published: false
 ---
 
 I've been going to a number of conferences and talks recently and I've developed a habit of taking

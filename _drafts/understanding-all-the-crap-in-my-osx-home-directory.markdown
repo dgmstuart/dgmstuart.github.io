@@ -5,7 +5,6 @@ date: 2015-02-08 22:11:13 +0100
 comments: true
 category: git
 tags: [git]
-published: false
 ---
 
 This is a long overdue post about how I cleaned up my home directory and learned a lot in the process. The story starts with dotfiles.

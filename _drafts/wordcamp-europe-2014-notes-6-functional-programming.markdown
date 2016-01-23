@@ -4,7 +4,6 @@ title: "WordCamp Europe 2014 notes - 1.6: Functional Programming"
 date: 2014-09-27 15:20:12 +0300
 comments: true
 categories:
-published: false
 ---
 
 * FP Is a bit of a buzzword right now - means different things to different people
