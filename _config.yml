@@ -8,6 +8,7 @@ description: >
 url: "http://dgmstuart.github.io"
 
 date_format: "%-d %b, %Y"
+animated: false
 
 twitter_username: dgmstuart
 github_username:  dgmstuart
