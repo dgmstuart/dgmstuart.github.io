@@ -9,4 +9,7 @@ group :jekyll_plugins do
   gem 'octopress-codeblock', '~> 1.0'
   gem 'octopress-image-tag', '~> 1.1'
   gem 'octopress-solarized'#, '~> 1.1'
+
+  gem 'jekyll-paginate', '~> 1.1.0'
+  gem 'jekyll-sitemap', '~> 0.10.0'
 end

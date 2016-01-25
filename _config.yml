@@ -6,14 +6,44 @@ description: >
   Architect living in London. The focus is mostly Ruby on Rails 
   with a little WordPress
 url: "http://dgmstuart.github.io"
+
+date_format: "%-d %b, %Y"
+
 twitter_username: dgmstuart
 github_username:  dgmstuart
 disqus_shortname: dgmscode
 
 google_analytics_code: UA-44436648-5
 
-# Build settings
-markdown: kramdown
-
 # Octopress 2-style permalink:
 permalink: /blog/:year/:month/:day/:title/
+
+# Build settings
+markdown: kramdown
+paginate: 10
+sass:
+  compressed: true
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+text:
+  pagination:
+    newer: 'Newer'
+    older: 'Older'
+  post:
+    updated:        'Updated'
+    minute_read:    'minute read'
+    related_posts:  'Related Posts'
+  index:
+    coming_soon: 'Coming soon...'
+  contact:
+    email:    'Email Address'
+    content:  'What would you like to say?'
+    subject:  'New submission!'
+    submit:   'Say Hello'
+    ajax:
+      sending:  'sending..'
+      sent:     'Message sent!'
+      error:    'Error!'
+  thanks: 'Thanks for contacting us. We will reply as soon as possible.'
