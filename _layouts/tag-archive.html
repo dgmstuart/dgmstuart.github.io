@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<h1 class="h1">Posts tagged with '{{ page.title }}':</h1>
+<div class="posts">
+  {% for post in page.posts %}
+    <div class="post">
+      <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <a href="{{ post.url | prepend: site.baseurl }}" class="post-link"><h3 class="post-title">{{ post.title }}</h3></a>
+    </div>
+  {% endfor %}
+</div>

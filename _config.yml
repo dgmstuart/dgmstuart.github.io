@@ -22,6 +22,14 @@ google_analytics_code: UA-44436648-5
 # Octopress 2-style permalink:
 permalink: /blog/:year/:month/:day/:title/
 
+jekyll-archives:
+  enabled:
+    - tags
+    - categories
+  layouts:
+    tag: tag-archive
+    category: category-archive
+
 # Build settings
 markdown: kramdown
 paginate: 10

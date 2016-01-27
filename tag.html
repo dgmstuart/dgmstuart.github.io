@@ -1,0 +1,14 @@
+---
+layout: default
+permalink: /tag/
+---
+<h1 class="h1">Tags:</h1>
+<div class="posts">
+  {% assign sorted_tags = (site.tags | sort:0) %}
+  <ul>
+  {% for tag_post in sorted_tags %}
+    {% assign tag = (tag_post | first) %}
+    <li><a href="{{ page.url | append: tag }}">{{ tag }}</a></li>
+  {% endfor %}
+  </ul>
+</div>
