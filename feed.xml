@@ -6,8 +6,8 @@
 </description>
     <link>http://dgmstuart.github.io/</link>
     <atom:link href="http://dgmstuart.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 23 Jan 2016 00:09:46 +0000</pubDate>
-    <lastBuildDate>Sat, 23 Jan 2016 00:09:46 +0000</lastBuildDate>
+    <pubDate>Wed, 27 Jan 2016 00:54:26 +0000</pubDate>
+    <lastBuildDate>Wed, 27 Jan 2016 00:54:26 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -257,14 +257,10 @@ find one of two words which are unique in the filename of your post and use that
         <description>&lt;p&gt;I’ve often wondered how in Ruby screencasts they magically execute code inline
 in the editor, e.g. they type:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;ruby
-[1, 2, 3].reverse # =&amp;gt;
-&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reverse&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
 
-&lt;p&gt;…and it magically becomes
-&lt;code&gt;ruby
-[1, 2, 3].reverse # =&amp;gt; [3, 2, 1]
-&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;…and it magically becomes&lt;/p&gt;
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reverse&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; [3, 2, 1]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
 
 &lt;p&gt;You can see how effective this is in action in
 &lt;a href=&quot;http://www.rubytapas.com/episodes/11-Method-and-Message&quot;&gt;one of the sample episodes for Ruby Tapas&lt;/a&gt;
