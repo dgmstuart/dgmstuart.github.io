@@ -9,6 +9,7 @@ url: "http://dgmstuart.github.io"
 
 date_format: "%-d %b, %Y"
 animated: false
+ajaxify_contact_form: false
 
 twitter_username: dgmstuart
 github_username:  dgmstuart
@@ -38,15 +39,13 @@ text:
     updated:        'Updated'
     minute_read:    'minute read'
     related_posts:  'Related Posts'
-  index:
-    coming_soon: 'Coming soon...'
   contact:
     email:    'Email Address'
     content:  'What would you like to say?'
-    subject:  'New submission!'
+    subject:  'New message from blog'
     submit:   'Say Hello'
     ajax:
       sending:  'sending..'
       sent:     'Message sent!'
       error:    'Error!'
-  thanks: 'Thanks for contacting us. We will reply as soon as possible.'
+  thanks: "Thanks for getting in touch. I'll reply as soon as possible."
