@@ -10,7 +10,9 @@ tags: [agile]
 _I'm at a [speaker session from Unboxed consulting](https://www.eventbrite.co.uk/e/unstick-your-digital-products-rapidly-progress-a-complex-product-or-portfolio-of-stalled-products-tickets-15872783924)_
 
 ## [Dave Evans](https://www.linkedin.com/pub/dave-evans/a/311/919) - Product Manager (E-commerce) at Macmillan Publishing Group
+
 ### “Trust me, I’m a product manager”: case study from publishing
+
 * Sales thinking: identify influencers, budget holders etc.
 * Commercial products: it's all about profit-and-loss. Non-commercial products
   need different KPIs
@@ -26,7 +28,9 @@ _I'm at a [speaker session from Unboxed consulting](https://www.eventbrite.co.uk
 
 
 ## [Glyn Parry](https://twitter.com/g_parry24/) – SH:24 (NHS collaboration)
+
 ### How designing a new experience in the NHS helped to unblock and unleash new potential
+
 * His experience: People in localgov/NHS aren't familiar with agile
 * Just because they don't think of thinks in agile terminology doesn't mean
   they don't have an agile mindset
@@ -56,6 +60,7 @@ _I'm at a [speaker session from Unboxed consulting](https://www.eventbrite.co.uk
 
 
 ## [Will Rowan](https://twitter.com/thecustomer) - Product Manager at the Ministry of Justice (interview)
+
 * Managers are more important if they have more responsibilities - therefore
   they're predjudiced towards bigger projects and bigger products
 * PRINCE2 documentation is large regardless of project size - again
@@ -86,7 +91,9 @@ _I'm at a [speaker session from Unboxed consulting](https://www.eventbrite.co.uk
   (you won't find them there).
 
 ## [Richard Stobart](https://twitter.com/richardstobart) – CEO, Unboxed Consulting, Agile Coach of the Year 2014
+
 ### Techniques for overcoming the Big 7 digital product blockers
+
 * The trap of 100% utilisation: Can't move quickly. Grind to a halt.
 * 70% utilisation is about as fast as you can go: helps avoid context-switching
 * Intuitive thing when you see someone not busy is to make them busy, but this
