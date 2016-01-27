@@ -12,4 +12,5 @@ group :jekyll_plugins do
 
   gem 'jekyll-paginate', '~> 1.1.0'
   gem 'jekyll-sitemap', '~> 0.10.0'
+  gem 'jekyll-archives'
 end
