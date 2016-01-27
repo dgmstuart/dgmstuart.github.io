@@ -9,7 +9,9 @@ computers.
 
 I’m the Technical Architect at [dxw](https://www.dxw.com/).
 That title means different things at different companies, but at dxw it means
-I spend most of my time in Vim writing code, and the rest of my time time talking
+I spend most of my time in
+[Vim](https://github.com/dgmstuart/dotfiles/blob/master/.vimrc)
+writing code, and the rest of my time time talking
 to customers and end users about what we should be building.
 
 I've been involved in making software and websites for a while. You can find out about
@@ -25,5 +27,3 @@ I'm very interested in the whole teaching kids to code thing. I volunteer some S
 at [Wizzie Wizzie Computer Coding Club](http://www.wizziewizzie.org/)
 and I run a meetup for
 [People teaching kids to code in London](http://www.meetup.com/People-teaching-kids-to-code-in-London/).
-
-If you’d like to get in touch try me on [twitter](https://twitter.com/dgmstuart) first.
