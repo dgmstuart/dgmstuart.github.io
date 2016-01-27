@@ -6,8 +6,8 @@
 </description>
     <link>http://dgmstuart.github.io/</link>
     <atom:link href="http://dgmstuart.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 27 Jan 2016 02:27:20 +0000</pubDate>
-    <lastBuildDate>Wed, 27 Jan 2016 02:27:20 +0000</lastBuildDate>
+    <pubDate>Wed, 27 Jan 2016 02:59:25 +0000</pubDate>
+    <lastBuildDate>Wed, 27 Jan 2016 02:59:25 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -301,50 +301,65 @@ sounds a bit silly now that I know :)&lt;/p&gt;
         <description>&lt;p&gt;&lt;em&gt;I’m at a &lt;a href=&quot;https://www.eventbrite.co.uk/e/unstick-your-digital-products-rapidly-progress-a-complex-product-or-portfolio-of-stalled-products-tickets-15872783924&quot;&gt;speaker session from Unboxed consulting&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;dave-evanshttpswwwlinkedincompubdave-evansa311919---product-manager-e-commerce-at-macmillan-publishing-group&quot;&gt;&lt;a href=&quot;https://www.linkedin.com/pub/dave-evans/a/311/919&quot;&gt;Dave Evans&lt;/a&gt; - Product Manager (E-commerce) at Macmillan Publishing Group&lt;/h2&gt;
-&lt;p&gt;### “Trust me, I’m a product manager”: case study from publishing
-* Sales thinking: identify influencers, budget holders etc.
-* Commercial products: it’s all about profit-and-loss. Non-commercial products
-  need different KPIs
-* Product manager != project manager. Responsible for:
-    * Backlog, vision statement
-    * Roadmap: what questions do we need to answer in the next windows of time
-* “You need to go rogue” - prove concepts on your own without a team
-* 404 test = e.g. buy now button - show it to a % of users, does nothing
-* Concierge test = build front-end, but handle the back-end manually
-* Everything in the backlog should be in line with the vision statement
-* Question for unpicking feature requests which you think might not actually
-  be about solving a problem: “What happens if you &lt;em&gt;can’t&lt;/em&gt; build it?”&lt;/p&gt;
+
+&lt;h3 id=&quot;trust-me-im-a-product-manager-case-study-from-publishing&quot;&gt;“Trust me, I’m a product manager”: case study from publishing&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sales thinking: identify influencers, budget holders etc.&lt;/li&gt;
+  &lt;li&gt;Commercial products: it’s all about profit-and-loss. Non-commercial products
+need different KPIs&lt;/li&gt;
+  &lt;li&gt;Product manager != project manager. Responsible for:
+    &lt;ul&gt;
+      &lt;li&gt;Backlog, vision statement&lt;/li&gt;
+      &lt;li&gt;Roadmap: what questions do we need to answer in the next windows of time&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;“You need to go rogue” - prove concepts on your own without a team&lt;/li&gt;
+  &lt;li&gt;404 test = e.g. buy now button - show it to a % of users, does nothing&lt;/li&gt;
+  &lt;li&gt;Concierge test = build front-end, but handle the back-end manually&lt;/li&gt;
+  &lt;li&gt;Everything in the backlog should be in line with the vision statement&lt;/li&gt;
+  &lt;li&gt;Question for unpicking feature requests which you think might not actually
+be about solving a problem: “What happens if you &lt;em&gt;can’t&lt;/em&gt; build it?”&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;glyn-parryhttpstwittercomgparry24--sh24-nhs-collaboration&quot;&gt;&lt;a href=&quot;https://twitter.com/g_parry24/&quot;&gt;Glyn Parry&lt;/a&gt; – SH:24 (NHS collaboration)&lt;/h2&gt;
-&lt;p&gt;### How designing a new experience in the NHS helped to unblock and unleash new potential
-* His experience: People in localgov/NHS aren’t familiar with agile
-* Just because they don’t think of thinks in agile terminology doesn’t mean
-  they don’t have an agile mindset
-* Sexual health services in Lambeth&amp;amp;Southwark are very overstretched, and in
-  rural areas, round-trip times to visit a clinic might be very long
-* Online STI kits - convenient but expensive
-* New service: free, user-focussed
-* User journeys illustrated with comic-strip style graphics:
-  &lt;img src=&quot;https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-15/11055891_730864497033484_1856034297_n.jpg&quot; alt=&quot;@g_parry_24 talking about SH:24 approach&quot; /&gt;
-* Identify people in the organisation who have an agile mindset and are quite
-  influential
-* Approach: agile prototyping, building a service piece-by-piece with users
-* Developing personas
-* It’s a digital project, but only 25% of the service being provided is
-  digital - needs to be recognised
-* Started with the basic GDS form
-* Prototyping the kits that people recieve - cardboard and post-its
-  * Started out trying to design engaging packaging for the test kits
-  * through user testing: learned that people don’t want this - they like a
-    really simple approach
-* Need to think about the user needs of the people receiving the tests as well
-* Continuous evaluation on multiple different angles: measuring the impact of
-  the service on sexual health
-* Assumptions broken: people don’t actually want their results to be
-  super-discreet: they just want to know as quickly and clearly as possible
-* Prior to alpha - 3 month discovery stage: very intensive working with users&lt;/p&gt;
+
+&lt;h3 id=&quot;how-designing-a-new-experience-in-the-nhs-helped-to-unblock-and-unleash-new-potential&quot;&gt;How designing a new experience in the NHS helped to unblock and unleash new potential&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;His experience: People in localgov/NHS aren’t familiar with agile&lt;/li&gt;
+  &lt;li&gt;Just because they don’t think of thinks in agile terminology doesn’t mean
+they don’t have an agile mindset&lt;/li&gt;
+  &lt;li&gt;Sexual health services in Lambeth&amp;amp;Southwark are very overstretched, and in
+rural areas, round-trip times to visit a clinic might be very long&lt;/li&gt;
+  &lt;li&gt;Online STI kits - convenient but expensive&lt;/li&gt;
+  &lt;li&gt;New service: free, user-focussed&lt;/li&gt;
+  &lt;li&gt;User journeys illustrated with comic-strip style graphics:
+&lt;img src=&quot;https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-15/11055891_730864497033484_1856034297_n.jpg&quot; alt=&quot;@g_parry_24 talking about SH:24 approach&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Identify people in the organisation who have an agile mindset and are quite
+influential&lt;/li&gt;
+  &lt;li&gt;Approach: agile prototyping, building a service piece-by-piece with users&lt;/li&gt;
+  &lt;li&gt;Developing personas&lt;/li&gt;
+  &lt;li&gt;It’s a digital project, but only 25% of the service being provided is
+digital - needs to be recognised&lt;/li&gt;
+  &lt;li&gt;Started with the basic GDS form&lt;/li&gt;
+  &lt;li&gt;Prototyping the kits that people recieve - cardboard and post-its
+    &lt;ul&gt;
+      &lt;li&gt;Started out trying to design engaging packaging for the test kits&lt;/li&gt;
+      &lt;li&gt;through user testing: learned that people don’t want this - they like a
+really simple approach&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Need to think about the user needs of the people receiving the tests as well&lt;/li&gt;
+  &lt;li&gt;Continuous evaluation on multiple different angles: measuring the impact of
+the service on sexual health&lt;/li&gt;
+  &lt;li&gt;Assumptions broken: people don’t actually want their results to be
+super-discreet: they just want to know as quickly and clearly as possible&lt;/li&gt;
+  &lt;li&gt;Prior to alpha - 3 month discovery stage: very intensive working with users&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;will-rowanhttpstwittercomthecustomer---product-manager-at-the-ministry-of-justice-interview&quot;&gt;&lt;a href=&quot;https://twitter.com/thecustomer&quot;&gt;Will Rowan&lt;/a&gt; - Product Manager at the Ministry of Justice (interview)&lt;/h2&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Managers are more important if they have more responsibilities - therefore
 they’re predjudiced towards bigger projects and bigger products&lt;/li&gt;
@@ -380,31 +395,41 @@ Always carry whiteboard markers and post-its when in a non-agile environment
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;richard-stobarthttpstwittercomrichardstobart--ceo-unboxed-consulting-agile-coach-of-the-year-2014&quot;&gt;&lt;a href=&quot;https://twitter.com/richardstobart&quot;&gt;Richard Stobart&lt;/a&gt; – CEO, Unboxed Consulting, Agile Coach of the Year 2014&lt;/h2&gt;
-&lt;p&gt;### Techniques for overcoming the Big 7 digital product blockers
-* The trap of 100% utilisation: Can’t move quickly. Grind to a halt.
-* 70% utilisation is about as fast as you can go: helps avoid context-switching
-* Intuitive thing when you see someone not busy is to make them busy, but this
-  slows down all their other projects
-* If you’ve got spare time, help unblock &lt;em&gt;other people&lt;/em&gt;, or do nothing”: don’t
-  add more things to the pipeline
-* Always be delivering the highest value thing on your most important project
-* Optimise ‘batch size’ - grouping together features for deploy. Small batches
-  = responding to change more quickly. = fixing bugs more easily: if the
-  problem is a result of code which was written recently, the devs have that
-  conceptual stack in their head.
-  * Not achievable if your deployment process is onerous or slow
-* People used to think of environments like pets: they all had names. Today
-  they’re like cattle: set up when you need it, tear down when you’re done.
-* rightscale + ansible + docker: used to spin up 1000 test servers to test
-  releasing a product to all students in China (which was the MVP!!)
-  * Cost £10k to run that test but was trivial to set up
-* Creating roll-back-able database migrations: dbdeploy, liquibase etc. - have
-  both database schema versions live in parallel, delete the old one when the
-  new one is stable
-* In closed-scope projects, everyone feels like they need to throw in all
-  their great feature ideas before the scope window closes - leads to feature
-  bloat. Solution: get stakeholders on side, and ensure that the product owner
-  controls the backlog&lt;/p&gt;
+
+&lt;h3 id=&quot;techniques-for-overcoming-the-big-7-digital-product-blockers&quot;&gt;Techniques for overcoming the Big 7 digital product blockers&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The trap of 100% utilisation: Can’t move quickly. Grind to a halt.&lt;/li&gt;
+  &lt;li&gt;70% utilisation is about as fast as you can go: helps avoid context-switching&lt;/li&gt;
+  &lt;li&gt;Intuitive thing when you see someone not busy is to make them busy, but this
+slows down all their other projects&lt;/li&gt;
+  &lt;li&gt;If you’ve got spare time, help unblock &lt;em&gt;other people&lt;/em&gt;, or do nothing”: don’t
+add more things to the pipeline&lt;/li&gt;
+  &lt;li&gt;Always be delivering the highest value thing on your most important project&lt;/li&gt;
+  &lt;li&gt;Optimise ‘batch size’ - grouping together features for deploy. Small batches
+= responding to change more quickly. = fixing bugs more easily: if the
+problem is a result of code which was written recently, the devs have that
+conceptual stack in their head.
+    &lt;ul&gt;
+      &lt;li&gt;Not achievable if your deployment process is onerous or slow&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;People used to think of environments like pets: they all had names. Today
+they’re like cattle: set up when you need it, tear down when you’re done.&lt;/li&gt;
+  &lt;li&gt;rightscale + ansible + docker: used to spin up 1000 test servers to test
+releasing a product to all students in China (which was the MVP!!)
+    &lt;ul&gt;
+      &lt;li&gt;Cost £10k to run that test but was trivial to set up&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Creating roll-back-able database migrations: dbdeploy, liquibase etc. - have
+both database schema versions live in parallel, delete the old one when the
+new one is stable&lt;/li&gt;
+  &lt;li&gt;In closed-scope projects, everyone feels like they need to throw in all
+their great feature ideas before the scope window closes - leads to feature
+bloat. Solution: get stakeholders on side, and ensure that the product owner
+controls the backlog&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Wed, 25 Mar 2015 09:55:22 +0000</pubDate>
         <link>http://dgmstuart.github.io/blog/2015/03/25/unboxed-event-notes/</link>
