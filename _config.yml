@@ -39,6 +39,8 @@ gems:
   - jekyll-paginate
   - jekyll-sitemap
 
+exclude: ['LICENSE.txt', 'Gemfile.lock', 'Gemfile']
+
 text:
   pagination:
     newer: 'Newer'
