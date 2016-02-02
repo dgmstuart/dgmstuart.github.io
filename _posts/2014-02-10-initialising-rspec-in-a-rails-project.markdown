@@ -48,4 +48,3 @@ it "does a thing", :focus do
   #...
 end
 {% endcodeblock %}
-```
