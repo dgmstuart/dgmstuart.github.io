@@ -6,9 +6,52 @@
 </description>
     <link>http://dgmstuart.github.io/</link>
     <atom:link href="http://dgmstuart.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 02 Feb 2016 17:20:51 +0000</pubDate>
-    <lastBuildDate>Tue, 02 Feb 2016 17:20:51 +0000</lastBuildDate>
+    <pubDate>Thu, 11 Feb 2016 14:03:43 +0000</pubDate>
+    <lastBuildDate>Thu, 11 Feb 2016 14:03:43 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Checking Out Branches From Tig</title>
+        <description>&lt;p&gt;I use &lt;a href=&quot;https://github.com/jonas/tig&quot;&gt;tig&lt;/a&gt; for my git tree browser. My normal
+usage is to look at the the commit tree (normally viewing all branches with
+&lt;code&gt;tig --all&lt;/code&gt;) but it’s a powerful tool with a lot of features, some of which
+I’m starting to integrate into my daily work.&lt;/p&gt;
+
+&lt;p&gt;Today I learned how check out a branch directly from tig.&lt;/p&gt;
+
+&lt;p&gt;The first
+step is to switch into ‘refs’ mode with &lt;code&gt;r&lt;/code&gt; - this shows a view of all the
+local branches, remote branches and tags:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/content/tig_refs_view.png&quot; /&gt;
+&lt;em&gt;tig’s ‘refs’ view&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;From any of these you can check out that branch or tag by putting the cursor
+on that line and pressing &lt;code&gt;C&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;On my team we use long branch names which
+reference a story ID, so checking out with tig is much quicker than typing out
+eg:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout -b branchname origin/branchname
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It’s also possible to check out individual commits (without creating a branch)
+from the normal tig view by putting the cursor over that commit and pressing
+&lt;code&gt;O&lt;/code&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 11 Feb 2016 12:48:36 +0000</pubDate>
+        <link>http://dgmstuart.github.io/blog/2016/02/11/checking-out-branches-from-tig/</link>
+        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2016/02/11/checking-out-branches-from-tig/</guid>
+        
+        <category>tig</category>
+        
+        <category>git</category>
+        
+        
+        <category>git</category>
+        
+      </item>
     
       <item>
         <title>Migrating From Octopress 2 to 3</title>
@@ -864,50 +907,6 @@ hulking exoskeleton of mathematics”&lt;/li&gt;
         <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/13/tom-stuart-a-lever-for-the-mind-at-bathruby/</guid>
         
         <category>bathruby</category>
-        
-        
-        <category>liveblog</category>
-        
-      </item>
-    
-      <item>
-        <title>Katrina Owen at BathRuby: Here be Dragons</title>
-        <description>&lt;p&gt;&lt;em&gt;I’m at &lt;a href=&quot;http://2015.bathruby.org/&quot;&gt;Bath Ruby 2015&lt;/a&gt;, live blogging some of the
-talks&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://pbs.twimg.com/media/B_-97ueWAAAnsGS.jpg&quot; alt=&quot;photo by
-@Naomi_Freeman&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Photo by &lt;a href=&quot;https://twitter.com/Naomi_Freeman&quot;&gt;@Naomi_Freeman&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Some bugs are admirable. Squashing them makes you feel victorious&lt;/li&gt;
-  &lt;li&gt;Squashing the bug isn’t enough: if you don’t clear up the root issues, it
-will just cause you future pain - cleaning up the mess.&lt;/li&gt;
-  &lt;li&gt;Fundamental attribution error: assume that bad code means a bad
-person/unskilled developer (other people), or assume that they were having a bad day (our
-friends)&lt;/li&gt;
-  &lt;li&gt;Prisoner’s dilemna as a metaphor for the choice of whether to follow good
-practices
-    &lt;ul&gt;
-      &lt;li&gt;The rational choice is to always ‘defect’ - but everyone loses.&lt;/li&gt;
-      &lt;li&gt;The way to maximise the overall result for people is for everyone to
-cooperate (add tests, improve error handling, extract responsibilities)&lt;/li&gt;
-      &lt;li&gt;only works if everyone is on board: one person ‘defecting’ will mess it up
-for everyone&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Every commit we make tips the balance in one direction or the other: towards
-entropy or order&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 13 Mar 2015 14:00:28 +0000</pubDate>
-        <link>http://dgmstuart.github.io/blog/2015/03/13/katrina-owen-at-bathruby-here-be-dragons/</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/13/katrina-owen-at-bathruby-here-be-dragons/</guid>
-        
-        <category>bathruby</category>
-        
-        <category>liveblog</category>
         
         
         <category>liveblog</category>
