@@ -28,10 +28,10 @@ Update '# =>' Markers” which has been ported over to other editors:
 
 * [Plugin for Sublime Text2](https://github.com/mmims/sublime-text-2-ruby-markers)
 * [Plugin for Vim](https://github.com/t9md/vim-ruby-xmpfilter)
+* [Instructions for Emacs](http://devblog.avdi.org/2013/06/24/rubytapas-freebie-xmpfilter/)
+  (using the
+  [rcodetools](https://rubygems.org/gems/rcodetools/versions/0.8.5.0) gem)
 
-_A quick google hasn't revealed how to enable this in Emacs, but it must be
-possible because I believe that's what Avdi uses_
-
-This also explains why the snippet for `#` expands to `# =>`. I'd always
+This also explains why the Sublime Text snippet for `#` expands to `# =>`. I'd always
 assumed that this was intended to make multiline comments more readable. That
 sounds a bit silly now that I know :)
