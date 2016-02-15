@@ -6,8 +6,8 @@
 </description>
     <link>http://dgmstuart.github.io/</link>
     <atom:link href="http://dgmstuart.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 11 Feb 2016 14:03:43 +0000</pubDate>
-    <lastBuildDate>Thu, 11 Feb 2016 14:03:43 +0000</lastBuildDate>
+    <pubDate>Mon, 15 Feb 2016 00:39:27 +0000</pubDate>
+    <lastBuildDate>Mon, 15 Feb 2016 00:39:27 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -315,12 +315,12 @@ Update ‘# =&amp;gt;’ Markers” which has been ported over to other editors:
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/mmims/sublime-text-2-ruby-markers&quot;&gt;Plugin for Sublime Text2&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/t9md/vim-ruby-xmpfilter&quot;&gt;Plugin for Vim&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://devblog.avdi.org/2013/06/24/rubytapas-freebie-xmpfilter/&quot;&gt;Instructions for Emacs&lt;/a&gt;
+(using the
+&lt;a href=&quot;https://rubygems.org/gems/rcodetools/versions/0.8.5.0&quot;&gt;rcodetools&lt;/a&gt; gem)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;em&gt;A quick google hasn’t revealed how to enable this in Emacs, but it must be
-possible because I believe that’s what Avdi uses&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;This also explains why the snippet for &lt;code&gt;#&lt;/code&gt; expands to &lt;code&gt;# =&amp;gt;&lt;/code&gt;. I’d always
+&lt;p&gt;This also explains why the Sublime Text snippet for &lt;code&gt;#&lt;/code&gt; expands to &lt;code&gt;# =&amp;gt;&lt;/code&gt;. I’d always
 assumed that this was intended to make multiline comments more readable. That
 sounds a bit silly now that I know :)&lt;/p&gt;
 </description>
