@@ -1096,7 +1096,7 @@ blockquote footer {
 
   blockquote {
     margin-left: 2rem;
-    padding: 2rem; }
+    padding: 1.5rem 2rem 0.5rem; }
 
   .social-icons-left {
     text-align: left; }

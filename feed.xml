@@ -6,9 +6,73 @@
 </description>
     <link>http://dgmstuart.github.io/</link>
     <atom:link href="http://dgmstuart.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 15 Feb 2016 00:42:24 +0000</pubDate>
-    <lastBuildDate>Mon, 15 Feb 2016 00:42:24 +0000</lastBuildDate>
+    <pubDate>Fri, 11 Mar 2016 10:13:38 +0000</pubDate>
+    <lastBuildDate>Fri, 11 Mar 2016 10:13:38 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Bath Ruby 1: Xavier Riley - Rocking out in Ruby, a playful introduction to Sonic Pi</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;The first time you enjoyed writing code: it’s an important feeling - an
+important step on the way to becoming a programmer&lt;/li&gt;
+  &lt;li&gt;Sonic Pi - cross-platform and preinstalled on every raspberry pi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&quot;https://vine.co/v/iHDKUtIlHTL/embed/simple&quot; width=&quot;600&quot; height=&quot;600&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+&lt;script src=&quot;https://platform.vine.co/static/scripts/embed.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;API:
+    &lt;ul&gt;
+      &lt;li&gt;Synths&lt;/li&gt;
+      &lt;li&gt;Samples&lt;/li&gt;
+      &lt;li&gt;Effects&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Uses Ruby internally - responds to RUBY_VERSION&lt;/li&gt;
+  &lt;li&gt;Zero set-up: getting started is very quick, and the feedback loop is very
+small&lt;/li&gt;
+  &lt;li&gt;Gold standard:
+    &lt;ul&gt;
+      &lt;li&gt;“If a 10 year old can’t use it and understand it, it’s not going in the API”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Default - all notes happen at time zero - to make a scale, put sleeps
+between the notes&lt;/li&gt;
+  &lt;li&gt;The &lt;code&gt;play&lt;/code&gt; command takes either a number (pitch) or a symbol (note name)&lt;/li&gt;
+  &lt;li&gt;Synths - just a symbol saying what synth the following notes should be
+played through&lt;/li&gt;
+  &lt;li&gt;Samples: Can be slowed down and sped up with a &lt;code&gt;rate&lt;/code&gt; argument&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;use_sample_bpm&lt;/code&gt; - changes &lt;code&gt;sleep 1&lt;/code&gt; to be the length of one beat - means
+you don’t have to specify the length of the sleep&lt;/li&gt;
+  &lt;li&gt;Live loops: continually plays and updates in realtime&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;play(scale :c, :minor_pentatonic).choose&lt;/code&gt; - random notes from a scale&lt;/li&gt;
+  &lt;li&gt;Multiple &lt;code&gt;live_loop&lt;/code&gt;s in a program - each one is a thread and they’re
+in time with each other (!)&lt;/li&gt;
+  &lt;li&gt;He learned to use it while studying for a music degree :)&lt;/li&gt;
+  &lt;li&gt;3000 words of tutorial - step by step through the whole thing&lt;/li&gt;
+  &lt;li&gt;A ‘ring’ is an array which loops around.&lt;/li&gt;
+  &lt;li&gt;A slice is a section of a sample - from a start time to an end time&lt;/li&gt;
+  &lt;li&gt;Played the Mario theme with NES synths :D&lt;/li&gt;
+  &lt;li&gt;Markov chains: train on some real music and it can generate similar music :D&lt;/li&gt;
+  &lt;li&gt;There’s no concept of time in webservers - speed is all that matters. Music
+is a very different challenge. It’s a different interaction with code. You can
+edit code in a way similar to playing a musical instrument: responding to
+what’s happening in a direct way.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Fri, 11 Mar 2016 09:39:26 +0000</pubDate>
+        <link>http://dgmstuart.github.io/blog/2016/03/11/bath-ruby-1-xavier-riley/</link>
+        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2016/03/11/bath-ruby-1-xavier-riley/</guid>
+        
+        <category>ruby</category>
+        
+        <category>bathruby</category>
+        
+        
+        <category>liveblog</category>
+        
+      </item>
     
       <item>
         <title>Checking Out Branches From Tig</title>
@@ -853,58 +917,6 @@ to the original object&lt;/li&gt;
         <pubDate>Fri, 13 Mar 2015 16:38:05 +0000</pubDate>
         <link>http://dgmstuart.github.io/blog/2015/03/13/sandi-metz-nothing-is-something-at-bathruby/</link>
         <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/13/sandi-metz-nothing-is-something-at-bathruby/</guid>
-        
-        <category>bathruby</category>
-        
-        
-        <category>liveblog</category>
-        
-      </item>
-    
-      <item>
-        <title>Tom Stuart - &#39;A lever for the mind&#39; at BathRuby</title>
-        <description>&lt;p&gt;&lt;em&gt;I’m at &lt;a href=&quot;http://2015.bathruby.org/&quot;&gt;Bath Ruby 2015&lt;/a&gt;, live blogging some of the
-talks&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://pbs.twimg.com/media/B__KM61WQAAyEr9.jpg:medium&quot; alt=&quot;Slide photo by @trailsuite&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Photo by &lt;a href=&quot;https://twitter.com/trailsuite&quot;&gt;@trailsuite&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Brains are just not very good at working with several complex ideas
-concurrently&lt;/li&gt;
-  &lt;li&gt;Abstraction is our solution to this&lt;/li&gt;
-  &lt;li&gt;Numbers are a &lt;em&gt;property&lt;/em&gt; of sets (?) of things. It doesn’t matter how we
-arrange the things, or how big they are&lt;/li&gt;
-  &lt;li&gt;We build other concepts on top of our idea of number: e.g. successor - a way
-to generate new numbers. gt/lt can be built from the idea of successors&lt;/li&gt;
-  &lt;li&gt;These abstractions allow us to predict what would happen in reality when
-certain actions occur: we can do the ‘work’ in the ‘abstract world’ rather
-than doing it in the real world and observing the result.&lt;/li&gt;
-  &lt;li&gt;Recognise patterns. Some patterns can be generalised to apply to whole
-classes of items (e.g. all natural numbers)&lt;/li&gt;
-  &lt;li&gt;You don’t need to remember the details of &lt;em&gt;why&lt;/em&gt; a particular formula works:
-it doesn’t matter: you can use it without understanding why it’s true&lt;/li&gt;
-  &lt;li&gt;A &lt;em&gt;walk&lt;/em&gt; across a graph is a sequence of visits from node to node along
-their adjacent edges&lt;/li&gt;
-  &lt;li&gt;A &lt;em&gt;connected graph&lt;/em&gt; is one where there exists a walk between any pair of notes&lt;/li&gt;
-  &lt;li&gt;A &lt;em&gt;trail&lt;/em&gt; is a walk which doesn’t repeat traversing edges&lt;/li&gt;
-  &lt;li&gt;An &lt;em&gt;Euleurian trail&lt;/em&gt; is a walk which visits every node and uses every edge&lt;/li&gt;
-  &lt;li&gt;Mathematics: “spot patterns, build reusable abstractions”&lt;/li&gt;
-  &lt;li&gt;Abstractions help us take complex things from the real world and reconstruct
-them in our heads so that we cal (?reason about them?)&lt;/li&gt;
-  &lt;li&gt;Idea of the &lt;em&gt;honest&lt;/em&gt; abstraction - the one which ‘honestly’ models your
-problem.&lt;/li&gt;
-  &lt;li&gt;The &lt;em&gt;minimal&lt;/em&gt; abstraction: start from nothing and only add the
-behaviours/ideas/operations which are strictly necessary&lt;/li&gt;
-  &lt;li&gt;“the most exciting thing you can do with your brain is to strap it into the
-hulking exoskeleton of mathematics”&lt;/li&gt;
-  &lt;li&gt;If you can write a program, you’re good at mathematics&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 13 Mar 2015 14:53:54 +0000</pubDate>
-        <link>http://dgmstuart.github.io/blog/2015/03/13/tom-stuart-a-lever-for-the-mind-at-bathruby/</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/13/tom-stuart-a-lever-for-the-mind-at-bathruby/</guid>
         
         <category>bathruby</category>
         
