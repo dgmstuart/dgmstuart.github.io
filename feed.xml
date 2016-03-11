@@ -6,9 +6,79 @@
 </description>
     <link>http://dgmstuart.github.io/</link>
     <atom:link href="http://dgmstuart.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 11 Mar 2016 11:41:40 +0000</pubDate>
-    <lastBuildDate>Fri, 11 Mar 2016 11:41:40 +0000</lastBuildDate>
+    <pubDate>Fri, 11 Mar 2016 12:21:09 +0000</pubDate>
+    <lastBuildDate>Fri, 11 Mar 2016 12:21:09 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Bath Ruby 3 - Courteney Ervin - Open Source For Your Benefit</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;self-love: take an active effort to love yourself, including strengths and
+weaknesses.&lt;/li&gt;
+  &lt;li&gt;‘should’ is this feeling of obligation and intimidation that prevents people
+from participating.&lt;/li&gt;
+  &lt;li&gt;Give yourself permission to write open source code&lt;/li&gt;
+  &lt;li&gt;Think about what your role is: what do you particularly want to get out of
+open source code.
+    &lt;ul&gt;
+      &lt;li&gt;Have code that you can show people (if your organisation’s code is 100%
+private)&lt;/li&gt;
+      &lt;li&gt;to get to know a new tech by interacting with a real project that people
+will actually use&lt;/li&gt;
+      &lt;li&gt;fixing a problem you really care about&lt;/li&gt;
+      &lt;li&gt;working with/learning from developers you look up to&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;My personal goal:
+    &lt;ul&gt;
+      &lt;li&gt;learn about how real-world problems are solved pragmatically&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Contributions to open source can be much broader than actual code -
+publicising, documentation, tutorials etc.
+    &lt;ul&gt;
+      &lt;li&gt;also code maintenance: refactoring, deployment, installation instructions&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;different ways to search for projects based on why you’re looking:
+    &lt;ul&gt;
+      &lt;li&gt;openhatch, codetriage, codemontage&lt;/li&gt;
+      &lt;li&gt;Hashtags - #first-timers-only, #help-wanted etc.&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;#protips&lt;/code&gt;:
+        &lt;ul&gt;
+          &lt;li&gt;make sure the project is actually maintained (and so you have a chance
+of getting merged)&lt;/li&gt;
+          &lt;li&gt;Call dibs on the issue - v. frustrating if you work on something and
+someone else fixes it first&lt;/li&gt;
+          &lt;li&gt;First PR could be fixing issuses with installation of a dev environment
+for a project&lt;/li&gt;
+          &lt;li&gt;be clear that you want feedback - give permission to the maintainer so
+that they’re not afraid of putting you off&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;open source is not a requirement: if it doesn’t work for you, you’re not
+obliged to do stuff for free!
+    &lt;ul&gt;
+      &lt;li&gt;If it makes you feel bad, don’t do it&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Fri, 11 Mar 2016 11:58:16 +0000</pubDate>
+        <link>http://dgmstuart.github.io/blog/2016/03/11/bath-ruby-3-courteney-ervin/</link>
+        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2016/03/11/bath-ruby-3-courteney-ervin/</guid>
+        
+        <category>open source</category>
+        
+        <category>bathruby</category>
+        
+        
+        <category>liveblog</category>
+        
+      </item>
     
       <item>
         <title>Bath Ruby 2 - Coraline Ada Ehmke: How Neo4j saved my relationship</title>
@@ -831,115 +901,6 @@ marked as expired but not deleted until the new data is available (!)&lt;/li&gt;
         <category>caching</category>
         
         <category>wordpress</category>
-        
-        <category>wordcamp london</category>
-        
-        
-        <category>liveblog</category>
-        
-      </item>
-    
-      <item>
-        <title>WordCamp London - Bruce Lawson - Responsive Images</title>
-        <description>&lt;p&gt;&lt;em&gt;I’m at &lt;a href=&quot;http://london.wordcamp.org/2015/&quot;&gt;WordCamp London&lt;/a&gt; - live-blogging
-some of the talks&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.brucelawson.co.uk/&quot;&gt;Bruce Lawson&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;EDIT: Bruce has added some corrections and clarifications in the comments
-below&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Responsiveness includes speed of loading&lt;/li&gt;
-  &lt;li&gt;0.5 second delay is a 20% drop in traffic&lt;/li&gt;
-  &lt;li&gt;Images are a major cause of slowing down pages&lt;/li&gt;
-  &lt;li&gt;Av web page is 1.9MB - of which 1.2MB are images&lt;/li&gt;
-  &lt;li&gt;Number of images loaded is static over time, but the size of images
-increases significantly over time&lt;/li&gt;
-  &lt;li&gt;How can I send huge images to retina devices, but smaller images for
-rendering on smaller screens? Answer: HARD.&lt;/li&gt;
-  &lt;li&gt;First try: use css to swap in images based on page width:
-    &lt;ul&gt;
-      &lt;li&gt;Fail: loads the retina image THEN the smaller image - i.e. downloads
-both - the opposite of what we want&lt;/li&gt;
-      &lt;li&gt;This is because CSS and JS get applied to the DOM, so the DOM needs to
-get loaded first (?)&lt;/li&gt;
-      &lt;li&gt;Browsers can create the DOM tree in whatever way they like&lt;/li&gt;
-      &lt;li&gt;Because of preloading (“the single greatest performance improvement
-that browsers have ever made”) The whole of the source is read before the DOM tree is loaded - as soon
-as an image is spotted in the DOM, a request is sent off to fetch that
-image (i.e. before the DOM tree gets constructed)&lt;/li&gt;
-      &lt;li&gt;therefore doing things in the  CSS is too late&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Therefore it needs to be the markup - Media Queries have been around a long
-time&lt;/li&gt;
-  &lt;li&gt;Respimg - responsive images community group&lt;/li&gt;
-  &lt;li&gt;First time a group of web developers wrote part of the standard and got it
-into the spec&lt;/li&gt;
-  &lt;li&gt;Now in Opera and Chrome and soon to be in Webkit&lt;/li&gt;
-  &lt;li&gt;First use case - optimise for high dpi screeens:
-    &lt;ul&gt;
-      &lt;li&gt;srcset attribute: specify images for particular pixel densities: a
-candidate list which the browser can use to select an optimal image&lt;/li&gt;
-      &lt;li&gt;The browser gets to choose - this is so that e.g. the user can choose what
-sort of image quality they wnat to have&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://igcdn-photos-b-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-15/11023186_1799356763623801_1327635725_n.jpg&quot; alt=&quot;@Brucel talking responsive images&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Second use case - stretchy images
-    &lt;ul&gt;
-      &lt;li&gt;Can be done straightforwardly with css, but involves sending massive
-images down the wire and putting a lot of CPU load on the browser&lt;/li&gt;
-      &lt;li&gt;Slows things down for the user!&lt;/li&gt;
-      &lt;li&gt;solution: w descriptor - use in src set to tell the browser which image
-is more suitable for a particular page width&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;All this requires a lot of cruft to add in all the clauses to make this work, but
-there’s a &lt;a href=&quot;https://wordpress.org/plugins/ricg-responsive-images/&quot;&gt;plugin from Respimg&lt;/a&gt; which does it for you&lt;/li&gt;
-  &lt;li&gt;Third use case - new image formats
-    &lt;ul&gt;
-      &lt;li&gt;JPG/PNG/GIF are ubiquitous, but there are more modern, better
-compression alternatives: smaller files, better quality - e.g. WebP&lt;/li&gt;
-      &lt;li&gt;Traditionally the logic is you can’t use this in the wild because only
-Chrome and Opera support it&lt;/li&gt;
-      &lt;li&gt;with the &lt;code&gt;&amp;lt;picture&amp;gt;&lt;/code&gt; element you can supply different image formats with
-fallbacks - so e.g. you can use WebP and fall back to img (actually
-browsers will force you to do progressive enhancement (supply an image)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Last use case - art direction
-    &lt;ul&gt;
-      &lt;li&gt;Choose a different aspect of the image to display on different devices:
-zoom in on a different bit of the image for different viewport sizes&lt;/li&gt;
-      &lt;li&gt;Use media queries within the &lt;code&gt;&amp;lt;picture&amp;gt;&lt;/code&gt; element to display different
-versions of an image at different widths&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Release dates:
-    &lt;ul&gt;
-      &lt;li&gt;in OPera and Chrome now&lt;/li&gt;
-      &lt;li&gt;FF in may&lt;/li&gt;
-      &lt;li&gt;IE “under consideration” …&lt;/li&gt;
-      &lt;li&gt;Safari already implement &lt;code&gt;srcset&lt;/code&gt; - havent talked about &lt;code&gt;&amp;lt;picture&amp;gt;&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;YOU CAN USE THIS NOW
-    &lt;ul&gt;
-      &lt;li&gt;It’s designed to force progressive enhancement - nobody gets a worse
-experience than they do now&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 21 Mar 2015 15:18:00 +0000</pubDate>
-        <link>http://dgmstuart.github.io/blog/2015/03/21/wp-london-bruce-lawson-responsive-images/</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/21/wp-london-bruce-lawson-responsive-images/</guid>
         
         <category>wordcamp london</category>
         
