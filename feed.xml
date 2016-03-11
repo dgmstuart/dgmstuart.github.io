@@ -6,9 +6,98 @@
 </description>
     <link>http://dgmstuart.github.io/</link>
     <atom:link href="http://dgmstuart.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 11 Mar 2016 12:24:24 +0000</pubDate>
-    <lastBuildDate>Fri, 11 Mar 2016 12:24:24 +0000</lastBuildDate>
+    <pubDate>Fri, 11 Mar 2016 15:11:38 +0000</pubDate>
+    <lastBuildDate>Fri, 11 Mar 2016 15:11:38 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Bath Ruby 4 - Janet Crawford - The Surprising Neuroscience of Gender Inequality</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;Not a coder, but a scientist&lt;/li&gt;
+  &lt;li&gt;Will try to explain why the gender inequality in our industry exists&lt;/li&gt;
+  &lt;li&gt;Messages growing up:
+    &lt;ul&gt;
+      &lt;li&gt;on the one hand message from rocket scientist father that being a
+scientist was a good goal for a woman&lt;/li&gt;
+      &lt;li&gt;On the other hand, birthday gifts between her (clothing, crafting) and her
+brother (tinkering, electrical engineering) were very gendered&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;why does this happen? Why do parents make these choices (despite their
+actual values)&lt;/li&gt;
+  &lt;li&gt;At university, message was: ‘because you don’t know soldering, you don’t
+belong on a physics degree&lt;/li&gt;
+  &lt;li&gt;unconscious bias&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://pbs.twimg.com/media/CdRn7iuW4AE6ksq.jpg&quot; alt=&quot;@JanetCrawford talking about unconscious
+bias&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Women in CS peaked in around 1970 (30-ish%) and has been declining ever
+since&lt;/li&gt;
+  &lt;li&gt;Similar stories in politics, film etc.&lt;/li&gt;
+  &lt;li&gt;“for a lot of people this doesn’t seem to be a problem”
+    &lt;ul&gt;
+      &lt;li&gt;Rationale: we have parity of education and opportunity, so it must just be
+because women aren’t interested in these roles&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Research: companies with more women, particularly on boards, massively
+outperform other companies “on every metric that business cares about”&lt;/li&gt;
+  &lt;li&gt;There are undeniable good reasons, so why is there still such inequality&lt;/li&gt;
+  &lt;li&gt;All of us, male and female are unconsciously gender-biased.
+    &lt;ul&gt;
+      &lt;li&gt;Until we learn how to bring these to the conscious level it’s going to
+continue to be a problem&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Brains encode associations based on what they perceive - irrespective of
+accuracy etc.
+    &lt;ul&gt;
+      &lt;li&gt;We make decisions about people immediately based on appearance&lt;/li&gt;
+      &lt;li&gt;Most of the time this is OK: these biases are shortcuts.&lt;/li&gt;
+      &lt;li&gt;Things go wrong when these biases stop working (stop being accurate)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Brain will always prefer to take the shortcut to free up brainpower for
+other tasks&lt;/li&gt;
+  &lt;li&gt;Unconscious associations can be tested by matching up traditionally gendered
+qualities with images of the opposite gender and measuring the difficulty of
+each pairing&lt;/li&gt;
+  &lt;li&gt;Mothers overestimate the crawling ability of boys and underestimate that of
+girls&lt;/li&gt;
+  &lt;li&gt;Women’s code on github PRs was accepted about 4% more than men’s (unless the
+gender could be inferred from their profile, which reversed the trend)&lt;/li&gt;
+  &lt;li&gt;Women are more likely to attribute their success to luck, men to hard work&lt;/li&gt;
+  &lt;li&gt;Confidence and likeability are positively correlated for men, and negatively
+correlated for women&lt;/li&gt;
+  &lt;li&gt;2 environments for a Computer Science classroom: one neutrally decorated,
+one geekily decorated. No difference in impact on Men’s interest in the
+subject, but the latter significantly reduced the interest in the course of
+the female participants&lt;/li&gt;
+  &lt;li&gt;How to fix it? Focus on creating a neutral environment - consider all
+aspects: decor, imagery etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Legislation doesn’t change culture: people do”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“It’s hard work and it’s messy, but it’s a mess worth wading into&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Fri, 11 Mar 2016 14:27:44 +0000</pubDate>
+        <link>http://dgmstuart.github.io/blog/2016/03/11/bath-ruby-4-janet-crawford/</link>
+        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2016/03/11/bath-ruby-4-janet-crawford/</guid>
+        
+        <category>bathruby</category>
+        
+        
+        <category>liveblog</category>
+        
+      </item>
     
       <item>
         <title>Bath Ruby 3 - Courteney Ervin - Open Source For Your Benefit</title>
@@ -771,144 +860,6 @@ but makes it much more maintainable&lt;/li&gt;
         <category>wordcamp london</category>
         
         <category>testing</category>
-        
-        
-        <category>liveblog</category>
-        
-      </item>
-    
-      <item>
-        <title>Mark Jaquith at WordCamp London - Cache Money Business</title>
-        <description>&lt;p&gt;&lt;em&gt;I’m at &lt;a href=&quot;http://london.wordcamp.org/2015/&quot;&gt;WordCamp London&lt;/a&gt; - live-blogging
-some of the talks&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://pbs.twimg.com/media/CAs0AgdWEAApTMb.jpg&quot; alt=&quot;Mark Jaquith talking caching at #wcldn - photo by @davepullig on
-twitter&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;photo of &lt;a href=&quot;https://twitter.com/markjaquith&quot;&gt;Mark Jaquith&lt;/a&gt; by &lt;a href=&quot;https://twitter.com/davepullig/&quot;&gt;Dave Pullig&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Ultimately failing to cache could take your site down: run out of connections&lt;/li&gt;
-  &lt;li&gt;Caching principles:
-    &lt;ul&gt;
-      &lt;li&gt;Do less work - By default WP is Totally dynamic - there’s a lot of
-complex stuff going on and it all gets done on every single request&lt;/li&gt;
-      &lt;li&gt;Hold onto data as long as it makes sense to do so: this is very specific
-to each individual site (at least for certain kinds of content)&lt;/li&gt;
-      &lt;li&gt;Make output generic: the more specific it is to a particular user, the
-less cachable it is&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Page caching:
-    &lt;ul&gt;
-      &lt;li&gt;Batcache - if a page gets requested more than 3 times in 3 mins it
-caches that whole page for 6 mins&lt;/li&gt;
-      &lt;li&gt;Used by WP.com&lt;/li&gt;
-      &lt;li&gt;Unobtrusive - only caches the most frequently requested stuff&lt;/li&gt;
-      &lt;li&gt;low-configuration&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;W3TotalCache
-    &lt;ul&gt;
-      &lt;li&gt;Extremely complex, lots of layers&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;WPSuperCache
-    &lt;ul&gt;
-      &lt;li&gt;Somewhere in-between&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Varnish or Nginx
-    &lt;ul&gt;
-      &lt;li&gt;Cache before it hits the webserver&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;CDN
-    &lt;ul&gt;
-      &lt;li&gt;geographically distributed caches: people access the cache closest to
-them&lt;/li&gt;
-      &lt;li&gt;Very popular for media files, but can be used for the whole site.&lt;/li&gt;
-      &lt;li&gt;Will obey cache headers&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Nginx Cache Purging
-    &lt;ul&gt;
-      &lt;li&gt;This is tricky&lt;/li&gt;
-      &lt;li&gt;There’s a third party package which can be compiled from source which
-enables this. But :-P&lt;/li&gt;
-      &lt;li&gt;Approach: Configure a ‘magic header’ ;) - when it’s passed with a
-request, it skips getting, but not setting, so overwrites whatever is
-currently in the cache&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Variable cache lengths + proactive cache refreshing:
-    &lt;ul&gt;
-      &lt;li&gt;Warm the cache (on cron) more frequently than it’s getting expired, to
-make sure that your content is always cached&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Does being logged-in mean you can’t cache the page?
-    &lt;ul&gt;
-      &lt;li&gt;It’s a pain if you have 1000’s of logged in users/active commenters etc.&lt;/li&gt;
-      &lt;li&gt;Think about how the page varies based on who you are logged in as:
-toolbar, private posts - etc.&lt;/li&gt;
-      &lt;li&gt;Choice: remove those things OR make them generic&lt;/li&gt;
-      &lt;li&gt;Comment forms: hide them by default, show them with ajax - either when
-hitting a button, or when scrolling to the bottom of the page (!)&lt;/li&gt;
-      &lt;li&gt;Remove toolbar for subscribers etc. - it’s not very useful!&lt;/li&gt;
-      &lt;li&gt;Remove private post fucntionality if it’s not used: it makes the queries
-much more complicated anyway&lt;/li&gt;
-      &lt;li&gt;Replace moderated comments with a generic “your comment is being
-moderated” message&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Approach if you really need to show logged-in data:
-    &lt;ul&gt;
-      &lt;li&gt;Use cookies: by default WP renders user-specific content using php, but
-that’s very odd&lt;/li&gt;
-      &lt;li&gt;Set JS-readable cookies and use them to populate the content&lt;/li&gt;
-      &lt;li&gt;He’s just written &lt;a href=&quot;https://github.com/markjaquith/cache-buddy&quot;&gt;Cache Buddy&lt;/a&gt; - a plugin to do this&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Object Caching
-    &lt;ul&gt;
-      &lt;li&gt;APCu, Memcache, or (recommended:) Redis&lt;/li&gt;
-      &lt;li&gt;put them in &lt;code&gt;object-cache.php&lt;/code&gt; - they need to be loaded before plugins&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Transients + Object Cache
-    &lt;ul&gt;
-      &lt;li&gt;For just a few values use transients - stores data in the options table&lt;/li&gt;
-      &lt;li&gt;For 1000s of values use the object cache&lt;/li&gt;
-      &lt;li&gt;Object cache can organise cache keys into groups&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Cache stampedes: What happens when cache expires?
-    &lt;ul&gt;
-      &lt;li&gt;One user triggers the remote request&lt;/li&gt;
-      &lt;li&gt;then the next user also triggers it (before it’s completed)&lt;/li&gt;
-      &lt;li&gt;and another… STAMPEDE!&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;tlc_transient&lt;/code&gt; - handles this problem: soft expiration - data gets
-marked as expired but not deleted until the new data is available (!)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Html fragment caching
-    &lt;ul&gt;
-      &lt;li&gt;e.g. A complex footer that’s the same on every page&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;CWS_Fragment_Cache&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 22 Mar 2015 11:31:06 +0000</pubDate>
-        <link>http://dgmstuart.github.io/blog/2015/03/22/mark-jaquith-at-wordcamp-london-cache-money-business/</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/22/mark-jaquith-at-wordcamp-london-cache-money-business/</guid>
-        
-        <category>caching</category>
-        
-        <category>wordpress</category>
-        
-        <category>wordcamp london</category>
         
         
         <category>liveblog</category>
