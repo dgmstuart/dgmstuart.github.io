@@ -6,21 +6,102 @@
 </description>
     <link>http://dgmstuart.github.io/</link>
     <atom:link href="http://dgmstuart.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 11 Mar 2016 10:13:38 +0000</pubDate>
-    <lastBuildDate>Fri, 11 Mar 2016 10:13:38 +0000</lastBuildDate>
+    <pubDate>Fri, 11 Mar 2016 11:40:35 +0000</pubDate>
+    <lastBuildDate>Fri, 11 Mar 2016 11:40:35 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Bath Ruby 2 - Coraline Ada Ehmke: How Neo4j saved my relationship</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;“people should not be shits to each other online”&lt;/li&gt;
+  &lt;li&gt;Relational databases are designed for backing &lt;em&gt;forms&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Not always the best way to store data&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Graph theory - originated with Euler&lt;/li&gt;
+  &lt;li&gt;Data suited to a graph db:
+    &lt;ul&gt;
+      &lt;li&gt;Where context is important - needed to understand the data&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Nodes and Edges
+    &lt;ul&gt;
+      &lt;li&gt;Edges are relationships between nodes&lt;/li&gt;
+      &lt;li&gt;relationships are first class citizens (unlike join tables)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://pbs.twimg.com/media/CdQ46yqW0AAOo8k.jpg&quot; alt=&quot;@CoralineAda talking about neo4j&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Graph dbs have Much better performance: linear, constant (RDBs performance
+degrade worst)&lt;/li&gt;
+  &lt;li&gt;Good for agile because they don’t lock you in to a particular data
+structure.&lt;/li&gt;
+  &lt;li&gt;Relations + Metadata = facts - extract facts and model as nodes instead of
+edges&lt;/li&gt;
+  &lt;li&gt;The graph db doesn’t care what is stored in a node: things don’t have to be
+in any particular structure.&lt;/li&gt;
+  &lt;li&gt;Neo4j
+    &lt;ul&gt;
+      &lt;li&gt;different stores: Node, property, relation&lt;/li&gt;
+      &lt;li&gt;Fixed-size records for Node and relationship data -
+this enables superfast lookups because
+you know where a record will exist in memory.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Query language - Cypher
+    &lt;ul&gt;
+      &lt;li&gt;AScii art to represent relationships! :D &lt;code&gt;(a)-[:follows]-&amp;gt;(b)&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;When deleting nodes, you have to detach from any existing relationships
+pointing at that node&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Neo4j console is a single-page webapp, with shiny interactive represenations
+of the graph&lt;/li&gt;
+  &lt;li&gt;Interaction with ruby: via a gem - build queries in mostly the same way that
+you would if writing it directly in plain text. Get a struct back with the data&lt;/li&gt;
+  &lt;li&gt;neo4j for AI:
+    &lt;ul&gt;
+      &lt;li&gt;Sophia - Coraline’s AI project&lt;/li&gt;
+      &lt;li&gt;aim is to create metaphors&lt;/li&gt;
+      &lt;li&gt;models contexts like beauty, animals etc..&lt;/li&gt;
+      &lt;li&gt;models synonyms and antonyms&lt;/li&gt;
+      &lt;li&gt;models facts about the terms - uses these to answer questions - e.g. “do
+cats have tails?”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;When to use:
+    &lt;ul&gt;
+      &lt;li&gt;when relations/metadata are as important as the data itself&lt;/li&gt;
+      &lt;li&gt;when data is deeply nested&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 11 Mar 2016 11:15:06 +0000</pubDate>
+        <link>http://dgmstuart.github.io/blog/2016/03/11/bath-ruby-2-coraline-ada-ehmke/</link>
+        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2016/03/11/bath-ruby-2-coraline-ada-ehmke/</guid>
+        
+        <category>neo4j</category>
+        
+        <category>database</category>
+        
+        <category>bathruby</category>
+        
+        
+        <category>liveblog</category>
+        
+      </item>
     
       <item>
         <title>Bath Ruby 1: Xavier Riley - Rocking out in Ruby, a playful introduction to Sonic Pi</title>
         <description>&lt;ul&gt;
   &lt;li&gt;The first time you enjoyed writing code: it’s an important feeling - an
 important step on the way to becoming a programmer&lt;/li&gt;
-  &lt;li&gt;Sonic Pi - cross-platform and preinstalled on every raspberry pi&lt;/li&gt;
-&lt;/ul&gt;
-&lt;iframe src=&quot;https://vine.co/v/iHDKUtIlHTL/embed/simple&quot; width=&quot;600&quot; height=&quot;600&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
-&lt;script src=&quot;https://platform.vine.co/static/scripts/embed.js&quot;&gt;&lt;/script&gt;
-
-&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://sonic-pi.net/&quot;&gt;Sonic Pi&lt;/a&gt; - cross-platform and preinstalled on every raspberry pi&lt;/li&gt;
   &lt;li&gt;API:
     &lt;ul&gt;
       &lt;li&gt;Synths&lt;/li&gt;
@@ -29,6 +110,11 @@ important step on the way to becoming a programmer&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Uses Ruby internally - responds to RUBY_VERSION&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&quot;https://vine.co/v/iHDKUtIlHTL/embed/simple&quot; width=&quot;600&quot; height=&quot;600&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+&lt;script src=&quot;https://platform.vine.co/static/scripts/embed.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
   &lt;li&gt;Zero set-up: getting started is very quick, and the feedback loop is very
 small&lt;/li&gt;
   &lt;li&gt;Gold standard:
@@ -856,69 +942,6 @@ experience than they do now&lt;/li&gt;
         <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/21/wp-london-bruce-lawson-responsive-images/</guid>
         
         <category>wordcamp london</category>
-        
-        
-        <category>liveblog</category>
-        
-      </item>
-    
-      <item>
-        <title>Sandi Metz: Nothing is Something - at BathRuby</title>
-        <description>&lt;p&gt;&lt;em&gt;I’m at &lt;a href=&quot;http://2015.bathruby.org/&quot;&gt;Bath Ruby 2015&lt;/a&gt;, live blogging some of the
-talks&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;All of her teaching ideas have a single underlying principle&lt;/li&gt;
-  &lt;li&gt;Learned OO from Smalltalk - massive influence on the way she thinks about
-objects&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;+&lt;/code&gt; is just a method on &lt;code&gt;Fixnum&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Ruby’s &lt;code&gt;if&lt;/code&gt; is effectively a typecheck (a check of whether an object is a
-member of &lt;code&gt;NilClass&lt;/code&gt;/&lt;code&gt;Trueclass&lt;/code&gt; ??)
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code&gt;if&lt;/code&gt; is very prodedural (not OO)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Sometimes &lt;code&gt;nil&lt;/code&gt; means nothing - so just remove nils from your results (e.g.
-&lt;code&gt;compact&lt;/code&gt; the array&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;try&lt;/code&gt; can effectively be a typecheck (for &lt;code&gt;NilClass&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;Conditions breed: if you have one you’ll get more. Making a change around
-them in one place may involve making changes in lots of places (“shotgun
-surgery”)&lt;/li&gt;
-  &lt;li&gt;If you return nil then calls to that object can return objects which respond
-to different Apis: The object’s or NilClass’s. Solution: Null Object Pattern
-(#ftw)&lt;/li&gt;
-  &lt;li&gt;Null Object is for when Nothing is actually a thing - for when you need to
-talk to it&lt;/li&gt;
-  &lt;li&gt;Null Object is a new dependency, so wrap it in a new class which returns
-either an instance of your Object, or the Null Object, then pass this new
-class around&lt;/li&gt;
-  &lt;li&gt;Null Object is a concrete implementation of a more general idea&lt;/li&gt;
-  &lt;li&gt;Single responsibilities allow you to override specific behaviours when
-inheriting&lt;/li&gt;
-  &lt;li&gt;Extending behaviour by inheritance makes it impossible to share multiple
-behaviours&lt;/li&gt;
-  &lt;li&gt;Inheritance is for specialisation (not for ??)
-    &lt;ul&gt;
-      &lt;li&gt;There’s no such thing as just one specialisation…&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Approach - Composition and dependecy injection:
-    &lt;ol&gt;
-      &lt;li&gt;make the original behaviour and the new behaviour look the same - this
-highlights the way they’re different&lt;/li&gt;
-      &lt;li&gt;Give the new behaviour a name - this helps work out what’s being applied
-to the original object&lt;/li&gt;
-      &lt;li&gt;Inject an object which represents the behaviour&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Fri, 13 Mar 2015 16:38:05 +0000</pubDate>
-        <link>http://dgmstuart.github.io/blog/2015/03/13/sandi-metz-nothing-is-something-at-bathruby/</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/13/sandi-metz-nothing-is-something-at-bathruby/</guid>
-        
-        <category>bathruby</category>
         
         
         <category>liveblog</category>
