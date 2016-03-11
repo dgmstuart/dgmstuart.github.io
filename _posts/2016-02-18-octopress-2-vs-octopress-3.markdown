@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Octopress Is Dead! Long Live Octopress!"
+title: "Octopress 2 vs Octopress 3: an inversion of control"
 date: 2016-02-18T22:22:54+00:00
 ---
 
@@ -22,15 +22,15 @@ Or maybe you just wanted to be able to use your
 without jumping through a bunch of hoops.
 
 [Octopress 2](https://github.com/imathis/octopress)
-seemed to tick a bunch of boxes:
+ticks a bunch of boxes:
 [lots](http://pragdave.me/)
 [of](http://blog.davidchelimsky.net/)
 [tech](http://thepugautomatic.com/)
 [blogs](http://www.breck-mckye.com/)
-seemed to use it (often with the default theme) and despite feeling suitably
+use it (often with the default theme) and despite feeling suitably
 hacker-y it had familiar features like plugins and themes.
 
-It also ran on Ruby. I like Ruby.
+It also runs on Ruby. I like Ruby.
 
 ## The problems
 
@@ -42,37 +42,33 @@ he said:
 
 > Octopress is basically some guy's Jekyll blog you can fork and modify
 
-If like me you wanted to tweak the configuration and theme to make it your
-own, while also pulling in updates, then you needed to fork the project and
-regularly pull in upstream fixes.
-
-Pretty often that meant spending time in git
-conflict hell, especially since the team had been convinced
+He talks about the inadequacy of the theming system, the difficulty of
+customising its components, the lack of meaningful versioning and (obliquely)
+the lack of real support for draft posts.
+Most critically he talks about the problems with distributing Octopress through git (exacerbated by
+the team being convinced
 [that the Gemfile.lock shouldn't be part of the
-repo](https://github.com/imathis/octopress/issues/568). Ick.
+repo](https://github.com/imathis/octopress/issues/568). Ick).
 
-Another fundamental issue is that Octopress 2 seemed to be in a tug of war
-between two paradigms: a world of systems assembled by developers from small
-components that do one thing well, and a world of monolithic software
-configurable by non-technical admins.
-
-Don't get me wrong, Octopress 2 was awesome and powerful, and it worked well,
-but the places which tried to be WordPress-shaped didn't seem to fit.
-
-So Octopress 3 was going to fix all that, right? It would have some new way of
+So Octopress 3 was going to fix all that, right? It would have a bunch of new
+features, some new way of
 distributing updates, and a big shiny "Upgrade to 3.0" button, right?
 
-Not quite...
+Not quite. That post also talks about disliking the way that Octopress had
+become a separate community from Jekyll and how:
+
+> There will no longer be a division between Octopress and Jekyll.
 
 
 ## That word you keep using...
 
 I guess I must have skipped over the massive headlines on the
-`imathis/octopress` repo:
-
-> Octopress is an obsessively designed framework for Jekyll blogging
+`imathis/octopress` and new `octopress/octopress` repos
 
 > Octopress is Jekyll blogging at its finest
+>
+> Octopress 3.0 – Jekyll's Ferrari
+
 
 Until recently I knew [Jekyll](https://jekyllrb.com/)
 only as "that thing they used for
@@ -84,12 +80,6 @@ If I was aware my Octopress blog was using it,
 then it was only an implementation detail - not
 anything I needed to worry about.
 
-Now the message has changed - the new repo proudly declares:
-
-> Octopress 3.0 – Jekyll's Ferrari
-
-> Octopress is an obsessively designed toolkit for writing and deploying
-> Jekyll blogs
 
 
 ## Face it: you're a Jekyll blogger. You always were
@@ -110,46 +100,43 @@ what does Octopress 2 actually add on top of this?
 * A collection of rake tasks for working with posts
 
 The project structure is different to Jekyll's default, so the Rake tasks also
-handle building and previewing the site.
+handle building and previewing the site. None of the Jekyll commands are
+called directly.
 
-One way to think of Octopress 2 is as a 'wrapper' around Jekyll.
+So in a sense Octopress 2 is as a 'wrapper' around Jekyll.
 
 
-## You Can't Go Home Again
+## From framework to toolkit
 
-So how do you upgrade? Brace yourself:
+It's interesting to note how the message has changed from Octopress 2:
 
-You can't.
+> Octopress is an obsessively designed framework for Jekyll blogging
 
-Or at least there's no sense in which you can move all your content, templates
-and styling into a new 'Octopress 3 blog'.
+...to Octopress 3:
 
-(Except that you _might_ be able to do that in future if you haven't made many
-customisations).
+> Octopress is an obsessively designed toolkit for writing and deploying
+> Jekyll blogs
 
-Actually [you can start using Octopress 3 with your existing blog content
-now](https://dgmstuart.github.io/blog/2016/01/22/migrating-from-octopress-2-to-3/), but it's not what you think.
-
-To make sense of this, remember that Octopress 2 with all it's features is
+### Octopress 2
+To unpack this a bit: remember that Octopress 2 with all it's features is
 distributed as a single project. Any individual blog might additionally add customisations:
 
 * Additional plugins
 * Changes to theme templates
 * Changes to Sass/CSS
 
-In contrast, Octopress 3 isn't one project - it's more like a namespace or
-brand for a collection of tools for Jekyll blogging, all packaged as Ruby
-gems:
+In contrast, Octopress 3 is more like a namespace or
+brand for a collection of Jekyll plugins, all packaged as Ruby
+gems. Some of the main ones are:
 
-* [`octopress`](https://github.com/octopress/octopress) adds
+* [`octopress`](https://github.com/octopress/octopress) provides
 blog templates for pages, posts and drafts, and a
 command-line interface for creating and managing the same
 * [`octopress-deploy`](https://github.com/octopress/deploy) adds support for deploying Jekyll blogs
 * Some of the features of Octopress like [
 code-blocks](https://github.com/octopress/codeblock) and
 [support for the Solarized syntax highlighting
-theme](https://github.com/octopress/solarized) have been implemented as gems
-which can be included as Jekyll plugins.
+theme](https://github.com/octopress/solarized) have been extracted into Gems.
 * [`genesis-theme`](https://github.com/octopress/genesis-theme) is a work in
 progress but is planned to be a default theme for Octopress.
 
@@ -167,6 +154,34 @@ Here's the model:
 
 <br>
 
-It's like an [inversion of control](): Octopress 2 used to be something you
-customsed, Octopress 3 is the customisations.
+This is the
+[inversion of control](https://en.wikipedia.org/wiki/Inversion_of_control):
+Octopress 2 used to be something you customsed,
+Octopress 3 is the customisations.
+
+
+## You Can't Go Home Again
+
+So how do you upgrade? Brace yourself:
+
+You can't.
+
+Or at least there's no sense in which you can move all your content, templates
+and styling into a new 'Octopress 3 blog'.
+
+(Except that you _might_ be able to do that in future if you haven't made many
+customisations).
+
+Actually [you can start using Octopress 3 with your existing blog content
+now](https://dgmstuart.github.io/blog/2016/01/22/migrating-from-octopress-2-to-3/), but it's not what you think.
+
+
+SCRATCH:
+Another fundamental issue is that Octopress 2 seemed to be in a tug of war
+between two paradigms: a world of systems assembled by developers from small
+components that do one thing well, and a world of monolithic software
+configurable by non-technical admins.
+
+Don't get me wrong, Octopress 2 was awesome and powerful, and it worked well,
+but the places which tried to be WordPress-shaped didn't seem to fit.
 
