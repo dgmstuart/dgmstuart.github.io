@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Some tools for faster blogging in Octopress &#8211; dgms code</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails  with a little WordPress
+    <meta name="description" content="This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails with a little WordPress
 ">
     <meta name="author" content="">
     <meta name="keywords" content="octopress">
-    <link rel="canonical" href="http://dgmstuart.github.io/blog/2015/03/27/some-tools-for-faster-blogging-in-octopress/">
+    <link rel="canonical" href="http://localhost:4000/blog/2015/03/27/some-tools-for-faster-blogging-in-octopress/">
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for dgms code" href="/feed.xml" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/pixyll.css?201603111511" type="text/css">
-    <link href='/stylesheets/all-24a1f2993bca9d72370c74b5f9520ea3.css' media='all' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/pixyll.css?201703291739" type="text/css">
+    <link href='/stylesheets/all-1409893eb5ae70c5401c92a80de668f5.css' media='all' rel='stylesheet' type='text/css'>
 
     <!-- Fonts -->
     <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
@@ -26,9 +26,9 @@
     <meta property="og:locale" content="en_GB">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Some tools for faster blogging in Octopress">
-    <meta property="og:description" content="This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails  with a little WordPress
+    <meta property="og:description" content="This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails with a little WordPress
 ">
-    <meta property="og:url" content="http://dgmstuart.github.io/blog/2015/03/27/some-tools-for-faster-blogging-in-octopress/">
+    <meta property="og:url" content="http://localhost:4000/blog/2015/03/27/some-tools-for-faster-blogging-in-octopress/">
     <meta property="og:site_name" content="dgms code">
 
     <!-- Twitter Card -->
@@ -37,9 +37,9 @@
         <meta name="twitter:site" content="@dgmstuart" />
     
     <meta name="twitter:title" content="Some tools for faster blogging in Octopress" />
-    <meta name="twitter:description" content="This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails  with a little WordPress
+    <meta name="twitter:description" content="This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails with a little WordPress
 " />
-    <meta name="twitter:url" content="http://dgmstuart.github.io/blog/2015/03/27/some-tools-for-faster-blogging-in-octopress/" />
+    <meta name="twitter:url" content="http://localhost:4000/blog/2015/03/27/some-tools-for-faster-blogging-in-octopress/" />
 
     
 
@@ -60,10 +60,11 @@
     <header class="site-header px2 px-responsive">
   <div class="mt2 wrap">
     <div class="measure">
-      <a href="http://dgmstuart.github.io" class="site-title">dgms code</a>
+      <a href="http://localhost:4000" class="site-title">dgms code</a>
       <nav class="site-nav">
-        <a href="http://dgmstuart.github.io/about/">About</a>
-<a href="http://dgmstuart.github.io/contact/">Say hello</a>
+        <a href="/conference-notes/">Conference notes</a>
+<a href="/about/">About</a>
+<a href="/contact/">Say hello</a>
       </nav>
       <div class="clearfix"></div>
       <div class="social-icons">
@@ -114,36 +115,36 @@ notes fast, and publish them even faster (when a talk finishes, lots of people w
 trying to get out of the row of seats past me!).</p>
 
 <p><em>NOTE: The scripts below assume editing with terminal vim. It might be more flexible to switch this out for
-the <code>$VISUAL</code> environment variable (?), but if you use a different editor you’ll probably
-just want to replace <code>vim</code> with whatever command you use to boot up your editor - e.g. <code>subl</code>, <code>mvim</code> etc.</em></p>
+the <code class="highlighter-rouge">$VISUAL</code> environment variable (?), but if you use a different editor you’ll probably
+just want to replace <code class="highlighter-rouge">vim</code> with whatever command you use to boot up your editor - e.g. <code class="highlighter-rouge">subl</code>, <code class="highlighter-rouge">mvim</code> etc.</em></p>
 
 <h3 id="creating-posts">Creating posts</h3>
-<p>The octopress command for creating a post is <code>rake new_post["The name of my
+<p>The octopress command for creating a post is <code class="highlighter-rouge">rake new_post["The name of my
 post"]</code>. I’d then typically select the filename it outputs with the mouse,
 paste that into the command line and open it with vim. That’s <em>way</em> too much
 typing, and any seasoned vim user would wince at the word “mouse”.</p>
 
-<p>Here’s a function which lets me type <code>newpost "The name of my post"</code> and creates
+<p>Here’s a function which lets me type <code class="highlighter-rouge">newpost "The name of my post"</code> and creates
 the post, isolates it and opens it in one step:</p>
 
-<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">~/.profile</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">function</span> newpost<span class="o">()&#x7b;</span>
-</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="nb">cd</span> <span class="k">$&#x7b;</span><span class="nv">BLOG_HOME</span><span class="p">:?</span><span class="s2">&quot;Need to set BLOG_HOME to the location of the octopress blog directory&quot;</span><span class="k">&#x7d;</span>
-</div></div><div data-line="3" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="nv">output</span><span class="o">=</span><span class="k">$(</span> rake new_post<span class="o">[</span><span class="s2">&quot;$@&quot;</span><span class="o">]</span> <span class="k">)</span>
-</div></div><div data-line="4" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="nb">echo</span> <span class="s2">&quot;$output&quot;</span>
+<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">~/.profile</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">function </span>newpost<span class="o">()&#x7b;</span>
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="nb">cd</span> <span class="k">$&#x7b;</span><span class="nv">BLOG_HOME</span>:?<span class="s2">"Need to set BLOG_HOME to the location of the octopress blog directory"</span><span class="k">&#x7d;</span>
+</div></div><div data-line="3" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="nv">output</span><span class="o">=</span><span class="k">$(</span> rake new_post[<span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span><span class="o">]</span> <span class="k">)</span>
+</div></div><div data-line="4" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$output</span><span class="s2">"</span>
 </div></div><div data-line="5" class="code-highlight-row numbered"><div class="code-highlight-line"> </div></div><div data-line="6" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="nb">local </span><span class="nv">return_code</span><span class="o">=</span><span class="nv">$?</span>
-</div></div><div data-line="7" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="k">if</span> <span class="o">[</span> <span class="nv">$return_code</span> -eq <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</div></div><div data-line="7" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="k">if</span> <span class="o">[</span> <span class="nv">$return_code</span> -eq 0 <span class="o">]</span>; <span class="k">then</span>
 </div></div><div data-line="8" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="c"># Get the name of the file which was just created:</span>
-</div></div><div data-line="9" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="nv">post_path</span><span class="o">=</span><span class="k">$(</span>grep -o <span class="s1">&#39;source\/_posts\/.*\.markdown&#39;</span> <span class="o">&lt;&lt;&lt;</span> <span class="nv">$output</span><span class="k">)</span>
+</div></div><div data-line="9" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="nv">post_path</span><span class="o">=</span><span class="k">$(</span>grep -o <span class="s1">'source\/_posts\/.*\.markdown'</span> <span class="o">&lt;&lt;&lt;</span> <span class="nv">$output</span><span class="k">)</span>
 </div></div><div data-line="10" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="c"># Stash all other posts (for faster generation)</span>
-</div></div><div data-line="11" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="nb">echo</span> <span class="s2">&quot;Isolating post...&quot;</span>
-</div></div><div data-line="12" class="code-highlight-row numbered"><div class="code-highlight-line">    rake isolate<span class="o">[</span><span class="s2">&quot;$post_path&quot;</span><span class="o">]</span>
+</div></div><div data-line="11" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="nb">echo</span> <span class="s2">"Isolating post..."</span>
+</div></div><div data-line="12" class="code-highlight-row numbered"><div class="code-highlight-line">    rake isolate[<span class="s2">"</span><span class="nv">$post_path</span><span class="s2">"</span><span class="o">]</span>
 </div></div><div data-line="13" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="c"># Open with the cursor at the bottom of the header:</span>
-</div></div><div data-line="14" class="code-highlight-row numbered"><div class="code-highlight-line">    vim -c <span class="s1">&#39;normal G&#39;</span> <span class="nv">$post_path</span>
+</div></div><div data-line="14" class="code-highlight-row numbered"><div class="code-highlight-line">    vim -c <span class="s1">'normal G'</span> <span class="nv">$post_path</span>
 </div></div><div data-line="15" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="k">fi</span>
 </div></div><div data-line="16" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="o">&#x7d;</span></div></div></pre></div></figure>
 
 <p>My <a href="https://github.com/dgmstuart/dotfiles">dotfiles</a> are shared between
-multiple machines, so the <code>BLOG_HOME</code> environment variable is set in a local
+multiple machines, so the <code class="highlighter-rouge">BLOG_HOME</code> environment variable is set in a local
 profile:</p>
 
 <figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">~/.profile.local</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="nb">export </span><span class="nv">BLOG_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/Dev/Personal/blog</div></div></pre></div></figure>
@@ -153,23 +154,23 @@ or more robust, please let me know in the comments.</p>
 
 <h3 id="isolating-posts">Isolating Posts</h3>
 
-<p>Notice in the <code>newpost</code> function I’ve got <code>rake isolate["$post_path"]</code> - that’s a
+<p>Notice in the <code class="highlighter-rouge">newpost</code> function I’ve got <code class="highlighter-rouge">rake isolate["$post_path"]</code> - that’s a
 nifty task provided by Octopress which gets around the fact that when you generate
 your Octopress blog it has to rebuild the entire site (?) which can be very slow.
 Unfortunately it doesn’t seem to be documented, but you can see the source in the
-<code>Rakefile</code> of your Octopress install.</p>
+<code class="highlighter-rouge">Rakefile</code> of your Octopress install.</p>
 
-<p><em>Side note: run <code>rake -T</code> in your blog directory to see all of the Octopress commands #protip</em></p>
+<p><em>Side note: run <code class="highlighter-rouge">rake -T</code> in your blog directory to see all of the Octopress commands #protip</em></p>
 
-<p><code>rake isolate</code> moves all posts into <code>source/_stash</code>, unless they  match the given
-string in their title. This means that when you’re previewing your post with <code>rake preview</code>
+<p><code class="highlighter-rouge">rake isolate</code> moves all posts into <code class="highlighter-rouge">source/_stash</code>, unless they  match the given
+string in their title. This means that when you’re previewing your post with <code class="highlighter-rouge">rake preview</code>
 it’s much faster to re-generate because it’s only having to handle one post each time.</p>
 
 <p>If you’re running this manually, there’s no need to pass the whole path: you can just
 find one of two words which are unique in the filename of your post and use that - e.g.
-<code>rake isolate[wizards]</code></p>
+<code class="highlighter-rouge">rake isolate[wizards]</code></p>
 
-<p>You can put your stashed posts back with <code>rake integrate</code>.</p>
+<p>You can put your stashed posts back with <code class="highlighter-rouge">rake integrate</code>.</p>
 
 <h3 id="listing-and-revisiting-posts">Listing and revisiting posts</h3>
 <p>A couple of things I find myself needing to do fairly often:</p>
@@ -184,18 +185,18 @@ find one of two words which are unique in the filename of your post and use that
 <figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">~/.profile</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="c"># blogposts: display the list of posts ordered by last modified time</span>
 </div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="c"># %m                           -- Last modified timestamp</span>
 </div></div><div data-line="3" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="c"># %N                           -- Quoted File name</span>
-</div></div><div data-line="4" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="c"># -exec stat -f &quot;%m %N&quot; &#x7b;&#x7d; \;  -- Outputs a timestamp at the beginning of the line for sorting</span>
-</div></div><div data-line="5" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="c"># cut -d &#39; &#39; -f2-              -- Returns only the second field in a space-delimited string</span>
-</div></div><div data-line="6" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="nb">alias </span><span class="nv">blogposts</span><span class="o">=</span><span class="s1">&#39;find $BLOG_HOME/source/_posts/* -exec stat -f &quot;%m %N&quot; &#x7b;&#x7d; \; | sort -n | cut -d &quot; &quot; -f2-&#39;</span>
-</div></div><div data-line="7" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="nb">alias </span><span class="nv">lastpost</span><span class="o">=</span><span class="s1">&#39;find `blogposts` | tail -1 &#39;</span>
-</div></div><div data-line="8" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="nb">alias </span><span class="nv">epost</span><span class="o">=</span><span class="s1">&#39;vim `lastpost`&#39;</span></div></div></pre></div></figure>
+</div></div><div data-line="4" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="c"># -exec stat -f "%m %N" &#x7b;&#x7d; \;  -- Outputs a timestamp at the beginning of the line for sorting</span>
+</div></div><div data-line="5" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="c"># cut -d ' ' -f2-              -- Returns only the second field in a space-delimited string</span>
+</div></div><div data-line="6" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="nb">alias </span><span class="nv">blogposts</span><span class="o">=</span><span class="s1">'find $BLOG_HOME/source/_posts/* -exec stat -f "%m %N" &#x7b;&#x7d; \; | sort -n | cut -d " " -f2-'</span>
+</div></div><div data-line="7" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="nb">alias </span><span class="nv">lastpost</span><span class="o">=</span><span class="s1">'find `blogposts` | tail -1 '</span>
+</div></div><div data-line="8" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="nb">alias </span><span class="nv">epost</span><span class="o">=</span><span class="s1">'vim `lastpost`'</span></div></div></pre></div></figure>
 
 <h3 id="deploying">Deploying</h3>
-<p>The <code>gen:deploy</code> rake task is a built-in alias for running the
-<code>:integrate</code>, <code>:generate</code>, and <code>:deploy</code> tasks, but again, typing
-<code>rake gen:deploy</code> is just too much typing, hence:</p>
+<p>The <code class="highlighter-rouge">gen:deploy</code> rake task is a built-in alias for running the
+<code class="highlighter-rouge">:integrate</code>, <code class="highlighter-rouge">:generate</code>, and <code class="highlighter-rouge">:deploy</code> tasks, but again, typing
+<code class="highlighter-rouge">rake gen:deploy</code> is just too much typing, hence:</p>
 
-<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">~/.profile</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="nb">alias </span><span class="nv">rgd</span><span class="o">=</span><span class="s1">&#39;rake gen_deploy&#39;</span></div></div></pre></div></figure>
+<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">~/.profile</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="nb">alias </span><span class="nv">rgd</span><span class="o">=</span><span class="s1">'rake gen_deploy'</span></div></div></pre></div></figure>
 
 </article>
 

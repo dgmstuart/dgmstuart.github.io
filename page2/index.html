@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>dgms code</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails  with a little WordPress
+    <meta name="description" content="This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails with a little WordPress
 ">
     <meta name="author" content="">
     
-    <link rel="canonical" href="http://dgmstuart.github.io/page2/">
+    <link rel="canonical" href="http://localhost:4000/page2/">
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for dgms code" href="/feed.xml" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/pixyll.css?201603111511" type="text/css">
-    <link href='/stylesheets/all-24a1f2993bca9d72370c74b5f9520ea3.css' media='all' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/pixyll.css?201703291739" type="text/css">
+    <link href='/stylesheets/all-1409893eb5ae70c5401c92a80de668f5.css' media='all' rel='stylesheet' type='text/css'>
 
     <!-- Fonts -->
     <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
@@ -26,9 +26,9 @@
     <meta property="og:locale" content="en_GB">
     <meta property="og:type" content="article">
     <meta property="og:title" content="dgms code">
-    <meta property="og:description" content="This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails  with a little WordPress
+    <meta property="og:description" content="This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails with a little WordPress
 ">
-    <meta property="og:url" content="http://dgmstuart.github.io/page2/index.html">
+    <meta property="og:url" content="http://localhost:4000/page2/">
     <meta property="og:site_name" content="dgms code">
 
     <!-- Twitter Card -->
@@ -37,9 +37,9 @@
         <meta name="twitter:site" content="@dgmstuart" />
     
     <meta name="twitter:title" content="dgms code" />
-    <meta name="twitter:description" content="This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails  with a little WordPress
+    <meta name="twitter:description" content="This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails with a little WordPress
 " />
-    <meta name="twitter:url" content="http://dgmstuart.github.io/page2/index.html" />
+    <meta name="twitter:url" content="http://localhost:4000/page2/" />
 
     
 
@@ -60,10 +60,11 @@
     <header class="site-header px2 px-responsive">
   <div class="mt2 wrap">
     <div class="measure">
-      <a href="http://dgmstuart.github.io" class="site-title">dgms code</a>
+      <a href="http://localhost:4000" class="site-title">dgms code</a>
       <nav class="site-nav">
-        <a href="http://dgmstuart.github.io/about/">About</a>
-<a href="http://dgmstuart.github.io/contact/">Say hello</a>
+        <a href="/conference-notes/">Conference notes</a>
+<a href="/about/">About</a>
+<a href="/contact/">Say hello</a>
       </nav>
       <div class="clearfix"></div>
       <div class="social-icons">
@@ -97,12 +98,11 @@
   <div class="posts">
     
       <div class="post py3">
-        <p class="post-meta">22 Mar, 2015</p>
-        <a href="/blog/2015/03/22/mark-jaquith-at-wordcamp-london-cache-money-business/" class="post-link"><h3 class="h1 post-title">Mark Jaquith at WordCamp London - Cache Money Business</h3></a>
+        <p class="post-meta">20 Aug, 2014</p>
+        <a href="/blog/2014/08/20/migrating-postgres-data-from-an-old-rails-project-to-a-new-one/" class="post-link"><h3 class="h1 post-title">Migrating Postgres data from an old Rails project to a new one</h3></a>
         <p class="post-summary">
           
-            <p><em>I’m at <a href="http://london.wordcamp.org/2015/">WordCamp London</a> - live-blogging
-some of the talks</em></p>
+            <p>TL;DR - this was my approach:</p>
 
 
           
@@ -110,12 +110,15 @@ some of the talks</em></p>
       </div>
     
       <div class="post py3">
-        <p class="post-meta">21 Mar, 2015</p>
-        <a href="/blog/2015/03/21/wp-london-bruce-lawson-responsive-images/" class="post-link"><h3 class="h1 post-title">WordCamp London - Bruce Lawson - Responsive Images</h3></a>
+        <p class="post-meta">15 Aug, 2014</p>
+        <a href="/blog/2014/08/15/creating-a-new-app-on-heroku-is-stupidly-easy/" class="post-link"><h3 class="h1 post-title">Creating a new app on heroku really is stupidly easy</h3></a>
         <p class="post-summary">
           
-            <p><em>I’m at <a href="http://london.wordcamp.org/2015/">WordCamp London</a> - live-blogging
-some of the talks</em></p>
+            <div class="highlighter-rouge"><pre class="highlight"><code>heroku apps:create swingoutlondon2 --region eu
+git push heroku master
+heroku run rake db:migrate
+</code></pre>
+</div>
 
 
           
@@ -123,12 +126,11 @@ some of the talks</em></p>
       </div>
     
       <div class="post py3">
-        <p class="post-meta">13 Mar, 2015</p>
-        <a href="/blog/2015/03/13/sandi-metz-nothing-is-something-at-bathruby/" class="post-link"><h3 class="h1 post-title">Sandi Metz: Nothing is Something - at BathRuby</h3></a>
+        <p class="post-meta">23 Jun, 2014</p>
+        <a href="/blog/2014/06/23/a-better-way-of-writing-commit-messages/" class="post-link"><h3 class="h1 post-title">A better way of writing commit messages</h3></a>
         <p class="post-summary">
           
-            <p><em>I’m at <a href="http://2015.bathruby.org/">Bath Ruby 2015</a>, live blogging some of the
-talks</em></p>
+            <p>I’ve always tended to write commit messages by answering the question “What did I do?”, but I learned a different approach recently which tends to produce much more expressive commits, which are often more terse as well. Compare the following:</p>
 
 
           
@@ -136,12 +138,11 @@ talks</em></p>
       </div>
     
       <div class="post py3">
-        <p class="post-meta">13 Mar, 2015</p>
-        <a href="/blog/2015/03/13/tom-stuart-a-lever-for-the-mind-at-bathruby/" class="post-link"><h3 class="h1 post-title">Tom Stuart - 'A lever for the mind' at BathRuby</h3></a>
+        <p class="post-meta">15 Jun, 2014</p>
+        <a href="/blog/2014/06/15/useful-rake-tasks-in-rails/" class="post-link"><h3 class="h1 post-title">Useful rake tasks in Rails</h3></a>
         <p class="post-summary">
           
-            <p><em>I’m at <a href="http://2015.bathruby.org/">Bath Ruby 2015</a>, live blogging some of the
-talks</em></p>
+            <p>When inside any directory with a <a href="https://github.com/jimweirich/rake">Rakefile</a>, you can bring up the list of available rake tasks with <code class="highlighter-rouge">rake -T</code></p>
 
 
           
@@ -149,12 +150,11 @@ talks</em></p>
       </div>
     
       <div class="post py3">
-        <p class="post-meta">13 Mar, 2015</p>
-        <a href="/blog/2015/03/13/katrina-owen-at-bathruby-here-be-dragons/" class="post-link"><h3 class="h1 post-title">Katrina Owen at BathRuby: Here be Dragons</h3></a>
+        <p class="post-meta">4 Jun, 2014</p>
+        <a href="/blog/2014/06/04/matching-on-a-final-segment-of-a-string/" class="post-link"><h3 class="h1 post-title">Matching on a final segment of a string</h3></a>
         <p class="post-summary">
           
-            <p><em>I’m at <a href="http://2015.bathruby.org/">Bath Ruby 2015</a>, live blogging some of the
-talks</em></p>
+            <p>when matching on the final segment of a string, e.g for a file extension, you could use a regular expression:</p>
 
 
           
@@ -162,12 +162,11 @@ talks</em></p>
       </div>
     
       <div class="post py3">
-        <p class="post-meta">13 Mar, 2015</p>
-        <a href="/blog/2015/03/13/live-coding-music-at-bathruby/" class="post-link"><h3 class="h1 post-title">Live-coding music at BathRuby</h3></a>
+        <p class="post-meta">10 Feb, 2014</p>
+        <a href="/blog/2014/02/10/initialising-rspec-in-a-rails-project/" class="post-link"><h3 class="h1 post-title">Gotcha: Initialising RSpec in a rails project</h3></a>
         <p class="post-summary">
           
-            <p><em>I’m at <a href="http://2015.bathruby.org/">Bath Ruby 2015</a>, live blogging some of the
-talks</em></p>
+            <p>I use RSpec for doing TDD, and the rspec-rails gem for integration in Rails projects. On initialising RSpec for SOLDN2, with <code class="highlighter-rouge">rspec init</code> it generated the following spec helper (comments removed):</p>
 
 
           
@@ -175,54 +174,11 @@ talks</em></p>
       </div>
     
       <div class="post py3">
-        <p class="post-meta">13 Mar, 2015</p>
-        <a href="/blog/2015/03/13/saron-yitbarek-learning-code-good-at-bathruby/" class="post-link"><h3 class="h1 post-title">Saron Yitbarek - Learning Code good (at BathRuby)</h3></a>
+        <p class="post-meta">7 Feb, 2014</p>
+        <a href="/blog/2014/02/07/getting-to-grips-with-postgres/" class="post-link"><h3 class="h1 post-title">Getting to grips with postgres</h3></a>
         <p class="post-summary">
           
-            <p><em>I’m at <a href="http://2015.bathruby.org/">Bath Ruby 2015</a>, live blogging some of the
-talks</em>
-<img src="https://pbs.twimg.com/media/B_-Xi25W8AAKFwW.jpg:medium" alt="photo by
-@Naomi_Freeman" /></p>
-
-
-          
-        </p>
-      </div>
-    
-      <div class="post py3">
-        <p class="post-meta">13 Mar, 2015</p>
-        <a href="/blog/2015/03/13/ben-orenstein-live-coding-in-the-bath-at-bathruby/" class="post-link"><h3 class="h1 post-title">Ben Orenstein: live coding in the Bath at BathRuby</h3></a>
-        <p class="post-summary">
-          
-            <p><em>I’m at <a href="http://2015.bathruby.org/">Bath Ruby 2015</a>, live blogging some of the
-talks</em></p>
-
-
-          
-        </p>
-      </div>
-    
-      <div class="post py3">
-        <p class="post-meta">13 Mar, 2015</p>
-        <a href="/blog/2015/03/13/bath-ruby-linda-liukas-principles-of-play/" class="post-link"><h3 class="h1 post-title">Bath Ruby: Linda Liukas - principles of play</h3></a>
-        <p class="post-summary">
-          
-            <p><em>I’m at <a href="http://2015.bathruby.org/">Bath Ruby 2015</a>, live blogging some of the
-talks</em></p>
-
-
-          
-        </p>
-      </div>
-    
-      <div class="post py3">
-        <p class="post-meta">28 Feb, 2015</p>
-        <a href="/blog/2015/02/28/setting-up-a-ruby-on-rails-dev-environment-on-bowery-dot-io/" class="post-link"><h3 class="h1 post-title">Setting up a Ruby dev environment on Bowery.io</h3></a>
-        <p class="post-summary">
-          
-            <p><em>EDIT: Apparently it’s not possible to run docker inside a Bowery instance
-because Bowery uses docker and docker has a hard time running inside a docker
-container - see <a href="https://groups.google.com/forum/#!topic/bowery/WsXWzWghwVc">this post on the forum</a></em></p>
+            <p>So, having generated my Rails app and selected postgres as the development database, I’m now faced with getting the damn thing running. On a Eurostar train (under the English channel) i.e. with no internet.</p>
 
 
           
@@ -241,7 +197,7 @@ container - see <a href="https://groups.google.com/forum/#!topic/bowery/WsXWzWgh
   </div>
   <div class="right">
     
-      <a class="pagination-item" href="/page3/">Older</a>
+      <span class="pagination-item disabled">Older</span>
     
   </div>
 </div>

@@ -2,362 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>dgms code</title>
-    <description>This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails  with a little WordPress
+    <description>This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails with a little WordPress
 </description>
-    <link>http://dgmstuart.github.io/</link>
-    <atom:link href="http://dgmstuart.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 11 Mar 2016 15:11:38 +0000</pubDate>
-    <lastBuildDate>Fri, 11 Mar 2016 15:11:38 +0000</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
-    
-      <item>
-        <title>Bath Ruby 4 - Janet Crawford - The Surprising Neuroscience of Gender Inequality</title>
-        <description>&lt;ul&gt;
-  &lt;li&gt;Not a coder, but a scientist&lt;/li&gt;
-  &lt;li&gt;Will try to explain why the gender inequality in our industry exists&lt;/li&gt;
-  &lt;li&gt;Messages growing up:
-    &lt;ul&gt;
-      &lt;li&gt;on the one hand message from rocket scientist father that being a
-scientist was a good goal for a woman&lt;/li&gt;
-      &lt;li&gt;On the other hand, birthday gifts between her (clothing, crafting) and her
-brother (tinkering, electrical engineering) were very gendered&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;why does this happen? Why do parents make these choices (despite their
-actual values)&lt;/li&gt;
-  &lt;li&gt;At university, message was: ‘because you don’t know soldering, you don’t
-belong on a physics degree&lt;/li&gt;
-  &lt;li&gt;unconscious bias&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://pbs.twimg.com/media/CdRn7iuW4AE6ksq.jpg&quot; alt=&quot;@JanetCrawford talking about unconscious
-bias&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Women in CS peaked in around 1970 (30-ish%) and has been declining ever
-since&lt;/li&gt;
-  &lt;li&gt;Similar stories in politics, film etc.&lt;/li&gt;
-  &lt;li&gt;“for a lot of people this doesn’t seem to be a problem”
-    &lt;ul&gt;
-      &lt;li&gt;Rationale: we have parity of education and opportunity, so it must just be
-because women aren’t interested in these roles&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Research: companies with more women, particularly on boards, massively
-outperform other companies “on every metric that business cares about”&lt;/li&gt;
-  &lt;li&gt;There are undeniable good reasons, so why is there still such inequality&lt;/li&gt;
-  &lt;li&gt;All of us, male and female are unconsciously gender-biased.
-    &lt;ul&gt;
-      &lt;li&gt;Until we learn how to bring these to the conscious level it’s going to
-continue to be a problem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Brains encode associations based on what they perceive - irrespective of
-accuracy etc.
-    &lt;ul&gt;
-      &lt;li&gt;We make decisions about people immediately based on appearance&lt;/li&gt;
-      &lt;li&gt;Most of the time this is OK: these biases are shortcuts.&lt;/li&gt;
-      &lt;li&gt;Things go wrong when these biases stop working (stop being accurate)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Brain will always prefer to take the shortcut to free up brainpower for
-other tasks&lt;/li&gt;
-  &lt;li&gt;Unconscious associations can be tested by matching up traditionally gendered
-qualities with images of the opposite gender and measuring the difficulty of
-each pairing&lt;/li&gt;
-  &lt;li&gt;Mothers overestimate the crawling ability of boys and underestimate that of
-girls&lt;/li&gt;
-  &lt;li&gt;Women’s code on github PRs was accepted about 4% more than men’s (unless the
-gender could be inferred from their profile, which reversed the trend)&lt;/li&gt;
-  &lt;li&gt;Women are more likely to attribute their success to luck, men to hard work&lt;/li&gt;
-  &lt;li&gt;Confidence and likeability are positively correlated for men, and negatively
-correlated for women&lt;/li&gt;
-  &lt;li&gt;2 environments for a Computer Science classroom: one neutrally decorated,
-one geekily decorated. No difference in impact on Men’s interest in the
-subject, but the latter significantly reduced the interest in the course of
-the female participants&lt;/li&gt;
-  &lt;li&gt;How to fix it? Focus on creating a neutral environment - consider all
-aspects: decor, imagery etc.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Legislation doesn’t change culture: people do”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“It’s hard work and it’s messy, but it’s a mess worth wading into&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Fri, 11 Mar 2016 14:27:44 +0000</pubDate>
-        <link>http://dgmstuart.github.io/blog/2016/03/11/bath-ruby-4-janet-crawford/</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2016/03/11/bath-ruby-4-janet-crawford/</guid>
-        
-        <category>bathruby</category>
-        
-        
-        <category>liveblog</category>
-        
-      </item>
-    
-      <item>
-        <title>Bath Ruby 3 - Courteney Ervin - Open Source For Your Benefit</title>
-        <description>&lt;ul&gt;
-  &lt;li&gt;self-love: take an active effort to love yourself, including strengths and
-weaknesses.&lt;/li&gt;
-  &lt;li&gt;‘should’ is this feeling of obligation and intimidation that prevents people
-from participating.&lt;/li&gt;
-  &lt;li&gt;Give yourself permission to write open source code&lt;/li&gt;
-  &lt;li&gt;Think about what your role is: what do you particularly want to get out of
-open source code.
-    &lt;ul&gt;
-      &lt;li&gt;Have code that you can show people (if your organisation’s code is 100%
-private)&lt;/li&gt;
-      &lt;li&gt;to get to know a new tech by interacting with a real project that people
-will actually use&lt;/li&gt;
-      &lt;li&gt;fixing a problem you really care about&lt;/li&gt;
-      &lt;li&gt;working with/learning from developers you look up to&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://pbs.twimg.com/media/CdREMCgW4AAOcZ8.jpg&quot; alt=&quot;@courteneyervin talking about open source
-contributions&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;My personal goal:
-    &lt;ul&gt;
-      &lt;li&gt;learn about how real-world problems are solved pragmatically&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Contributions to open source can be much broader than actual code -
-publicising, documentation, tutorials etc.
-    &lt;ul&gt;
-      &lt;li&gt;also code maintenance: refactoring, deployment, installation instructions&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;different ways to search for projects based on why you’re looking:
-    &lt;ul&gt;
-      &lt;li&gt;openhatch, codetriage, codemontage&lt;/li&gt;
-      &lt;li&gt;Hashtags - #first-timers-only, #help-wanted etc.&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;#protips&lt;/code&gt;:
-        &lt;ul&gt;
-          &lt;li&gt;make sure the project is actually maintained (and so you have a chance
-of getting merged)&lt;/li&gt;
-          &lt;li&gt;Call dibs on the issue - v. frustrating if you work on something and
-someone else fixes it first&lt;/li&gt;
-          &lt;li&gt;First PR could be fixing issuses with installation of a dev environment
-for a project&lt;/li&gt;
-          &lt;li&gt;be clear that you want feedback - give permission to the maintainer so
-that they’re not afraid of putting you off&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;open source is not a requirement: if it doesn’t work for you, you’re not
-obliged to do stuff for free!
-    &lt;ul&gt;
-      &lt;li&gt;If it makes you feel bad, don’t do it&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Fri, 11 Mar 2016 11:58:16 +0000</pubDate>
-        <link>http://dgmstuart.github.io/blog/2016/03/11/bath-ruby-3-courteney-ervin/</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2016/03/11/bath-ruby-3-courteney-ervin/</guid>
-        
-        <category>open source</category>
-        
-        <category>bathruby</category>
-        
-        
-        <category>liveblog</category>
-        
-      </item>
-    
-      <item>
-        <title>Bath Ruby 2 - Coraline Ada Ehmke: How Neo4j saved my relationship</title>
-        <description>&lt;ul&gt;
-  &lt;li&gt;“people should not be shits to each other online”&lt;/li&gt;
-  &lt;li&gt;Relational databases are designed for backing &lt;em&gt;forms&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Not always the best way to store data&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Graph theory - originated with Euler&lt;/li&gt;
-  &lt;li&gt;Data suited to a graph db:
-    &lt;ul&gt;
-      &lt;li&gt;Where context is important - needed to understand the data&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Nodes and Edges
-    &lt;ul&gt;
-      &lt;li&gt;Edges are relationships between nodes&lt;/li&gt;
-      &lt;li&gt;relationships are first class citizens (unlike join tables)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://pbs.twimg.com/media/CdQ46yqW0AAOo8k.jpg&quot; alt=&quot;@CoralineAda talking about neo4j&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Graph dbs have Much better performance: linear, constant (RDBs performance
-degrade worst)&lt;/li&gt;
-  &lt;li&gt;Good for agile because they don’t lock you in to a particular data
-structure.&lt;/li&gt;
-  &lt;li&gt;Relations + Metadata = facts - extract facts and model as nodes instead of
-edges&lt;/li&gt;
-  &lt;li&gt;The graph db doesn’t care what is stored in a node: things don’t have to be
-in any particular structure.&lt;/li&gt;
-  &lt;li&gt;Neo4j
-    &lt;ul&gt;
-      &lt;li&gt;different stores: Node, property, relation&lt;/li&gt;
-      &lt;li&gt;Fixed-size records for Node and relationship data -
-this enables superfast lookups because
-you know where a record will exist in memory.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Query language - Cypher
-    &lt;ul&gt;
-      &lt;li&gt;AScii art to represent relationships! :D &lt;code&gt;(a)-[:follows]-&amp;gt;(b)&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;When deleting nodes, you have to detach from any existing relationships
-pointing at that node&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Neo4j console is a single-page webapp, with shiny interactive represenations
-of the graph&lt;/li&gt;
-  &lt;li&gt;Interaction with ruby: via a gem - build queries in mostly the same way that
-you would if writing it directly in plain text. Get a struct back with the data&lt;/li&gt;
-  &lt;li&gt;neo4j for AI:
-    &lt;ul&gt;
-      &lt;li&gt;Sophia - Coraline’s AI project&lt;/li&gt;
-      &lt;li&gt;aim is to create metaphors&lt;/li&gt;
-      &lt;li&gt;models contexts like beauty, animals etc..&lt;/li&gt;
-      &lt;li&gt;models synonyms and antonyms&lt;/li&gt;
-      &lt;li&gt;models facts about the terms - uses these to answer questions - e.g. “do
-cats have tails?”&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;When to use:
-    &lt;ul&gt;
-      &lt;li&gt;when relations/metadata are as important as the data itself&lt;/li&gt;
-      &lt;li&gt;when data is deeply nested&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 11 Mar 2016 11:15:06 +0000</pubDate>
-        <link>http://dgmstuart.github.io/blog/2016/03/11/bath-ruby-2-coraline-ada-ehmke/</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2016/03/11/bath-ruby-2-coraline-ada-ehmke/</guid>
-        
-        <category>neo4j</category>
-        
-        <category>database</category>
-        
-        <category>bathruby</category>
-        
-        
-        <category>liveblog</category>
-        
-      </item>
-    
-      <item>
-        <title>Bath Ruby 1: Xavier Riley - Rocking out in Ruby, a playful introduction to Sonic Pi</title>
-        <description>&lt;ul&gt;
-  &lt;li&gt;The first time you enjoyed writing code: it’s an important feeling - an
-important step on the way to becoming a programmer&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://sonic-pi.net/&quot;&gt;Sonic Pi&lt;/a&gt; - cross-platform and preinstalled on every raspberry pi&lt;/li&gt;
-  &lt;li&gt;API:
-    &lt;ul&gt;
-      &lt;li&gt;Synths&lt;/li&gt;
-      &lt;li&gt;Samples&lt;/li&gt;
-      &lt;li&gt;Effects&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Uses Ruby internally - responds to RUBY_VERSION&lt;/li&gt;
-&lt;/ul&gt;
-&lt;iframe src=&quot;https://vine.co/v/iHDKUtIlHTL/embed/simple&quot; width=&quot;600&quot; height=&quot;600&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
-&lt;script src=&quot;https://platform.vine.co/static/scripts/embed.js&quot;&gt;&lt;/script&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Zero set-up: getting started is very quick, and the feedback loop is very
-small&lt;/li&gt;
-  &lt;li&gt;Gold standard:
-    &lt;ul&gt;
-      &lt;li&gt;“If a 10 year old can’t use it and understand it, it’s not going in the API”&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Default - all notes happen at time zero - to make a scale, put sleeps
-between the notes&lt;/li&gt;
-  &lt;li&gt;The &lt;code&gt;play&lt;/code&gt; command takes either a number (pitch) or a symbol (note name)&lt;/li&gt;
-  &lt;li&gt;Synths - just a symbol saying what synth the following notes should be
-played through&lt;/li&gt;
-  &lt;li&gt;Samples: Can be slowed down and sped up with a &lt;code&gt;rate&lt;/code&gt; argument&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;use_sample_bpm&lt;/code&gt; - changes &lt;code&gt;sleep 1&lt;/code&gt; to be the length of one beat - means
-you don’t have to specify the length of the sleep&lt;/li&gt;
-  &lt;li&gt;Live loops: continually plays and updates in realtime&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;play(scale :c, :minor_pentatonic).choose&lt;/code&gt; - random notes from a scale&lt;/li&gt;
-  &lt;li&gt;Multiple &lt;code&gt;live_loop&lt;/code&gt;s in a program - each one is a thread and they’re
-in time with each other (!)&lt;/li&gt;
-  &lt;li&gt;He learned to use it while studying for a music degree :)&lt;/li&gt;
-  &lt;li&gt;3000 words of tutorial - step by step through the whole thing&lt;/li&gt;
-  &lt;li&gt;A ‘ring’ is an array which loops around.&lt;/li&gt;
-  &lt;li&gt;A slice is a section of a sample - from a start time to an end time&lt;/li&gt;
-  &lt;li&gt;Played the Mario theme with NES synths :D&lt;/li&gt;
-  &lt;li&gt;Markov chains: train on some real music and it can generate similar music :D&lt;/li&gt;
-  &lt;li&gt;There’s no concept of time in webservers - speed is all that matters. Music
-is a very different challenge. It’s a different interaction with code. You can
-edit code in a way similar to playing a musical instrument: responding to
-what’s happening in a direct way.&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Fri, 11 Mar 2016 09:39:26 +0000</pubDate>
-        <link>http://dgmstuart.github.io/blog/2016/03/11/bath-ruby-1-xavier-riley/</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2016/03/11/bath-ruby-1-xavier-riley/</guid>
-        
-        <category>ruby</category>
-        
-        <category>bathruby</category>
-        
-        
-        <category>liveblog</category>
-        
-      </item>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 29 Mar 2017 17:39:46 +0100</pubDate>
+    <lastBuildDate>Wed, 29 Mar 2017 17:39:46 +0100</lastBuildDate>
+    <generator>Jekyll v3.4.3</generator>
     
       <item>
         <title>Checking Out Branches From Tig</title>
         <description>&lt;p&gt;I use &lt;a href=&quot;https://github.com/jonas/tig&quot;&gt;tig&lt;/a&gt; for my git tree browser. My normal
 usage is to look at the the commit tree (normally viewing all branches with
-&lt;code&gt;tig --all&lt;/code&gt;) but it’s a powerful tool with a lot of features, some of which
+&lt;code class=&quot;highlighter-rouge&quot;&gt;tig --all&lt;/code&gt;) but it’s a powerful tool with a lot of features, some of which
 I’m starting to integrate into my daily work.&lt;/p&gt;
 
 &lt;p&gt;Today I learned how check out a branch directly from tig.&lt;/p&gt;
 
 &lt;p&gt;The first
-step is to switch into ‘refs’ mode with &lt;code&gt;r&lt;/code&gt; - this shows a view of all the
+step is to switch into ‘refs’ mode with &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt; - this shows a view of all the
 local branches, remote branches and tags:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/content/tig_refs_view.png&quot; /&gt;
 &lt;em&gt;tig’s ‘refs’ view&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;From any of these you can check out that branch or tag by putting the cursor
-on that line and pressing &lt;code&gt;C&lt;/code&gt;.&lt;/p&gt;
+on that line and pressing &lt;code class=&quot;highlighter-rouge&quot;&gt;C&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;On my team we use long branch names which
 reference a story ID, so checking out with tig is much quicker than typing out
 eg:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git checkout -b branchname origin/branchname
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git checkout -b branchname origin/branchname
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;It’s also possible to check out individual commits (without creating a branch)
 from the normal tig view by putting the cursor over that commit and pressing
-&lt;code&gt;O&lt;/code&gt;.&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;O&lt;/code&gt;.&lt;/p&gt;
 </description>
         <pubDate>Thu, 11 Feb 2016 12:48:36 +0000</pubDate>
-        <link>http://dgmstuart.github.io/blog/2016/02/11/checking-out-branches-from-tig/</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2016/02/11/checking-out-branches-from-tig/</guid>
+        <link>http://localhost:4000/blog/2016/02/11/checking-out-branches-from-tig/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2016/02/11/checking-out-branches-from-tig/</guid>
         
         <category>tig</category>
         
@@ -382,12 +68,13 @@ commits on github&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;First I need to make sure I have the latest version of Octopress available on my machine:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ gem update octopress
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem update octopress
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Now I can make a new blog:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ octopress new blog
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ octopress new blog
 New jekyll site installed in /Users/dxwduncan/dev/Personal/blog.
 Added Octopress scaffold:
  + _templates/
@@ -395,10 +82,11 @@ Added Octopress scaffold:
  +   page
  +   post
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;Looking at what that’s given us, some of the directories are familar from the &lt;code&gt;source&lt;/code&gt; directory of Octopress 2 sites (e.g. &lt;code&gt;_posts&lt;/code&gt;):&lt;/p&gt;
+&lt;p&gt;Looking at what that’s given us, some of the directories are familar from the &lt;code class=&quot;highlighter-rouge&quot;&gt;source&lt;/code&gt; directory of Octopress 2 sites (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt;):&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.
 ├── _config.yml
 ├── _includes
 │   ├── footer.html
@@ -428,12 +116,14 @@ Added Octopress scaffold:
 ├── feed.xml
 └── index.html
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;I can now preview the site:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ cd blog
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd blog
 $ jekyll serve
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Here’s what we get:&lt;/p&gt;
 
@@ -441,42 +131,44 @@ $ jekyll serve
 
 &lt;h2 id=&quot;configuring-gems&quot;&gt;Configuring gems&lt;/h2&gt;
 
-&lt;p&gt;Now I want to add a Gemfile (&lt;code&gt;bundle init&lt;/code&gt;) to manage the versions of Jekyll and Octopress:&lt;/p&gt;
+&lt;p&gt;Now I want to add a Gemfile (&lt;code class=&quot;highlighter-rouge&quot;&gt;bundle init&lt;/code&gt;) to manage the versions of Jekyll and Octopress:&lt;/p&gt;
 
-&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;~/Gemfile&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://rubygems.org&amp;quot;&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt; &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;jekyll&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;~&amp;gt; 3.0.2&amp;#39;&lt;/span&gt;
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;~/Gemfile&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;https://rubygems.org&quot;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt; &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'jekyll'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'~&amp;gt; 3.0.2'&lt;/span&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;4&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt; &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;5&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:jekyll_plugins&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;6&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;octopress&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;~&amp;gt; 3.0.11&amp;#39;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;6&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'octopress'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'~&amp;gt; 3.0.11'&lt;/span&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;7&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now I can start copying over my content. I only have posts and a couple of associated images:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ cp -r ../blog_old/source/_posts ./_posts
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cp -r ../blog_old/source/_posts ./_posts
 $ mkdir images
 $ cp -r ../blog_old/source/images/content ./images/content
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;&lt;em&gt;N.B. the new blog structure doesn’t have an images directory by default&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Now trying to run &lt;code&gt;jekyll serve&lt;/code&gt; I get an error:&lt;/p&gt;
+&lt;p&gt;Now trying to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; I get an error:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Liquid Exception: Liquid syntax error: Unknown tag &#39;codeblock&#39; in /Users/dxwduncan/dev/Personal/blog/_posts/2014-02-07-getting-to-grips-with-postgres.markdown
-jekyll 3.0.2 | Error:  Liquid syntax error: Unknown tag &#39;codeblock&#39;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Liquid Exception: Liquid syntax error: Unknown tag 'codeblock' in /Users/dxwduncan/dev/Personal/blog/_posts/2014-02-07-getting-to-grips-with-postgres.markdown
+jekyll 3.0.2 | Error:  Liquid syntax error: Unknown tag 'codeblock'
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;This is because I’m using the &lt;a href=&quot;https://github.com/octopress/codeblock&quot;&gt;codeblock&lt;/a&gt; octopress plugin. There are a couple of different ways of &lt;a href=&quot;https://jekyllrb.com/docs/plugins/&quot;&gt;adding plugins to jekyll&lt;/a&gt; but the one which makes most sense to me is to put them in the &lt;code&gt;Gemfile&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This is because I’m using the &lt;a href=&quot;https://github.com/octopress/codeblock&quot;&gt;codeblock&lt;/a&gt; octopress plugin. There are a couple of different ways of &lt;a href=&quot;https://jekyllrb.com/docs/plugins/&quot;&gt;adding plugins to jekyll&lt;/a&gt; but the one which makes most sense to me is to put them in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Here’s the plugins part of my gemfile after adding the required plugins:&lt;/p&gt;
 
 &lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;~/Gemfile&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:jekyll_plugins&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;octopress&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;~&amp;gt; 3.0.11&amp;#39;&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;octopress-codeblock&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;~&amp;gt; 1.0&amp;#39;&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;4&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;octopress-image-tag&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;~&amp;gt; 1.1&amp;#39;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'octopress'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'~&amp;gt; 3.0.11'&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'octopress-codeblock'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'~&amp;gt; 1.0'&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;4&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'octopress-image-tag'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'~&amp;gt; 1.1'&lt;/span&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;5&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
 
-&lt;p&gt;Install them with &lt;code&gt;bundle install&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Install them with &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle install&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Codeblock adds a &lt;code&gt;.code-highlighter-cache&lt;/code&gt; which needs to be added to the &lt;code&gt;.gitignore&lt;/code&gt; which Octopress created for me.&lt;/p&gt;
+&lt;p&gt;Codeblock adds a &lt;code class=&quot;highlighter-rouge&quot;&gt;.code-highlighter-cache&lt;/code&gt; which needs to be added to the &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt; which Octopress created for me.&lt;/p&gt;
 
 &lt;h2 id=&quot;deployment&quot;&gt;Deployment&lt;/h2&gt;
 
@@ -487,13 +179,13 @@ This is pretty nice now!&lt;/p&gt;
 
 &lt;h2 id=&quot;making-it-all-look-nice&quot;&gt;Making it all look nice&lt;/h2&gt;
 
-&lt;p&gt;Now that all the content is imported it’s just a case of editing the &lt;code&gt;config.yml&lt;/code&gt; file (very minimal compared to the Octopress 2 default) and tweaking the templates.&lt;/p&gt;
+&lt;p&gt;Now that all the content is imported it’s just a case of editing the &lt;code class=&quot;highlighter-rouge&quot;&gt;config.yml&lt;/code&gt; file (very minimal compared to the Octopress 2 default) and tweaking the templates.&lt;/p&gt;
 
 &lt;p&gt;It doesn’t look like there’s any obvious way to re-use Octopress 2 themes directly - I suppose it would be possible to copy the styles and templates into the right places, but I fancy a change of look anyway so I’m off to have a look at some Jekyll themes. I hope you’ve found this useful.&lt;/p&gt;
 </description>
         <pubDate>Fri, 22 Jan 2016 00:40:02 +0000</pubDate>
-        <link>http://dgmstuart.github.io/blog/2016/01/22/migrating-from-octopress-2-to-3/</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2016/01/22/migrating-from-octopress-2-to-3/</guid>
+        <link>http://localhost:4000/blog/2016/01/22/migrating-from-octopress-2-to-3/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2016/01/22/migrating-from-octopress-2-to-3/</guid>
         
         <category>octopress</category>
         
@@ -514,36 +206,36 @@ notes fast, and publish them even faster (when a talk finishes, lots of people w
 trying to get out of the row of seats past me!).&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;NOTE: The scripts below assume editing with terminal vim. It might be more flexible to switch this out for
-the &lt;code&gt;$VISUAL&lt;/code&gt; environment variable (?), but if you use a different editor you’ll probably
-just want to replace &lt;code&gt;vim&lt;/code&gt; with whatever command you use to boot up your editor - e.g. &lt;code&gt;subl&lt;/code&gt;, &lt;code&gt;mvim&lt;/code&gt; etc.&lt;/em&gt;&lt;/p&gt;
+the &lt;code class=&quot;highlighter-rouge&quot;&gt;$VISUAL&lt;/code&gt; environment variable (?), but if you use a different editor you’ll probably
+just want to replace &lt;code class=&quot;highlighter-rouge&quot;&gt;vim&lt;/code&gt; with whatever command you use to boot up your editor - e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;subl&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;mvim&lt;/code&gt; etc.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;creating-posts&quot;&gt;Creating posts&lt;/h3&gt;
-&lt;p&gt;The octopress command for creating a post is &lt;code&gt;rake new_post[&quot;The name of my
+&lt;p&gt;The octopress command for creating a post is &lt;code class=&quot;highlighter-rouge&quot;&gt;rake new_post[&quot;The name of my
 post&quot;]&lt;/code&gt;. I’d then typically select the filename it outputs with the mouse,
 paste that into the command line and open it with vim. That’s &lt;em&gt;way&lt;/em&gt; too much
 typing, and any seasoned vim user would wince at the word “mouse”.&lt;/p&gt;
 
-&lt;p&gt;Here’s a function which lets me type &lt;code&gt;newpost &quot;The name of my post&quot;&lt;/code&gt; and creates
+&lt;p&gt;Here’s a function which lets me type &lt;code class=&quot;highlighter-rouge&quot;&gt;newpost &quot;The name of my post&quot;&lt;/code&gt; and creates
 the post, isolates it and opens it in one step:&lt;/p&gt;
 
-&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;~/.profile&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; newpost&lt;span class=&quot;o&quot;&gt;()&amp;#x7b;&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$&amp;#x7b;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;BLOG_HOME&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:?&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Need to set BLOG_HOME to the location of the octopress blog directory&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;&amp;#x7d;&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;nv&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt; rake new_post&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;$@&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;4&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$output&amp;quot;&lt;/span&gt;
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;~/.profile&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;k&quot;&gt;function &lt;/span&gt;newpost&lt;span class=&quot;o&quot;&gt;()&amp;#x7b;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$&amp;#x7b;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;BLOG_HOME&lt;/span&gt;:?&lt;span class=&quot;s2&quot;&gt;&quot;Need to set BLOG_HOME to the location of the octopress blog directory&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;&amp;#x7d;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;nv&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt; rake new_post[&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;4&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$output&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;5&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt; &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;6&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;nb&quot;&gt;local &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;return_code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$?&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;7&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$return_code&lt;/span&gt; -eq &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;7&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$return_code&lt;/span&gt; -eq 0 &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;8&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;c&quot;&gt;# Get the name of the file which was just created:&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;9&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;nv&quot;&gt;post_path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;grep -o &lt;span class=&quot;s1&quot;&gt;&amp;#39;source\/_posts\/.*\.markdown&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$output&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;9&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;nv&quot;&gt;post_path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;grep -o &lt;span class=&quot;s1&quot;&gt;'source\/_posts\/.*\.markdown'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$output&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;10&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;c&quot;&gt;# Stash all other posts (for faster generation)&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;11&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Isolating post...&amp;quot;&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;12&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    rake isolate&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;$post_path&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;11&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Isolating post...&quot;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;12&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    rake isolate[&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$post_path&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;13&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;c&quot;&gt;# Open with the cursor at the bottom of the header:&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;14&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    vim -c &lt;span class=&quot;s1&quot;&gt;&amp;#39;normal G&amp;#39;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$post_path&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;14&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    vim -c &lt;span class=&quot;s1&quot;&gt;'normal G'&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$post_path&lt;/span&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;15&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;16&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;#x7d;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
 
 &lt;p&gt;My &lt;a href=&quot;https://github.com/dgmstuart/dotfiles&quot;&gt;dotfiles&lt;/a&gt; are shared between
-multiple machines, so the &lt;code&gt;BLOG_HOME&lt;/code&gt; environment variable is set in a local
+multiple machines, so the &lt;code class=&quot;highlighter-rouge&quot;&gt;BLOG_HOME&lt;/code&gt; environment variable is set in a local
 profile:&lt;/p&gt;
 
 &lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;~/.profile.local&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;BLOG_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/Dev/Personal/blog&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
@@ -553,23 +245,23 @@ or more robust, please let me know in the comments.&lt;/p&gt;
 
 &lt;h3 id=&quot;isolating-posts&quot;&gt;Isolating Posts&lt;/h3&gt;
 
-&lt;p&gt;Notice in the &lt;code&gt;newpost&lt;/code&gt; function I’ve got &lt;code&gt;rake isolate[&quot;$post_path&quot;]&lt;/code&gt; - that’s a
+&lt;p&gt;Notice in the &lt;code class=&quot;highlighter-rouge&quot;&gt;newpost&lt;/code&gt; function I’ve got &lt;code class=&quot;highlighter-rouge&quot;&gt;rake isolate[&quot;$post_path&quot;]&lt;/code&gt; - that’s a
 nifty task provided by Octopress which gets around the fact that when you generate
 your Octopress blog it has to rebuild the entire site (?) which can be very slow.
 Unfortunately it doesn’t seem to be documented, but you can see the source in the
-&lt;code&gt;Rakefile&lt;/code&gt; of your Octopress install.&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Rakefile&lt;/code&gt; of your Octopress install.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Side note: run &lt;code&gt;rake -T&lt;/code&gt; in your blog directory to see all of the Octopress commands #protip&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Side note: run &lt;code class=&quot;highlighter-rouge&quot;&gt;rake -T&lt;/code&gt; in your blog directory to see all of the Octopress commands #protip&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;rake isolate&lt;/code&gt; moves all posts into &lt;code&gt;source/_stash&lt;/code&gt;, unless they  match the given
-string in their title. This means that when you’re previewing your post with &lt;code&gt;rake preview&lt;/code&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rake isolate&lt;/code&gt; moves all posts into &lt;code class=&quot;highlighter-rouge&quot;&gt;source/_stash&lt;/code&gt;, unless they  match the given
+string in their title. This means that when you’re previewing your post with &lt;code class=&quot;highlighter-rouge&quot;&gt;rake preview&lt;/code&gt;
 it’s much faster to re-generate because it’s only having to handle one post each time.&lt;/p&gt;
 
 &lt;p&gt;If you’re running this manually, there’s no need to pass the whole path: you can just
 find one of two words which are unique in the filename of your post and use that - e.g.
-&lt;code&gt;rake isolate[wizards]&lt;/code&gt;&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;rake isolate[wizards]&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;You can put your stashed posts back with &lt;code&gt;rake integrate&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You can put your stashed posts back with &lt;code class=&quot;highlighter-rouge&quot;&gt;rake integrate&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;listing-and-revisiting-posts&quot;&gt;Listing and revisiting posts&lt;/h3&gt;
 &lt;p&gt;A couple of things I find myself needing to do fairly often:&lt;/p&gt;
@@ -584,22 +276,22 @@ find one of two words which are unique in the filename of your post and use that
 &lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;~/.profile&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;c&quot;&gt;# blogposts: display the list of posts ordered by last modified time&lt;/span&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;c&quot;&gt;# %m                           -- Last modified timestamp&lt;/span&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;c&quot;&gt;# %N                           -- Quoted File name&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;4&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;c&quot;&gt;# -exec stat -f &amp;quot;%m %N&amp;quot; &amp;#x7b;&amp;#x7d; \;  -- Outputs a timestamp at the beginning of the line for sorting&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;5&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;c&quot;&gt;# cut -d &amp;#39; &amp;#39; -f2-              -- Returns only the second field in a space-delimited string&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;6&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;blogposts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;find $BLOG_HOME/source/_posts/* -exec stat -f &amp;quot;%m %N&amp;quot; &amp;#x7b;&amp;#x7d; \; | sort -n | cut -d &amp;quot; &amp;quot; -f2-&amp;#39;&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;7&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;lastpost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;find `blogposts` | tail -1 &amp;#39;&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;8&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;epost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;vim `lastpost`&amp;#39;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;4&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;c&quot;&gt;# -exec stat -f &quot;%m %N&quot; &amp;#x7b;&amp;#x7d; \;  -- Outputs a timestamp at the beginning of the line for sorting&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;5&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;c&quot;&gt;# cut -d ' ' -f2-              -- Returns only the second field in a space-delimited string&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;6&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;blogposts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'find $BLOG_HOME/source/_posts/* -exec stat -f &quot;%m %N&quot; &amp;#x7b;&amp;#x7d; \; | sort -n | cut -d &quot; &quot; -f2-'&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;7&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;lastpost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'find `blogposts` | tail -1 '&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;8&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;epost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'vim `lastpost`'&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;deploying&quot;&gt;Deploying&lt;/h3&gt;
-&lt;p&gt;The &lt;code&gt;gen:deploy&lt;/code&gt; rake task is a built-in alias for running the
-&lt;code&gt;:integrate&lt;/code&gt;, &lt;code&gt;:generate&lt;/code&gt;, and &lt;code&gt;:deploy&lt;/code&gt; tasks, but again, typing
-&lt;code&gt;rake gen:deploy&lt;/code&gt; is just too much typing, hence:&lt;/p&gt;
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;gen:deploy&lt;/code&gt; rake task is a built-in alias for running the
+&lt;code class=&quot;highlighter-rouge&quot;&gt;:integrate&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;:generate&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;:deploy&lt;/code&gt; tasks, but again, typing
+&lt;code class=&quot;highlighter-rouge&quot;&gt;rake gen:deploy&lt;/code&gt; is just too much typing, hence:&lt;/p&gt;
 
-&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;~/.profile&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;rgd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;rake gen_deploy&amp;#39;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;~/.profile&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;rgd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'rake gen_deploy'&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
 </description>
         <pubDate>Fri, 27 Mar 2015 18:48:31 +0000</pubDate>
-        <link>http://dgmstuart.github.io/blog/2015/03/27/some-tools-for-faster-blogging-in-octopress/</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/27/some-tools-for-faster-blogging-in-octopress/</guid>
+        <link>http://localhost:4000/blog/2015/03/27/some-tools-for-faster-blogging-in-octopress/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2015/03/27/some-tools-for-faster-blogging-in-octopress/</guid>
         
         <category>blogging</category>
         
@@ -615,10 +307,10 @@ find one of two words which are unique in the filename of your post and use that
         <description>&lt;p&gt;I’ve often wondered how in Ruby screencasts they magically execute code inline
 in the editor, e.g. they type:&lt;/p&gt;
 
-&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reverse&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reverse&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
 
 &lt;p&gt;…and it magically becomes&lt;/p&gt;
-&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reverse&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; [3, 2, 1]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reverse&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; [3, 2, 1]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
 
 &lt;p&gt;You can see how effective this is in action in
 &lt;a href=&quot;http://www.rubytapas.com/episodes/11-Method-and-Message&quot;&gt;one of the sample episodes for Ruby Tapas&lt;/a&gt;
@@ -635,13 +327,13 @@ Update ‘# =&amp;gt;’ Markers” which has been ported over to other editors:
 &lt;a href=&quot;https://rubygems.org/gems/rcodetools/versions/0.8.5.0&quot;&gt;rcodetools&lt;/a&gt; gem)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;This also explains why the Sublime Text snippet for &lt;code&gt;#&lt;/code&gt; expands to &lt;code&gt;# =&amp;gt;&lt;/code&gt;. I’d always
+&lt;p&gt;This also explains why the Sublime Text snippet for &lt;code class=&quot;highlighter-rouge&quot;&gt;#&lt;/code&gt; expands to &lt;code class=&quot;highlighter-rouge&quot;&gt;# =&amp;gt;&lt;/code&gt;. I’d always
 assumed that this was intended to make multiline comments more readable. That
 sounds a bit silly now that I know :)&lt;/p&gt;
 </description>
         <pubDate>Fri, 27 Mar 2015 15:41:47 +0000</pubDate>
-        <link>http://dgmstuart.github.io/blog/2015/03/27/execute-ruby-code-inline-in-the-editor/</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/27/execute-ruby-code-inline-in-the-editor/</guid>
+        <link>http://localhost:4000/blog/2015/03/27/execute-ruby-code-inline-in-the-editor/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2015/03/27/execute-ruby-code-inline-in-the-editor/</guid>
         
         <category>ruby</category>
         
@@ -658,7 +350,7 @@ sounds a bit silly now that I know :)&lt;/p&gt;
         <title>Unboxed Event notes: &quot;Unstick your digital products&quot;</title>
         <description>&lt;p&gt;&lt;em&gt;I’m at a &lt;a href=&quot;https://www.eventbrite.co.uk/e/unstick-your-digital-products-rapidly-progress-a-complex-product-or-portfolio-of-stalled-products-tickets-15872783924&quot;&gt;speaker session from Unboxed consulting&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;dave-evanshttpswwwlinkedincompubdave-evansa311919---product-manager-e-commerce-at-macmillan-publishing-group&quot;&gt;&lt;a href=&quot;https://www.linkedin.com/pub/dave-evans/a/311/919&quot;&gt;Dave Evans&lt;/a&gt; - Product Manager (E-commerce) at Macmillan Publishing Group&lt;/h2&gt;
+&lt;h2 id=&quot;dave-evans---product-manager-e-commerce-at-macmillan-publishing-group&quot;&gt;&lt;a href=&quot;https://www.linkedin.com/pub/dave-evans/a/311/919&quot;&gt;Dave Evans&lt;/a&gt; - Product Manager (E-commerce) at Macmillan Publishing Group&lt;/h2&gt;
 
 &lt;h3 id=&quot;trust-me-im-a-product-manager-case-study-from-publishing&quot;&gt;“Trust me, I’m a product manager”: case study from publishing&lt;/h3&gt;
 
@@ -680,7 +372,7 @@ need different KPIs&lt;/li&gt;
 be about solving a problem: “What happens if you &lt;em&gt;can’t&lt;/em&gt; build it?”&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;glyn-parryhttpstwittercomgparry24--sh24-nhs-collaboration&quot;&gt;&lt;a href=&quot;https://twitter.com/g_parry24/&quot;&gt;Glyn Parry&lt;/a&gt; – SH:24 (NHS collaboration)&lt;/h2&gt;
+&lt;h2 id=&quot;glyn-parry--sh24-nhs-collaboration&quot;&gt;&lt;a href=&quot;https://twitter.com/g_parry24/&quot;&gt;Glyn Parry&lt;/a&gt; – SH:24 (NHS collaboration)&lt;/h2&gt;
 
 &lt;h3 id=&quot;how-designing-a-new-experience-in-the-nhs-helped-to-unblock-and-unleash-new-potential&quot;&gt;How designing a new experience in the NHS helped to unblock and unleash new potential&lt;/h3&gt;
 
@@ -716,7 +408,7 @@ super-discreet: they just want to know as quickly and clearly as possible&lt;/li
   &lt;li&gt;Prior to alpha - 3 month discovery stage: very intensive working with users&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;will-rowanhttpstwittercomthecustomer---product-manager-at-the-ministry-of-justice-interview&quot;&gt;&lt;a href=&quot;https://twitter.com/thecustomer&quot;&gt;Will Rowan&lt;/a&gt; - Product Manager at the Ministry of Justice (interview)&lt;/h2&gt;
+&lt;h2 id=&quot;will-rowan---product-manager-at-the-ministry-of-justice-interview&quot;&gt;&lt;a href=&quot;https://twitter.com/thecustomer&quot;&gt;Will Rowan&lt;/a&gt; - Product Manager at the Ministry of Justice (interview)&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Managers are more important if they have more responsibilities - therefore
@@ -752,7 +444,7 @@ Always carry whiteboard markers and post-its when in a non-agile environment
 (you won’t find them there).&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;richard-stobarthttpstwittercomrichardstobart--ceo-unboxed-consulting-agile-coach-of-the-year-2014&quot;&gt;&lt;a href=&quot;https://twitter.com/richardstobart&quot;&gt;Richard Stobart&lt;/a&gt; – CEO, Unboxed Consulting, Agile Coach of the Year 2014&lt;/h2&gt;
+&lt;h2 id=&quot;richard-stobart--ceo-unboxed-consulting-agile-coach-of-the-year-2014&quot;&gt;&lt;a href=&quot;https://twitter.com/richardstobart&quot;&gt;Richard Stobart&lt;/a&gt; – CEO, Unboxed Consulting, Agile Coach of the Year 2014&lt;/h2&gt;
 
 &lt;h3 id=&quot;techniques-for-overcoming-the-big-7-digital-product-blockers&quot;&gt;Techniques for overcoming the Big 7 digital product blockers&lt;/h3&gt;
 
@@ -790,8 +482,8 @@ controls the backlog&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 25 Mar 2015 09:55:22 +0000</pubDate>
-        <link>http://dgmstuart.github.io/blog/2015/03/25/unboxed-event-notes/</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/25/unboxed-event-notes/</guid>
+        <link>http://localhost:4000/blog/2015/03/25/unboxed-event-notes/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2015/03/25/unboxed-event-notes/</guid>
         
         <category>agile</category>
         
@@ -801,65 +493,343 @@ controls the backlog&lt;/li&gt;
       </item>
     
       <item>
-        <title>Tim Nash at WordCamp London - Beyond Unit Tests</title>
-        <description>&lt;p&gt;&lt;em&gt;I’m at &lt;a href=&quot;http://london.wordcamp.org/2015/&quot;&gt;WordCamp London&lt;/a&gt; - live-blogging
-some of the talks&lt;/em&gt;&lt;/p&gt;
+        <title>Setting up a Ruby dev environment on Bowery.io</title>
+        <description>&lt;p&gt;&lt;em&gt;EDIT: Apparently it’s not possible to run docker inside a Bowery instance
+because Bowery uses docker and docker has a hard time running inside a docker
+container - see &lt;a href=&quot;https://groups.google.com/forum/#!topic/bowery/WsXWzWghwVc&quot;&gt;this post on the forum&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://twitter.com/tnash&quot;&gt;Tim Nash&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://bowery.io/&quot;&gt;Bowery.io&lt;/a&gt; is a hosted development environment service.
+The idea is that you edit your files locally, but run your code in a cloud-hosted
+&lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt; container, based on an image which can be
+shared and edited by teams.&lt;/p&gt;
+
+&lt;p&gt;It looks like it used to host its own packages and allow environments to be
+set up through a gui, but now the approach is to either install everything by
+hand or use a dockerfile, which I guess makes sense as docker has become more
+and more popular and Bowery’s main audience is going to be quite devvy devs
+who are comfortable using docker.&lt;/p&gt;
+
+&lt;p&gt;I had a go at setting up an environment for ruby development and didn’t really
+find any documentation so here’s what I tried:&lt;/p&gt;
+
+&lt;h2 id=&quot;approach-use-a-dockerfile&quot;&gt;Approach: Use a dockerfile&lt;/h2&gt;
+&lt;p&gt;The simplest way to start your Bowery image with ruby is to use a dockerfile
+which sets ruby up for you. This can be as simple as creating a file called
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; at the root of your project, consisting of this line:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from ruby:2.2.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;…then when you select your code directory for the first time through the
+Bowery app you can click “Yes” on this prompt to initialize your Bowery image
+based on that Dockerfile:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/content/bowery_prompt.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;More details about this approach can be found &lt;a href=&quot;http://bowery.io/posts/dockerfile-support/&quot;&gt;on the Bowery blog&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;approach-install-ruby-directly&quot;&gt;Approach: Install ruby directly&lt;/h2&gt;
+&lt;p&gt;Not having ever used docker in anger, my first attempt involved just
+installing ruby manually. The following steps are
+basically a textbook set of steps for installing ruby on a new Ubuntu machine
+(which is what Bowery instances are based on):&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Update apt-get:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; apt-get update
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/sstephenson/ruby-build/wiki#suggested-build-environment&quot;&gt;Install the dependencies for ruby-build&lt;/a&gt;
+using apt-get&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/sstephenson/rbenv&quot;&gt;Install rbenv&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/sstephenson/ruby-build&quot;&gt;Install ruby-build&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install ruby with rbenv:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; rbenv install 2.2.0
+ rbenv global 2.2.0
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install bundler:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; gem install bundler
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;what-about-rails&quot;&gt;What about Rails?&lt;/h2&gt;
+&lt;p&gt;I &lt;em&gt;have&lt;/em&gt; managed to successfully set up a Rails dev environment using Bowery,
+but it ended up being pretty fiddly and I’m not sure I have anything coherent
+enough to blog about.&lt;/p&gt;
+
+&lt;p&gt;I essentially set it up just like any other ubuntu box would be set up (but
+I’m still pretty green at server management - hence fiddly).&lt;/p&gt;
+
+&lt;p&gt;What I was hoping
+to find was a Dockerfile which at least set up Ruby and Postgres, but it seems
+like the normal approach is to run separate Docker containers and link them
+(as in &lt;a href=&quot;http://allenwei.cn/setup-rails-development-environment-with-docker/&quot;&gt;this tutorial&lt;/a&gt;).
+I don’t think this approach applies to Bowery, where a single dockerfile is
+used to initialize the image. I suppose I could run docker on Bowery though? (#meta)&lt;/p&gt;
+
+&lt;p&gt;In any case, here are the additional components which need to be installed to
+run my Rails dev environment:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Strategy for handling a tight deadline: Piles of acceptance tests&lt;/li&gt;
-  &lt;li&gt;Disagreement between different languages on what unit tests mean&lt;/li&gt;
-  &lt;li&gt;Focus on tools and concepts not methodology&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://codeception.com/&quot;&gt;Codececption&lt;/a&gt; - does a lot of things, mocking etc.
-php testing framework&lt;/li&gt;
-  &lt;li&gt;Acceptance testing: commands like &lt;code&gt;amOnPage&lt;/code&gt;, &lt;code&gt;see&lt;/code&gt;, &lt;code&gt;fillField&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Define scenarios: login, fill in form and submit etc.&lt;/li&gt;
-  &lt;li&gt;Generates reports in: console, html, xml (Ick!)&lt;/li&gt;
-  &lt;li&gt;Can use different drivers: WebDriver (fast, headless, no js, basically does the equivalend of cURL), Selenium (Slow, but drives the actual browser: can be hard to set up), PhantomJS (headless, runs js)&lt;/li&gt;
-  &lt;li&gt;Functional testing: sits alongside acceptance testing
+  &lt;li&gt;A Javascript runtime (I installed Node.js with apt-get)&lt;/li&gt;
+  &lt;li&gt;A database (I installed Postgresql with apt-get but had a pain setting it up)&lt;/li&gt;
+  &lt;li&gt;A headless browser for javascript specs (I &lt;a href=&quot;http://phantomjs.org/build.html&quot;&gt;built phantom.js from
+scratch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sat, 28 Feb 2015 01:27:44 +0000</pubDate>
+        <link>http://localhost:4000/blog/2015/02/28/setting-up-a-ruby-on-rails-dev-environment-on-bowery-dot-io/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2015/02/28/setting-up-a-ruby-on-rails-dev-environment-on-bowery-dot-io/</guid>
+        
+        <category>ruby</category>
+        
+        <category>ubuntu</category>
+        
+        
+        <category>ruby</category>
+        
+      </item>
+    
+      <item>
+        <title>How your base PATH gets generated in OSX</title>
+        <description>&lt;p&gt;On OSX and linux it seems to be fairly common practice to totally define the &lt;code class=&quot;highlighter-rouge&quot;&gt;PATH&lt;/code&gt; in a
+&lt;code class=&quot;highlighter-rouge&quot;&gt;.profile&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; file. This gives total control over the order in which
+various locations are searched through. Here’s the line from &lt;a href=&quot;https://github.com/dgmstuart/dotfiles/blob/master/.profile&quot;&gt;my .profile&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export PATH=~/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;However, your &lt;code class=&quot;highlighter-rouge&quot;&gt;PATH&lt;/code&gt; isn’t just set through &lt;code class=&quot;highlighter-rouge&quot;&gt;profile&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;rc&lt;/code&gt; files: if you
+don’t build your path from scratch and you only ever append or prepend to it
+with statements like &lt;code class=&quot;highlighter-rouge&quot;&gt;export PATH=$PATH:some/other/stuff&lt;/code&gt; then the OS helpfully
+sets your base &lt;code class=&quot;highlighter-rouge&quot;&gt;PATH&lt;/code&gt; to something sensible.&lt;/p&gt;
+
+&lt;p&gt;It does this based on various files in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc&lt;/code&gt; (at least on OSX):&lt;/p&gt;
+
+&lt;h2 id=&quot;etcpaths&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/paths&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;This contains the list of the various binary directories which make up the core of your path:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/usr/local/bin
+/usr/bin
+/bin
+/usr/sbin
+/sbin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;etcpathsd&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/paths.d&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;This contains a number of files which contain paths for various applications,
+again with one path element per line. I believe these are added to the &lt;em&gt;end&lt;/em&gt; of
+the &lt;code class=&quot;highlighter-rouge&quot;&gt;PATH&lt;/code&gt;. Mine includes a &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/usr/local/git/bin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 23 Feb 2015 23:03:33 +0000</pubDate>
+        <link>http://localhost:4000/blog/2015/02/23/how-your-base-path-gets-generated-in-osx/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2015/02/23/how-your-base-path-gets-generated-in-osx/</guid>
+        
+        <category>osx</category>
+        
+        
+        <category>osx</category>
+        
+      </item>
+    
+      <item>
+        <title>How to not break permalinks in WordPress</title>
+        <description>&lt;p&gt;I’ve written a blog post for &lt;a href=&quot;https://www.dxw.com/&quot;&gt;work&lt;/a&gt; about how much you can and can’t mess around with urls in WordPress before old links stop working. It boils down to 5 rules:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Editing Post slugs doesn’t break old links&lt;/li&gt;
+  &lt;li&gt;Editing Post url structure (the permalinks) doesn’t break old links&lt;/li&gt;
+  &lt;li&gt;Changing both the permalink structure and the slug will break old links&lt;/li&gt;
+  &lt;li&gt;Editing the parent/child relationships of pages doesn’t break old links&lt;/li&gt;
+  &lt;li&gt;Editing the slugs of pages will break old links&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For more details read the full post on the dxw blog: &lt;a href=&quot;https://www.dxw.com/2015/02/keeping-traffic-flowing-to-your-wordpress-site-after-a-big-restructuring/&quot;&gt;Keeping traffic flowing to your WordPress site after a big restructuring&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 06 Feb 2015 00:13:40 +0000</pubDate>
+        <link>http://localhost:4000/blog/2015/02/06/how-to-not-break-permalinks-in-wordpress/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2015/02/06/how-to-not-break-permalinks-in-wordpress/</guid>
+        
+        <category>wordpress</category>
+        
+        
+        <category>wordpress</category>
+        
+      </item>
+    
+      <item>
+        <title>Managing identity in git</title>
+        <description>&lt;p&gt;When using git, your commits are labelled with your name and email address.
+These are usually based on the &lt;code class=&quot;highlighter-rouge&quot;&gt;user.name&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;user.email&lt;/code&gt; fields in a global &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitconfig&lt;/code&gt; file in your home directory,
+ensuring that these values are always available.&lt;/p&gt;
+
+&lt;p&gt;There might be some circumstances under which these need to vary. For example, on public projects for work I like to use my work email rather than my personal one.
+There are a couple of ways to achieve this:&lt;/p&gt;
+
+&lt;h3 id=&quot;1-as-an-argument-to-the-commit&quot;&gt;1. As an argument to the commit:&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git commit user.email duncan@work.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This is useful for one-off commits but would be tedious to type every time.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-in-a-local-git-config&quot;&gt;2. In a local git config&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config user.email duncan@work.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This creates a local &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitconfig&lt;/code&gt; file. Useful in project directories - since all child directories will use settings in this file,
+or will fall back to the global settings if a setting isn’t present in this file.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-in-an-environment-variable&quot;&gt;3. In an environment variable&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export AUTHOR_EMAIL=duncan@work.com
+export COMMITTER_EMAIL=duncan@work.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;These override everything - any email setting in any &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitconfig&lt;/code&gt; file.
+Useful if like me you like to &lt;a href=&quot;https://github.com/dgmstuart/dotfiles&quot;&gt;manage your dotfiles in git&lt;/a&gt;
+and share them on github in order to easily copy settings between different computers.&lt;/p&gt;
+
+&lt;p&gt;These could be set in a local &lt;code class=&quot;highlighter-rouge&quot;&gt;.profile&lt;/code&gt; file to make every project on that computer use a different email to your main one, while keeping the &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitconfig&lt;/code&gt; file pristine.
+&lt;em&gt;To understand the difference between Author and Committer see &lt;a href=&quot;https://stackoverflow.com/questions/18750808/difference-between-author-and-committer-in-git/18754896#18754896&quot;&gt;this StackOverflow post&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;bonus-what-if-you-dont-set-anything&quot;&gt;Bonus: What if you don’t set anything?&lt;/h2&gt;
+&lt;p&gt;It turns out git will try it’s best to find a name and email address to associate with your commits even if you don’t tell it explicitly what these are.
+Here’s where it looks, in order, for an email address to use:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;An &lt;code class=&quot;highlighter-rouge&quot;&gt;EMAIL&lt;/code&gt; local variable&lt;/li&gt;
+  &lt;li&gt;Your system username &lt;code class=&quot;highlighter-rouge&quot;&gt;@&lt;/code&gt; the value in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/mailname&lt;/code&gt; (which only exists on Debian systems?)&lt;/li&gt;
+  &lt;li&gt;Your system username &lt;code class=&quot;highlighter-rouge&quot;&gt;@&lt;/code&gt; the fully qualified hostname of the computer&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For more information check out the &lt;a href=&quot;http://git-scm.com/docs/git-commit-tree.html&quot;&gt;git documentation on the topic&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks to &lt;a href=&quot;https://twitter.com/holizz&quot;&gt;@holizz&lt;/a&gt; for helping me understand all this&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 04 Feb 2015 00:17:21 +0000</pubDate>
+        <link>http://localhost:4000/blog/2015/02/04/managing-identity-in-git/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2015/02/04/managing-identity-in-git/</guid>
+        
+        <category>git</category>
+        
+        
+        <category>tools</category>
+        
+      </item>
+    
+      <item>
+        <title>Pivotal talk: data-informed product decisions</title>
+        <description>&lt;p&gt;http://www.meetup.com/Pivotal-Labs-Tech-Talks/events/213571202/&lt;/p&gt;
+
+&lt;p&gt;Marc Abraham. &lt;a href=&quot;http://www.slideshare.net/abrahammarc1/102214-pivotal-labs-tech-talk&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;First thing is to ask the right questions&lt;/li&gt;
+  &lt;li&gt;Book - Lean Analytics&lt;/li&gt;
+  &lt;li&gt;Articulate Assumptions about the benefits of your product,&lt;/li&gt;
+  &lt;li&gt;Define Hypothesis: how will we know (in terms of hard metrics) if our assumptions are validated? What does success look like?&lt;/li&gt;
+  &lt;li&gt;To start with, focus on one key metric&lt;/li&gt;
+  &lt;li&gt;Behavioural plan - what do you want users to do - both to achieve user needs and business needs&lt;/li&gt;
+  &lt;li&gt;You have a live product:
     &lt;ul&gt;
-      &lt;li&gt;Test the interactions between units - integrations&lt;/li&gt;
-      &lt;li&gt;Ignore UI and JS - make posts directly: don’t emulate the browser - just
-call endpoints (incl. ajax) directly&lt;/li&gt;
-      &lt;li&gt;Can also be used to test apis/rss, cli, sending email, can also test
-xml-rpc&lt;/li&gt;
+      &lt;li&gt;Is it meeting the hypothesis&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;We’ll be interacting with the database, so we need to set up and tear down
-data
+  &lt;li&gt;
+    &lt;p&gt;Product retrospectives: how are we doing with the product - what does the data tell us about how well it’s going?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Data-Driven vs Data Informed approaches
     &lt;ul&gt;
-      &lt;li&gt;WP-Browser handles these database interactions (i.e. you can directly
-insert data)&lt;/li&gt;
-      &lt;li&gt;Approach for setup and teardown: you can run a shell script before and
-after a codeception test, so setup wp-cli scripts to do the database
-setup and teardown&lt;/li&gt;
+      &lt;li&gt;Data Driven:
+        &lt;ul&gt;
+          &lt;li&gt;Focus on one metric - collect lots of data (A/B, Multivariate tests etc. and understand whether what you’re doing is impacting that metric)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Re-usable code in Codeception: Step objects (collections of related steps to DRY up tests?)
+  &lt;li&gt;Data Informed
     &lt;ul&gt;
-      &lt;li&gt;Helpers, Modules&lt;/li&gt;
+      &lt;li&gt;Data might not tell you whether it’s a good product idea full stop: might be a leap of faith
+        &lt;ul&gt;
+          &lt;li&gt;When you actually have an MVP, &lt;em&gt;then&lt;/em&gt; you can start gathering data&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Plurality is the key: data is often just one aspect in data decisions&lt;/li&gt;
+      &lt;li&gt;Talk - Adam Osiri (?) on Facebook’s data-informed approach&lt;/li&gt;
+      &lt;li&gt;Data is important, bit other factors come into play: resources, competition, regulation, brand.&lt;/li&gt;
+      &lt;li&gt;You can’t replace intuition or creative ideas with data&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Refactoring strategy: Acceptance tests allow you to refactor your unit tests
-with confidence, (which allows you to refactor your code with confidence)&lt;/li&gt;
-  &lt;li&gt;Question: How to not couple the tests to e.g. the names of field names
-    &lt;ul&gt;
-      &lt;li&gt;Strategy: create a page object which wraps up those IDs, so that you
-only have one point where you need to change these&lt;/li&gt;
-      &lt;li&gt;Makes it slightly harder for non-developers to do the changes &lt;em&gt;(does it though??)&lt;/em&gt;,
-but makes it much more maintainable&lt;/li&gt;
-    &lt;/ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;5 key points:&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;Focus on the right questions&lt;/li&gt;
+      &lt;li&gt;Data can’t replace intuition&lt;/li&gt;
+      &lt;li&gt;Listen to the data and act accordingly
+        &lt;ul&gt;
+          &lt;li&gt;This is hard&lt;/li&gt;
+          &lt;li&gt;e.g. data might say that your idea or your variation isn’t actually effective.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Build and launch with data in mind
+        &lt;ul&gt;
+          &lt;li&gt;Include analytics in the user stories&lt;/li&gt;
+          &lt;li&gt;Start thinking about your assumptions and hypotheses at the beginning of the product life cycle&lt;/li&gt;
+          &lt;li&gt;as soon as you start working on the product you should be working with the analytics team/building data in from the ground up.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Be clear about your hypotheses, sample size and timing.
+        &lt;ul&gt;
+          &lt;li&gt;how large a sample do you need before you can claim that your results are significant.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
   &lt;/li&gt;
+  &lt;li&gt;Final statement “Embrace the data - don’t fear it”&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Sun, 22 Mar 2015 12:17:20 +0000</pubDate>
-        <link>http://dgmstuart.github.io/blog/2015/03/22/tim-nash-at-wordcamp-london-beyond-unit-tests/</link>
-        <guid isPermaLink="true">http://dgmstuart.github.io/blog/2015/03/22/tim-nash-at-wordcamp-london-beyond-unit-tests/</guid>
+        <pubDate>Wed, 22 Oct 2014 12:48:38 +0100</pubDate>
+        <link>http://localhost:4000/blog/2014/10/22/pivotal-talk-data-driven-product-decisions/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2014/10/22/pivotal-talk-data-driven-product-decisions/</guid>
         
-        <category>wordcamp london</category>
+        <category>talk</category>
         
-        <category>testing</category>
+        <category>products</category>
+        
+        <category>pivotal talk</category>
         
         
         <category>liveblog</category>
