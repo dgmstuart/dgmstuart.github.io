@@ -3,7 +3,7 @@ title: dgms code
 email: dgmstuart@gmail.com
 description: >
   This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical
-  Architect living in London. The focus is mostly Ruby on Rails 
+  Architect living in London. The focus is mostly Ruby on Rails
   with a little WordPress
 url: "http://dgmstuart.github.io"
 
@@ -29,6 +29,10 @@ jekyll-archives:
   layouts:
     tag: tag-archive
     category: category-archive
+
+collections:
+  conference-notes:
+    output: true
 
 # Build settings
 markdown: kramdown

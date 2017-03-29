@@ -1,0 +1,21 @@
+---
+layout: default
+permalink: /conference-notes/
+---
+<h1 class="h1">Conference notes:</h1>
+<article class="post-content">
+  <p>When I go to conferences I like to take notes and publish them straight away:</p>
+
+  {% for conference in site.data.conferences %}
+    <h2 class="h2">{{ conference.name }}</h2>
+    <p><small><a href="{{ conference.url }}">{{ conference.url }}</a></small></p>
+
+    {% assign conference_notes = site.conference-notes | sort %}
+    {% for conference_note in conference_notes %}
+      {% if conference_note.path contains conference.slug %}
+        <p><a href="{{ conference_note.url }}">{{ conference_note.title }}</a></p>
+      {% endif %}
+    {% endfor %}
+
+  {% endfor %}
+</article>
