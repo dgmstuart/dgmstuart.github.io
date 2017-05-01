@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>dgms code</title>
-    <description>This is the dev blog of Duncan Graeme Macdonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails with a little WordPress
+    <description>This is the dev blog of Duncan Graeme MacDonald Stuart - a Technical Architect living in London. The focus is mostly Ruby on Rails with a little WordPress
 </description>
     <link>http://dgmstuart.github.io/</link>
     <atom:link href="http://dgmstuart.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 12 Apr 2017 12:44:43 +0100</pubDate>
-    <lastBuildDate>Wed, 12 Apr 2017 12:44:43 +0100</lastBuildDate>
+    <pubDate>Mon, 01 May 2017 14:00:25 +0100</pubDate>
+    <lastBuildDate>Mon, 01 May 2017 14:00:25 +0100</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
