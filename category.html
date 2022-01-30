@@ -4,10 +4,10 @@ permalink: /category/
 ---
 <h1 class="h1">Categories:</h1>
 <div class="posts">
-  {% assign sorted_categories = (site.categories | sort:0) %}
+  {% assign sorted_categories = site.categories | sort %}
   <ul>
   {% for category_post in sorted_categories %}
-    {% assign category = (category_post | first) %}
+    {% assign category = category_post | first %}
     <li><a href="{{ page.url | append: category}}">{{ category }}</a></li>
   {% endfor %}
   </ul>
