@@ -42,7 +42,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
-exclude: ['LICENSE.txt', 'Gemfile.lock', 'Gemfile']
+exclude: ['LICENSE.txt', 'README.md', 'Gemfile.lock', 'Gemfile']
 
 text:
   pagination:
