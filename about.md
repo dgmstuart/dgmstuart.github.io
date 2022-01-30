@@ -29,7 +29,10 @@ Head of Products. Find out where I'm working now on
 or check out my
 shiny responsive [CV](https://dgmstuart.github.io/dgms_cv/).
 
-In my spare time I’m mostly swing dancing or sewing.
+In my spare time I’m mostly swing dancing, sewing or playing board games. I
+have a [WordPress blog](https://duncangmstuart.com/) where I
+post about that sort of thing sometimes. That blog also has some much older
+[code-related posts](https://duncangmstuart.com/category/code/).
 
 One thing I'm particularly proud of is
 [Swing Out London](https://www.swingoutlondon.co.uk/):
