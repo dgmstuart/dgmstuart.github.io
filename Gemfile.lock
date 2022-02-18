@@ -60,10 +60,6 @@ GEM
     octopress-autoprefixer (2.0.1)
       autoprefixer-rails
       jekyll (~> 3.0)
-    octopress-code-highlighter (4.3.0)
-      jekyll (~> 3.0)
-    octopress-codeblock (1.0.5)
-      octopress-code-highlighter (~> 4.2)
     octopress-date-format (3.0.3)
       jekyll (>= 2.0)
     octopress-deploy (1.3.0)
@@ -126,7 +122,6 @@ DEPENDENCIES
   jekyll-sitemap
   kramdown-parser-gfm
   octopress
-  octopress-codeblock
   octopress-image-tag
   octopress-solarized
 

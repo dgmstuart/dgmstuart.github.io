@@ -52,7 +52,7 @@ So now on restarting zeus and running the rails sever I get this error:
 
 Looking at my `database.yml`, it seemed that the application generator had set up several 'myapp' databases:
 
-{% codeblock database.yml %}
+{% highlight database.yml %}
 development:
   adapter:  postgresql
   host:     localhost
@@ -64,7 +64,7 @@ development:
   template: template0
 
   ...
-{% endcodeblock %}
+{% endhighlight %}
 
 Replacing myapp with swingoutlondon, I dared to hope that running `rake db:create` would just create these databases for me...
 

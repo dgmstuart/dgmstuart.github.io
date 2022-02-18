@@ -77,7 +77,8 @@ Here's what we get:
 
 Now I want to add a Gemfile (`bundle init`) to manage the versions of Jekyll and Octopress:
 
-{% codeblock lang:ruby ~/Gemfile %}
+{% highlight ruby %}
+# Gemfile
 source "https://rubygems.org"
 
 gem 'jekyll', '~> 3.0.2'
@@ -85,7 +86,7 @@ gem 'jekyll', '~> 3.0.2'
 group :jekyll_plugins do
   gem 'octopress', '~> 3.0.11'
 end
-{% endcodeblock %}
+{% endhighlight %}
 
 Now I can start copying over my content. I only have posts and a couple of associated images:
 
@@ -104,13 +105,15 @@ This is because I'm using the [codeblock](https://github.com/octopress/codeblock
 
 Here's the plugins part of my gemfile after adding the required plugins:
 
-{% codeblock lang:ruby ~/Gemfile %}
+{% highlight ruby %}
+# Gemfile
+
 group :jekyll_plugins do
   gem 'octopress', '~> 3.0.11'
   gem 'octopress-codeblock', '~> 1.0'
   gem 'octopress-image-tag', '~> 1.1'
 end
-{% endcodeblock %}
+{% endhighlight %}
 
 Install them with `bundle install`
 

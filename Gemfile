@@ -5,7 +5,6 @@ gem 'kramdown-parser-gfm'
 
 group :jekyll_plugins do
   gem 'octopress'
-  gem 'octopress-codeblock'
   gem 'octopress-image-tag'
   gem 'octopress-solarized'
 

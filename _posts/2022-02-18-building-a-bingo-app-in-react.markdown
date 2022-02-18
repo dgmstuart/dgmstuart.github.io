@@ -137,15 +137,15 @@ the compiler points out mistakes before I notice them.
 So I thought I'd have a crack at building a new bingo card in plain React with
 Typescript. After a false start, I initialised an application with:
 
-{% codeblock lang:sh %}
+{% highlight shell %}
 npx create-react-app my-app --template typescript
-{% endcodeblock %}
+{% endhighlight %}
 
 ...and remarkably quickly I had an grid of randomised words from a
 [JSON word list](https://github.com/dgmstuart/bingo-frontend/blob/main/src/wordList.json),
 where clicking a cell changed its colour:
 
-{% codeblock lang:tsx %}
+{% highlight tsx true %}
 import React, { useState } from 'react';
 import classNames from 'classnames';
 
@@ -172,7 +172,7 @@ const Cell: React.FC<{ word: string }> = ({ word }) => {
 }
 
 export default Cell;
-{% endcodeblock %}
+{% endhighlight %}
 
 ### "The Snatch (aerial)": The problem of state
 
@@ -208,9 +208,9 @@ I won't show
 here, but here's a simplified version of the type definition of the elements
 of that array:
 
-{% codeblock lang:ts %}
+{% highlight ts %}
 type CellProps = { word: string, stamped: boolean, toggleStamped: () => void }
-{% endcodeblock %}
+{% endhighlight %}
 
 I'm pretty pleased with the result - I was worried that the code was going to
 be either hacky or hard to wrap my head around, but it's turned out to be

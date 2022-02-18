@@ -66,7 +66,7 @@ This involved copying the section of the schema in the new app which creates the
 ### MoveDataToNewEventTables
 This is where the gnarly stuff happens. First I need a way of putting data into the new tables. I could go and create full models in the app, but it's possible to just create lightweight classes right in the migration:
 
-{% codeblock lang:ruby %}
+{% highlight ruby %}
 class EventSeed <  ActiveRecord::Base
   belongs_to :event
   belongs_to :venue
@@ -74,12 +74,12 @@ end
 class EventGenerator < ActiveRecord::Base
   belongs_to :event_seed
 end
-{% endcodeblock %}
+{% endhighlight %}
 I guess I should maybe also have included all of the validations here, but I'm fairly confident that the validations are basically equivalent between the two apps, and in any case, the relevant fields have `null: false` constraints on them in the database, so I'm not going to sweat it.
 
 Now we can actually create the new records:
 
-{% codeblock lang:ruby %}
+{% highlight ruby %}
 def change
   Event.all.each do |event|
     event_seed = create_event_seed(event)
@@ -96,7 +96,7 @@ def change
 
   # ...
 end
-{% endcodeblock %}
+{% endhighlight %}
 Note the use of `event.dates`.
 
 `create_event_seed` and `create_event_generator` are just wrappers around

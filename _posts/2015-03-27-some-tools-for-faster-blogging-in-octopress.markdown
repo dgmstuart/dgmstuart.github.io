@@ -27,7 +27,9 @@ typing, and any seasoned vim user would wince at the word "mouse".
 Here's a function which lets me type `newpost "The name of my post"` and creates
 the post, isolates it and opens it in one step:
 
-{% codeblock lang:sh ~/.profile %}
+{% highlight shell %}
+#  ~/.profile
+
 function newpost(){
   cd ${BLOG_HOME:?"Need to set BLOG_HOME to the location of the octopress blog directory"}
   output=$( rake new_post["$@"] )
@@ -44,15 +46,16 @@ function newpost(){
     vim -c 'normal G' $post_path
   fi
 }
-{% endcodeblock %}
+{% endhighlight %}
 
 My [dotfiles](https://github.com/dgmstuart/dotfiles) are shared between
 multiple machines, so the `BLOG_HOME` environment variable is set in a local
 profile:
 
-{% codeblock lang:sh ~/.profile.local %}
+{% highlight shell %}
+#  ~/.profile
 export BLOG_HOME=$HOME/Dev/Personal/blog
-{% endcodeblock %}
+{% endhighlight %}
 
 I'm pretty new at shell scripting, so if you know of a way to make this better
 or more robust, please let me know in the comments.
@@ -85,7 +88,9 @@ A couple of things I find myself needing to do fairly often:
 
 The following aliases achieve that:
 
-{% codeblock lang:sh ~/.profile %}
+{% highlight shell %}
+# ~/.profile
+
 # blogposts: display the list of posts ordered by last modified time
 # %m                           -- Last modified timestamp
 # %N                           -- Quoted File name
@@ -94,13 +99,15 @@ The following aliases achieve that:
 alias blogposts='find $BLOG_HOME/source/_posts/* -exec stat -f "%m %N" {} \; | sort -n | cut -d " " -f2-'
 alias lastpost='find `blogposts` | tail -1 '
 alias epost='vim `lastpost`'
-{% endcodeblock %}
+{% endhighlight %}
 
 ### Deploying
 The `gen:deploy` rake task is a built-in alias for running the
 `:integrate`, `:generate`, and `:deploy` tasks, but again, typing
 `rake gen:deploy` is just too much typing, hence:
 
-{% codeblock lang:sh ~/.profile %}
+{% highlight shell %}
+# ~/.profile
+
 alias rgd='rake gen_deploy'
-{% endcodeblock %}
+{% endhighlight %}
