@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "\"Somebody is upside down!\": building a bingo app in React"
-date: 2022-02-18 00:00:00 +0100
+date: 2022-02-18 12:00:00 +0100
 comments: true
 categories: [reactjs]
 tags: [reactjs, react]
