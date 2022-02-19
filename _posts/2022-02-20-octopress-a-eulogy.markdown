@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Octopress: A Eulogy"
-date: 2022-02-21T20:57:37+01:00
+date: 2022-02-21T00:08:00+01:00
 comments: true
 categories: [octopress]
 tags: [octopress, jekyll]
