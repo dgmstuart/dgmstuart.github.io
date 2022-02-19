@@ -81,7 +81,7 @@ We watched a lot of great dancing.
 
 The osric.com bingo cards looked like this:
 
-{% img /images/content/osric_bingo_card.png "An osric.com bingo card" %}
+!["An osric.com bingo card"](/images/content/osric_bingo_card.png)
 
 Eventually I tracked down the developer and got a
 [Pull Request](https://github.com/cherdt/BingoCardGenerator/pull/27)
@@ -216,7 +216,7 @@ I'm pretty pleased with the result - I was worried that the code was going to
 be either hacky or hard to wrap my head around, but it's turned out to be
 quite elegant. Here's what the new card looks like:
 
-{% img /images/content/team_lindy_bingo_card.png "An Team Lindy Bingo card" %}
+!["A Team Lindy Bingo card"](/images/content/team_lindy_bingo_card.png)
 
 You can have a play for yourself at
 [dgmstuart.github.io/bingo-frontend](https://dgmstuart.github.io/bingo-frontend/)
@@ -256,12 +256,12 @@ your game, but rather than messing about with images, the image is made up of
 emoji, which are just text so can be pasted pretty much anywhere. It's kind
 of genius. I think they look especially great in Discord:
 
-{% img /images/content/wordle_emoji_grid.png "A Wordle emoji grid" %}
+!["A Wordle emoji grid"](/images/content/wordle_emoji_grid.png)
 
 So of course I had to implement a similar share button to output an emojified
 bingo card:
 
-{% img /images/content/team_lindy_bingo_emoji_grid.png "A Team Lindy Bingo emoji grid" %}
+!["A Team Lindy Bingo emoji grid"](/images/content/team_lindy_bingo_emoji_grid.png)
 
 Building the actual grid is pretty simple: it's just `map`ping over the array
 of `CellData` state.

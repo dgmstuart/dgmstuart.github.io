@@ -59,8 +59,6 @@ GEM
       jekyll (~> 3.0)
     octopress-hooks (2.6.2)
       jekyll (>= 2.0)
-    octopress-image-tag (1.1.0)
-      jekyll
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
@@ -88,7 +86,6 @@ DEPENDENCIES
   jekyll-sitemap
   kramdown-parser-gfm
   octopress
-  octopress-image-tag
 
 BUNDLED WITH
    2.2.30

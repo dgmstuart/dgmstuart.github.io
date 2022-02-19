@@ -36,7 +36,7 @@ which sets ruby up for you. This can be as simple as creating a file called
 Bowery app you can click "Yes" on this prompt to initialize your Bowery image
 based on that Dockerfile:
 
-{% img /images/content/bowery_prompt.png %}
+!["A screenshot of the Bowery prompt"](/images/content/bowery_prompt.png)
 
 More details about this approach can be found [on the Bowery blog](http://bowery.io/posts/dockerfile-support/)
 
@@ -90,4 +90,3 @@ run my Rails dev environment:
   * A database (I installed Postgresql with apt-get but had a pain setting it up)
   * A headless browser for javascript specs (I [built phantom.js from
     scratch](http://phantomjs.org/build.html)
-

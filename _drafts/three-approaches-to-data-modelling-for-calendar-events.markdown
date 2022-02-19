@@ -6,7 +6,7 @@ comments: true
 category:
 tags: [design, "data modelling", ruby, rails]
 ---
-{% img /images/content/soldn_data_model_sketch.jpg %}
+!["A sketch of Swing Out London's data model"](/images/content/soldn_data_model_sketch.jpg)
 
 [Swing Out London](http://swingoutlondon.co.uk) has to deal with a set of constraints shared by any moderately complicated system handling events which have dates associated with them:
 
@@ -86,4 +86,3 @@ has_one :event, through: :event_seed
 [new one](https://github.com/dgmstuart/swingoutlondon2/blob/daa4397f1e9d772a5b5302cdd369b81201c8ec84/db/schema.rb)
 
 Approach 3a: Instances: create one-offs, generate repeating
-

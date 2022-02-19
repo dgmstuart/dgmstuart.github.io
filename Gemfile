@@ -5,7 +5,6 @@ gem 'kramdown-parser-gfm'
 
 group :jekyll_plugins do
   gem 'octopress'
-  gem 'octopress-image-tag'
 
   gem 'jekyll-paginate'
   gem 'jekyll-sitemap'

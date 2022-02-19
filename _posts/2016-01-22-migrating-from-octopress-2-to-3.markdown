@@ -70,7 +70,7 @@ I can now preview the site:
 
 Here's what we get:
 
-{% img /images/content/jekyll_new.png %}
+!["Jekyll new"](/images/content/jekyll_new.png)
 
 
 ## Configuring gems
