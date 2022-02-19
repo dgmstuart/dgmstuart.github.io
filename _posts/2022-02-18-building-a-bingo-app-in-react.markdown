@@ -145,7 +145,7 @@ npx create-react-app my-app --template typescript
 [JSON word list](https://github.com/dgmstuart/bingo-frontend/blob/main/src/wordList.json),
 where clicking a cell changed its colour:
 
-{% highlight tsx true %}
+{% highlight tsx %}
 import React, { useState } from 'react';
 import classNames from 'classnames';
 
