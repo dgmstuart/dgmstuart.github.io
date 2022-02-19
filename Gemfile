@@ -4,8 +4,7 @@ gem 'jekyll'
 gem 'kramdown-parser-gfm'
 
 group :jekyll_plugins do
-  gem 'octopress'
-
+  gem 'jekyll-compose'
   gem 'jekyll-paginate'
   gem 'jekyll-sitemap'
   gem 'jekyll-archives'

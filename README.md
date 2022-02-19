@@ -3,7 +3,9 @@
 Source code for blog hosted at https://dgmstuart.github.io/.
 Blog repo: https://github.com/dgmstuart/dgmstuart.github.io
 
-Based on Jekyll, using Octopress plugins.
+Based on Jekyll and uses
+`[jekyll-compose](https://github.com/jekyll/jekyll-compose#usage)` for
+creating and managing posts.
 
 ### Install dependencies:
 
@@ -15,11 +17,6 @@ Based on Jekyll, using Octopress plugins.
 
 ### Deploy
 
-First edit `_deploy.yml`, then:
-
-    jekyll build;octopress deploy
-
-Make sure you don't have a server running at the same time! Otherwise you
-might end up pushing a version with localhost urls instead of the production
-url.
-
+The site is automatically deployed to
+[github pages](https://pages.github.com/)
+when the `main` branch is pushed.
