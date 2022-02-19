@@ -28,6 +28,18 @@ jekyll-archives:
     tag: tag-archive
     category: category-archive
 
+jekyll_compose:
+  auto_open: true
+  default_front_matter:
+    drafts:
+      comments: true
+      categories: []
+      tags: []
+    posts:
+      comments: true
+      categories: []
+      tags: []
+
 collections:
   conference-notes:
     output: true
