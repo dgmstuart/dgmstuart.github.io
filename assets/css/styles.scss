@@ -3,14 +3,32 @@
 @import "pixyll";
 @import "solarized";
 
+// Inline code tags
+code {
+  padding: 0.25em 0.5em;
+  font-size: 85%;
+  color: $magenta;
+  background-color: $lighter-gray;
+}
+
+p code {
+  white-space: nowrap;
+}
+
+// code blocks
 .highlight {
   margin-inline-end: 0;
   margin-inline-start: 0;
 
-  pre, pre code {
+  pre,
+  pre code {
     font-size: .9em;
     line-height: 1.25em;
-    font-family: "Source Code Pro", Inconsolata-dz, Inconsolata, Menlo, Monaco, Consolas, "Liberation Mono", Courier, monospace;
+  }
+
+  pre code {
+    background-color: transparent;
+    padding: 0;
   }
 
   .p {

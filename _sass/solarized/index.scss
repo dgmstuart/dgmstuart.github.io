@@ -3,14 +3,9 @@
 $text-color: $base0;
 $code-background: $base03;
 
-.highlight,
 .highlight pre {
   code {
     color: $text-color;
-  }
-
-  .highlighter-rouge & {
-    background: $code-background;
   }
 
   background: $code-background;
