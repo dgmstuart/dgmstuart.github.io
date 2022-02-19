@@ -44,12 +44,12 @@ $code-background: $base03;
   .s { color: $cyan } /* Literal.String */
   .na { color: $blue } /* Name.Attribute */
   .nb { color: $orange } /* Name.Builtin */
-  .nc { color: $text-color } /* Name.Class */
-  .no { color: $orange } /* Name.Constant */
+  .nc { color: $yellow } /* Name.Class */
+  .no { color: $yellow } /* Name.Constant */
   .nd { color: $green } /* Name.Decorator */
   .ni { color: $orange } /* Name.Entity */
   .ne { color: $orange } /* Name.Exception */
-  .nf { color: $text-color } /* Name.Function */
+  .nf { color: $blue } /* Name.Function */
   .nl { color: $text-color } /* Name.Label */
   .nn { color: $text-color } /* Name.Namespace */
   .nx { color: $yellow } /* Name.Other */
