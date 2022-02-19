@@ -4,7 +4,7 @@ Source code for blog hosted at https://dgmstuart.github.io/.
 Blog repo: https://github.com/dgmstuart/dgmstuart.github.io
 
 Based on Jekyll and uses
-`[jekyll-compose](https://github.com/jekyll/jekyll-compose#usage)` for
+[`jekyll-compose`](https://github.com/jekyll/jekyll-compose#usage) for
 creating and managing posts.
 
 ### Install dependencies:
