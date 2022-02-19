@@ -16,7 +16,7 @@ The first
 step is to switch into 'refs' mode with `r` - this shows a view of all the
 local branches, remote branches and tags:
 
-{% img /images/content/tig_refs_view.png %}
+!["The tig refs view"](/images/content/tig_refs_view.png)
 _tig's 'refs' view_
 
 From any of these you can check out that branch or tag by putting the cursor

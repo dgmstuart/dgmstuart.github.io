@@ -1,0 +1,19 @@
+---
+---
+@import "pixyll";
+@import "solarized";
+
+.highlight {
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+
+  pre, pre code {
+    font-size: .9em;
+    line-height: 1.25em;
+    font-family: "Source Code Pro", Inconsolata-dz, Inconsolata, Menlo, Monaco, Consolas, "Liberation Mono", Courier, monospace;
+  }
+
+  .p {
+    font-size: inherit;
+  }
+}

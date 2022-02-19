@@ -6,7 +6,7 @@ comments: true
 category:
 tags: [design, "data modelling", ruby, rails]
 ---
-{% img /images/content/soldn_data_model_sketch.jpg %}
+!["A sketch of Swing Out London's data model"](/images/content/soldn_data_model_sketch.jpg)
 
 [Swing Out London](http://swingoutlondon.co.uk) has to deal with a set of constraints shared by any moderately complicated system handling events which have dates associated with them:
 
@@ -61,7 +61,7 @@ Do-able with modulo math in the sql
 <a name="approach_3"></a>Approach 3: Generate instances
 ---------------------------------
 
-{% codeblock lang:ruby %}
+{% highlight ruby %}
 # app/models/event.rb
 has_many :event_seeds
 has_many :event_generators, through: :event_seeds
@@ -80,10 +80,9 @@ has_many :event_instances, through: :event_seed
 # app/models/event_instance.rb
 belongs_to :event_seed
 has_one :event, through: :event_seed
-{% endcodeblock %}
+{% endhighlight %}
 
 
 [new one](https://github.com/dgmstuart/swingoutlondon2/blob/daa4397f1e9d772a5b5302cdd369b81201c8ec84/db/schema.rb)
 
 Approach 3a: Instances: create one-offs, generate repeating
-

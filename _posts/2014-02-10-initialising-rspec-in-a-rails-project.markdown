@@ -8,14 +8,15 @@ tags: [ruby, rspec, rails, testing]
 ---
 I use RSpec for doing TDD, and the rspec-rails gem for integration in Rails projects. On initialising RSpec for SOLDN2, with `rspec init` it generated the following spec helper (comments removed):
 
-{% codeblock spec/spec_helper.rb %}
+{% highlight ruby %}
+# spec/spec_helper.rb
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
   config.run_all_when_everything_filtered = true
   config.filter_run :focus
   config.order = 'random'
 end
-{% endcodeblock %}
+{% endhighlight %}
 
 This seemed to be missing some things, notably the loading of the Rails environment. Looking at the readme of the rspec-rails gem, I found that the correct command is actually:
 
@@ -23,7 +24,8 @@ This seemed to be missing some things, notably the loading of the Rails environm
 
 The file this command generates is much more verbose with instructive comments:
 
-{% codeblock spec/spec_helper.rb %}
+{% highlight ruby %}
+# spec/spec_helper.rb
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
@@ -39,12 +41,12 @@ RSpec.configure do |config|
   config.infer_base_class_for_anonymous_controllers = false
   config.order = "random"
 end
-{% endcodeblock %}
+{% endhighlight %}
 
 Interestingly this leaves out the `focus` config options, which allow you to select specific specs to run, e.g:
 
-{% codeblock lang:ruby %}
+{% highlight ruby %}
 it "does a thing", :focus do
   #...
 end
-{% endcodeblock %}
+{% endhighlight %}
