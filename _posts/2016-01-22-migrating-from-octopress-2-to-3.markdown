@@ -31,7 +31,7 @@ Now I can make a new blog:
      +   page
      +   post
 
-Looking at what that's given us, some of the directories are familar from the `source` directory of Octopress 2 sites (e.g. `_posts`):
+Looking at what that's given us, some of the directories are familiar from the `source` directory of Octopress 2 sites (e.g. `_posts`):
 
     .
     ├── _config.yml
