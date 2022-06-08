@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Migrating From Octopress 2 to 3 &#8211; dgms code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+">
+    <meta name="author" content="">
+    <meta name="keywords" content="octopress">
+    <link rel="canonical" href="https://dgmstuart.github.io/blog/2016/01/22/migrating-from-octopress-2-to-3/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for dgms code" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/styles.css?202206082308" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Migrating From Octopress 2 to 3">
+    <meta property="og:description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+">
+    <meta property="og:url" content="https://dgmstuart.github.io/blog/2016/01/22/migrating-from-octopress-2-to-3/">
+    <meta property="og:site_name" content="dgms code">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="@dgmstuart" />
+    
+    <meta name="twitter:title" content="Migrating From Octopress 2 to 3" />
+    <meta name="twitter:description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+" />
+    <meta name="twitter:url" content="https://dgmstuart.github.io/blog/2016/01/22/migrating-from-octopress-2-to-3/" />
+
+    
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44436648-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="site">
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="https://dgmstuart.github.io" class="site-title">dgms code</a>
+      <nav class="site-nav">
+        <a href="/conference-notes/">Conference notes</a>
+<a href="/about/">About</a>
+<a href="/contact/">Say hello</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-twitter" href="https://twitter.com/dgmstuart"></a>
+    
+    
+      <a class="fa fa-github" href="https://github.com/dgmstuart"></a>
+    
+    
+      <a class="fa fa-stack-overflow" href="https://stackoverflow.com/users/1035431/dgmstuart"></a>
+    
+    
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/duncangmstuart"></a>
+    
+    
+    <a class="fa fa-rss" href="/feed.xml"></a>
+  </div>
+</div>
+<div class="clearfix"></div>
+
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>Migrating From Octopress 2 to 3</h1>
+  <span class="post-meta">22 Jan, 2016</span><br>
+  
+  <span class="post-meta small">
+  
+    3 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>I’ve just migrated this blog from Octopress 2 to 3 and since <a href="https://github.com/octopress/octoress/issues/29">there doesn’t seem to be a definitive migration guide yet</a> (and inspired by a similar post by <a href="http://samwize.com/2015/09/30/migrating-octopress-2-to-octopress-3/">@samwize</a>)
+I wanted to share what I did.</p>
+
+<p>This was done with Octopress 3.0.11 and Jekyll 3.0.2. You can see the <a href="https://github.com/dgmstuart/blog_source/commits/master">actual
+commits on github</a>.</p>
+
+<p>The approach is to create a new Octopress 3 blog from scratch, import the exising content, and configure a few things to make that existing content work.</p>
+
+<h2 id="set-up-a-new-blog">Set up a new blog</h2>
+
+<p>First I need to make sure I have the latest version of Octopress available on my machine:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem update octopress
+</code></pre></div></div>
+
+<p>Now I can make a new blog:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ octopress new blog
+New jekyll site installed in /Users/dxwduncan/dev/Personal/blog.
+Added Octopress scaffold:
+ + _templates/
+ +   draft
+ +   page
+ +   post
+</code></pre></div></div>
+
+<p>Looking at what that’s given us, some of the directories are familiar from the <code class="language-plaintext highlighter-rouge">source</code> directory of Octopress 2 sites (e.g. <code class="language-plaintext highlighter-rouge">_posts</code>):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.
+├── _config.yml
+├── _includes
+│   ├── footer.html
+│   ├── head.html
+│   ├── header.html
+│   ├── icon-github.html
+│   ├── icon-github.svg
+│   ├── icon-twitter.html
+│   └── icon-twitter.svg
+├── _layouts
+│   ├── default.html
+│   ├── page.html
+│   └── post.html
+├── _posts
+│   └── 2016-01-21-welcome-to-jekyll.markdown
+├── _sass
+│   ├── _base.scss
+│   ├── _layout.scss
+│   └── _syntax-highlighting.scss
+├── _templates
+│   ├── draft
+│   ├── page
+│   └── post
+├── about.md
+├── css
+│   └── main.scss
+├── feed.xml
+└── index.html
+</code></pre></div></div>
+
+<p>I can now preview the site:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd blog
+$ jekyll serve
+</code></pre></div></div>
+
+<p>Here’s what we get:</p>
+
+<p><img src="/images/content/jekyll_new.png" alt="&quot;Jekyll new&quot;" /></p>
+
+<h2 id="configuring-gems">Configuring gems</h2>
+
+<p>Now I want to add a Gemfile (<code class="language-plaintext highlighter-rouge">bundle init</code>) to manage the versions of Jekyll and Octopress:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># Gemfile</span>
+<span class="n">source</span> <span class="s2">"https://rubygems.org"</span>
+
+<span class="n">gem</span> <span class="s1">'jekyll'</span><span class="p">,</span> <span class="s1">'~&gt; 3.0.2'</span>
+
+<span class="n">group</span> <span class="ss">:jekyll_plugins</span> <span class="k">do</span>
+  <span class="n">gem</span> <span class="s1">'octopress'</span><span class="p">,</span> <span class="s1">'~&gt; 3.0.11'</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>Now I can start copying over my content. I only have posts and a couple of associated images:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cp -r ../blog_old/source/_posts ./_posts
+$ mkdir images
+$ cp -r ../blog_old/source/images/content ./images/content
+</code></pre></div></div>
+
+<p><em>N.B. the new blog structure doesn’t have an images directory by default</em></p>
+
+<p>Now trying to run <code class="language-plaintext highlighter-rouge">jekyll serve</code> I get an error:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Liquid Exception: Liquid syntax error: Unknown tag 'codeblock' in /Users/dxwduncan/dev/Personal/blog/_posts/2014-02-07-getting-to-grips-with-postgres.markdown
+jekyll 3.0.2 | Error:  Liquid syntax error: Unknown tag 'codeblock'
+</code></pre></div></div>
+
+<p>This is because I’m using the <a href="https://github.com/octopress/codeblock">codeblock</a> octopress plugin. There are a couple of different ways of <a href="https://jekyllrb.com/docs/plugins/">adding plugins to jekyll</a> but the one which makes most sense to me is to put them in the <code class="language-plaintext highlighter-rouge">Gemfile</code>.</p>
+
+<p>Here’s the plugins part of my gemfile after adding the required plugins:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># Gemfile</span>
+
+<span class="n">group</span> <span class="ss">:jekyll_plugins</span> <span class="k">do</span>
+  <span class="n">gem</span> <span class="s1">'octopress'</span><span class="p">,</span> <span class="s1">'~&gt; 3.0.11'</span>
+  <span class="n">gem</span> <span class="s1">'octopress-codeblock'</span><span class="p">,</span> <span class="s1">'~&gt; 1.0'</span>
+  <span class="n">gem</span> <span class="s1">'octopress-image-tag'</span><span class="p">,</span> <span class="s1">'~&gt; 1.1'</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>Install them with <code class="language-plaintext highlighter-rouge">bundle install</code></p>
+
+<p>Codeblock adds a <code class="language-plaintext highlighter-rouge">.code-highlighter-cache</code> which needs to be added to the <code class="language-plaintext highlighter-rouge">.gitignore</code> which Octopress created for me.</p>
+
+<h2 id="deployment">Deployment</h2>
+
+<p>Now that I’ve got a working Octopress blog, I can rely on the <a href="https://github.com/octopress/octopress#deploying-your-site">standard
+deployment
+instructions</a>.
+This is pretty nice now!</p>
+
+<h2 id="making-it-all-look-nice">Making it all look nice</h2>
+
+<p>Now that all the content is imported it’s just a case of editing the <code class="language-plaintext highlighter-rouge">config.yml</code> file (very minimal compared to the Octopress 2 default) and tweaking the templates.</p>
+
+<p>It doesn’t look like there’s any obvious way to re-use Octopress 2 themes directly - I suppose it would be possible to copy the styles and templates into the right places, but I fancy a change of look anyway so I’m off to have a look at some Jekyll themes. I hope you’ve found this useful.</p>
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'dgmscode';
+    var disqus_identifier = '/blog/2016/01/22/migrating-from-octopress-2-to-3';
+    var disqus_title      = 'Migrating From Octopress 2 to 3';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      © 2022 Duncan Stuart. 
+      Powered by <a href="https://jekyllrb.com/">Jekyll</a>.
+      Theme based on <a href="https://github.com/johnotander/pixyll">Pixyll</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

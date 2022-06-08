@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WordCamp Europe 2014 notes - 2.3: The Next Generation Hosting Stack &#8211; dgms code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+">
+    <meta name="author" content="">
+    <meta name="keywords" content="liveblog">
+    <link rel="canonical" href="https://dgmstuart.github.io/conference-notes/wordcamp-europe-2014/2014-09-28-wordcamp-europe-2014-notes-2-dot-3-the-next-generation-hosting-stack/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for dgms code" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/styles.css?202206082308" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="WordCamp Europe 2014 notes - 2.3: The Next Generation Hosting Stack">
+    <meta property="og:description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+">
+    <meta property="og:url" content="https://dgmstuart.github.io/conference-notes/wordcamp-europe-2014/2014-09-28-wordcamp-europe-2014-notes-2-dot-3-the-next-generation-hosting-stack/">
+    <meta property="og:site_name" content="dgms code">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="@dgmstuart" />
+    
+    <meta name="twitter:title" content="WordCamp Europe 2014 notes - 2.3: The Next Generation Hosting Stack" />
+    <meta name="twitter:description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+" />
+    <meta name="twitter:url" content="https://dgmstuart.github.io/conference-notes/wordcamp-europe-2014/2014-09-28-wordcamp-europe-2014-notes-2-dot-3-the-next-generation-hosting-stack/" />
+
+    
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44436648-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="site">
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="https://dgmstuart.github.io" class="site-title">dgms code</a>
+      <nav class="site-nav">
+        <a href="/conference-notes/">Conference notes</a>
+<a href="/about/">About</a>
+<a href="/contact/">Say hello</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-twitter" href="https://twitter.com/dgmstuart"></a>
+    
+    
+      <a class="fa fa-github" href="https://github.com/dgmstuart"></a>
+    
+    
+      <a class="fa fa-stack-overflow" href="https://stackoverflow.com/users/1035431/dgmstuart"></a>
+    
+    
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/duncangmstuart"></a>
+    
+    
+    <a class="fa fa-rss" href="/feed.xml"></a>
+  </div>
+</div>
+<div class="clearfix"></div>
+
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>WordCamp Europe 2014 notes - 2.3: The Next Generation Hosting Stack</h1>
+  <span class="post-meta">28 Sep, 2014</span><br>
+  
+  <span class="post-meta small">
+  
+    2 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p><em>I’m at <a href="http://2014.europe.wordcamp.org/">WordCamp Europe</a> in Sofia - taking rough notes on some of the talks</em></p>
+
+<p>Mark Jaquith (@markjaquith) http://2014.europe.wordcamp.org/session/mark-jaquith/</p>
+
+<ul>
+  <li>Why is performance important?
+    <ul>
+      <li>It’s not about overall speed - it’s about the frustration of being interrupted</li>
+      <li>Everyone hates Lag</li>
+    </ul>
+  </li>
+  <li>WP has a bad rep for speed
+    <ul>
+      <li>no matter what wp core do, WP DB’s are getting bigger, lots of functionality, lots of plugins</li>
+    </ul>
+  </li>
+  <li>WP is dynamic - everything is built on the fly
+    <ul>
+      <li>Why don’t we just generate static files? - No persistent caching in core. Pages are so dynamic: search results etc. Only a small number of pages can be cached</li>
+    </ul>
+  </li>
+  <li>For the purposes of this talk: speed = speed of download of just the html page (not css or other assets)</li>
+  <li>3+ seconds = EMERGENCY</li>
+  <li>1-3 seconds = Slow</li>
+  <li>100-250ms = fast</li>
+  <li>&lt;100ms = instant</li>
+  <li>Many hosts don’t help with static caching</li>
+  <li>Virtual server hosting - what to look for
+    <ul>
+      <li>Are they going to be around for a while?</li>
+      <li>What’s their raw performance - lots of people have done hardcore speed tests - easily googleable</li>
+      <li>Value for money</li>
+      <li>Tool support - provisioning scripts, auto backup</li>
+      <li>Recommended: Linode, Digital Ocean</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="web-server">Web Server</h2>
+
+<ul>
+  <li>“Nginx is the best thing to happen to web servers ever”</li>
+  <li>Apache approach - php is baked in. That means there’s an overhead for each request</li>
+  <li>Nginx approach - can’t have php baked in. PHP-FPM runs php</li>
+  <li>PHP 5.5 has significant performance improvements over previous versions</li>
+  <li>HHVM - facebook project: transcodes php into machine code on the fly, with caching = crazy fast
+    <ul>
+      <li>Might not be production stable - need monitoring to catch when it crashes</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="database">Database</h2>
+
+<ul>
+  <li>MySQL is not the only option: MariaDB, Percona</li>
+  <li>HyperDB - project for providing a layer to manage lots of database instances</li>
+</ul>
+
+<h2 id="caching">Caching</h2>
+
+<h3 id="page-caching">Page caching:</h3>
+
+<ul>
+  <li>Questions - who, what, how long. Answers: Anonymous???, front of site, minutes, maybe hours???.</li>
+  <li>Nginx has a cache</li>
+  <li>Varnish is another option, but is another moving part</li>
+  <li>Plugins are tightly integrated with WP, but run in php so are much slower</li>
+</ul>
+
+<h3 id="object-caching">Object caching:</h3>
+<ul>
+  <li>Recommend using Redis (Pantheon uses it)</li>
+  <li>Memcached - used to be a recommendation. Restarting flushes the data - can cause massive spikes in load</li>
+  <li>Mark’s wrappers:
+    <ul>
+      <li>TLC Tranients http://bitly/tlc-transients</li>
+      <li>Fragment caching: http://bitly/fragment-cache</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="the-next-generation-stack">The next generation stack</h3>
+<p><img src="https://pbs.twimg.com/media/Bym-26pCcAAyPVd.jpg:large" alt="The next generation WordPress hosting stack" /></p>
+
+<ul>
+  <li>Audience qu Hyper db - works with MariaDB &amp; Percona?
+    <ul>
+      <li>AFAIK yes</li>
+    </ul>
+  </li>
+  <li>My qu - can you make core use Redis for your object cache or is that just for your own caching
+    <ul>
+      <li>Yes - you configure an object cache and core will use it to cache posts, taxonomies, a bunch of other things.</li>
+    </ul>
+  </li>
+  <li>Audience qu: What do you use for performance monitoring
+    <ul>
+      <li>NewRelic: very expensive, but gives you amazing insights</li>
+    </ul>
+  </li>
+</ul>
+
+<p>*</p>
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'dgmscode';
+    var disqus_identifier = '/conference-notes/wordcamp-europe-2014/wordcamp-europe-2014-notes-2-dot-3-the-next-generation-hosting-stack';
+    var disqus_title      = 'WordCamp Europe 2014 notes - 2.3: The Next Generation Hosting Stack';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      © 2022 Duncan Stuart. 
+      Powered by <a href="https://jekyllrb.com/">Jekyll</a>.
+      Theme based on <a href="https://github.com/johnotander/pixyll">Pixyll</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

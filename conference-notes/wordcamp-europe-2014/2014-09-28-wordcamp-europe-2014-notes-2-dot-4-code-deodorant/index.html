@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WordCamp Europe 2014 notes - 2.4: Code Deodorant &#8211; dgms code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+">
+    <meta name="author" content="">
+    <meta name="keywords" content="liveblog">
+    <link rel="canonical" href="https://dgmstuart.github.io/conference-notes/wordcamp-europe-2014/2014-09-28-wordcamp-europe-2014-notes-2-dot-4-code-deodorant/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for dgms code" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/styles.css?202206082308" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="WordCamp Europe 2014 notes - 2.4: Code Deodorant">
+    <meta property="og:description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+">
+    <meta property="og:url" content="https://dgmstuart.github.io/conference-notes/wordcamp-europe-2014/2014-09-28-wordcamp-europe-2014-notes-2-dot-4-code-deodorant/">
+    <meta property="og:site_name" content="dgms code">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="@dgmstuart" />
+    
+    <meta name="twitter:title" content="WordCamp Europe 2014 notes - 2.4: Code Deodorant" />
+    <meta name="twitter:description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+" />
+    <meta name="twitter:url" content="https://dgmstuart.github.io/conference-notes/wordcamp-europe-2014/2014-09-28-wordcamp-europe-2014-notes-2-dot-4-code-deodorant/" />
+
+    
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44436648-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="site">
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="https://dgmstuart.github.io" class="site-title">dgms code</a>
+      <nav class="site-nav">
+        <a href="/conference-notes/">Conference notes</a>
+<a href="/about/">About</a>
+<a href="/contact/">Say hello</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-twitter" href="https://twitter.com/dgmstuart"></a>
+    
+    
+      <a class="fa fa-github" href="https://github.com/dgmstuart"></a>
+    
+    
+      <a class="fa fa-stack-overflow" href="https://stackoverflow.com/users/1035431/dgmstuart"></a>
+    
+    
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/duncangmstuart"></a>
+    
+    
+    <a class="fa fa-rss" href="/feed.xml"></a>
+  </div>
+</div>
+<div class="clearfix"></div>
+
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>WordCamp Europe 2014 notes - 2.4: Code Deodorant</h1>
+  <span class="post-meta">28 Sep, 2014</span><br>
+  
+  <span class="post-meta small">
+  
+    1 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p><em>I’m at <a href="http://2014.europe.wordcamp.org/">WordCamp Europe</a> in Sofia - taking rough notes on some of the talks</em></p>
+
+<p>Tom Nowell (cftp) http://2014.europe.wordcamp.org/session/tom-nowell/</p>
+
+<ul>
+  <li>Now when running vanilla WP without plugins you shouldn’t see any warnings, so all warnings are things you should pay attention to</li>
+  <li>’@’ swallows errors - hides them.</li>
+  <li><a href="http://codex.wordpress.org/Plugin_API/Action_Reference/pre_get_posts">pre_get_posts action</a> - useful for removing complexity: modifying queries before they get run</li>
+  <li>Law of Demeter “if you’re talking to something, only talk to the things directly adjacent to you”</li>
+  <li>No global variables - random ordering of tests can help to show up issues.</li>
+  <li>Tools for code quality:
+    <ul>
+      <li>php syntax checking - if your editor isn’t doing this you’re doing it wrong. PHP Storm does this</li>
+      <li><a href="https://github.com/squizlabs/PHP_CodeSniffer">php code sniffer</a> - give it coding standards - it’ll check them</li>
+      <li><a href="https://github.com/Halleck45/PhpMetrics">php Metrics</a></li>
+      <li>phpLOC - tells you how many lines, classes, namespaces, measure of code complexity</li>
+      <li><a href="https://github.com/phpmd/phpmd">php Mess detector</a> - fuzzy matching: helps detect typos and join up e.g. misspelled variables which might be the same thing</li>
+      <li>NPath &amp; Cyclomatic complexity - Cycl = number of points at which code may diverge, NPath is number of execution paths through the code.
+        <ul>
+          <li>NPath complexity is roughly equivalent to the number of unit tests that you need to have to fully test the function</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Lots of WP functions have incredibly large npath complexity - WP_Query::get_posts is insanely large. Even larger in WP 4.0
+    <ul>
+      <li>http://www.tomjn.com/390/wp_queryget_posts/</li>
+    </ul>
+  </li>
+</ul>
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'dgmscode';
+    var disqus_identifier = '/conference-notes/wordcamp-europe-2014/wordcamp-europe-2014-notes-2-dot-4-code-deodorant';
+    var disqus_title      = 'WordCamp Europe 2014 notes - 2.4: Code Deodorant';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      © 2022 Duncan Stuart. 
+      Powered by <a href="https://jekyllrb.com/">Jekyll</a>.
+      Theme based on <a href="https://github.com/johnotander/pixyll">Pixyll</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

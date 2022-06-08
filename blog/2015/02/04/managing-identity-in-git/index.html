@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Managing identity in git &#8211; dgms code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+">
+    <meta name="author" content="">
+    <meta name="keywords" content="tools">
+    <link rel="canonical" href="https://dgmstuart.github.io/blog/2015/02/04/managing-identity-in-git/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for dgms code" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/styles.css?202206082308" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Managing identity in git">
+    <meta property="og:description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+">
+    <meta property="og:url" content="https://dgmstuart.github.io/blog/2015/02/04/managing-identity-in-git/">
+    <meta property="og:site_name" content="dgms code">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="@dgmstuart" />
+    
+    <meta name="twitter:title" content="Managing identity in git" />
+    <meta name="twitter:description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+" />
+    <meta name="twitter:url" content="https://dgmstuart.github.io/blog/2015/02/04/managing-identity-in-git/" />
+
+    
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44436648-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="site">
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="https://dgmstuart.github.io" class="site-title">dgms code</a>
+      <nav class="site-nav">
+        <a href="/conference-notes/">Conference notes</a>
+<a href="/about/">About</a>
+<a href="/contact/">Say hello</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-twitter" href="https://twitter.com/dgmstuart"></a>
+    
+    
+      <a class="fa fa-github" href="https://github.com/dgmstuart"></a>
+    
+    
+      <a class="fa fa-stack-overflow" href="https://stackoverflow.com/users/1035431/dgmstuart"></a>
+    
+    
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/duncangmstuart"></a>
+    
+    
+    <a class="fa fa-rss" href="/feed.xml"></a>
+  </div>
+</div>
+<div class="clearfix"></div>
+
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>Managing identity in git</h1>
+  <span class="post-meta">4 Feb, 2015</span><br>
+  
+  <span class="post-meta small">
+  
+    1 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>When using git, your commits are labelled with your name and email address.
+These are usually based on the <code class="language-plaintext highlighter-rouge">user.name</code> and <code class="language-plaintext highlighter-rouge">user.email</code> fields in a global <code class="language-plaintext highlighter-rouge">.gitconfig</code> file in your home directory,
+ensuring that these values are always available.</p>
+
+<p>There might be some circumstances under which these need to vary. For example, on public projects for work I like to use my work email rather than my personal one.
+There are a couple of ways to achieve this:</p>
+
+<h3 id="1-as-an-argument-to-the-commit">1. As an argument to the commit:</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit user.email duncan@work.com
+</code></pre></div></div>
+
+<p>This is useful for one-off commits but would be tedious to type every time.</p>
+
+<h3 id="2-in-a-local-git-config">2. In a local git config</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config user.email duncan@work.com
+</code></pre></div></div>
+
+<p>This creates a local <code class="language-plaintext highlighter-rouge">.gitconfig</code> file. Useful in project directories - since all child directories will use settings in this file,
+or will fall back to the global settings if a setting isn’t present in this file.</p>
+
+<h3 id="3-in-an-environment-variable">3. In an environment variable</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export AUTHOR_EMAIL=duncan@work.com
+export COMMITTER_EMAIL=duncan@work.com
+</code></pre></div></div>
+
+<p>These override everything - any email setting in any <code class="language-plaintext highlighter-rouge">.gitconfig</code> file.
+Useful if like me you like to <a href="https://github.com/dgmstuart/dotfiles">manage your dotfiles in git</a>
+and share them on github in order to easily copy settings between different computers.</p>
+
+<p>These could be set in a local <code class="language-plaintext highlighter-rouge">.profile</code> file to make every project on that computer use a different email to your main one, while keeping the <code class="language-plaintext highlighter-rouge">.gitconfig</code> file pristine.
+<em>To understand the difference between Author and Committer see <a href="https://stackoverflow.com/questions/18750808/difference-between-author-and-committer-in-git/18754896#18754896">this StackOverflow post</a></em></p>
+
+<h2 id="bonus-what-if-you-dont-set-anything">Bonus: What if you don’t set anything?</h2>
+<p>It turns out git will try it’s best to find a name and email address to associate with your commits even if you don’t tell it explicitly what these are.
+Here’s where it looks, in order, for an email address to use:</p>
+
+<ol>
+  <li>An <code class="language-plaintext highlighter-rouge">EMAIL</code> local variable</li>
+  <li>Your system username <code class="language-plaintext highlighter-rouge">@</code> the value in <code class="language-plaintext highlighter-rouge">/etc/mailname</code> (which only exists on Debian systems?)</li>
+  <li>Your system username <code class="language-plaintext highlighter-rouge">@</code> the fully qualified hostname of the computer</li>
+</ol>
+
+<p>For more information check out the <a href="http://git-scm.com/docs/git-commit-tree.html">git documentation on the topic</a></p>
+
+<p><em>Thanks to <a href="https://twitter.com/holizz">@holizz</a> for helping me understand all this</em></p>
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'dgmscode';
+    var disqus_identifier = '/blog/2015/02/04/managing-identity-in-git';
+    var disqus_title      = 'Managing identity in git';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      © 2022 Duncan Stuart. 
+      Powered by <a href="https://jekyllrb.com/">Jekyll</a>.
+      Theme based on <a href="https://github.com/johnotander/pixyll">Pixyll</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

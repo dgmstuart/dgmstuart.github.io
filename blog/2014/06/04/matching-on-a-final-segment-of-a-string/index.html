@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Matching on a final segment of a string &#8211; dgms code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+">
+    <meta name="author" content="">
+    <meta name="keywords" content="ruby">
+    <link rel="canonical" href="https://dgmstuart.github.io/blog/2014/06/04/matching-on-a-final-segment-of-a-string/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for dgms code" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/styles.css?202206082308" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Matching on a final segment of a string">
+    <meta property="og:description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+">
+    <meta property="og:url" content="https://dgmstuart.github.io/blog/2014/06/04/matching-on-a-final-segment-of-a-string/">
+    <meta property="og:site_name" content="dgms code">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="@dgmstuart" />
+    
+    <meta name="twitter:title" content="Matching on a final segment of a string" />
+    <meta name="twitter:description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+" />
+    <meta name="twitter:url" content="https://dgmstuart.github.io/blog/2014/06/04/matching-on-a-final-segment-of-a-string/" />
+
+    
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44436648-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="site">
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="https://dgmstuart.github.io" class="site-title">dgms code</a>
+      <nav class="site-nav">
+        <a href="/conference-notes/">Conference notes</a>
+<a href="/about/">About</a>
+<a href="/contact/">Say hello</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-twitter" href="https://twitter.com/dgmstuart"></a>
+    
+    
+      <a class="fa fa-github" href="https://github.com/dgmstuart"></a>
+    
+    
+      <a class="fa fa-stack-overflow" href="https://stackoverflow.com/users/1035431/dgmstuart"></a>
+    
+    
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/duncangmstuart"></a>
+    
+    
+    <a class="fa fa-rss" href="/feed.xml"></a>
+  </div>
+</div>
+<div class="clearfix"></div>
+
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>Matching on a final segment of a string</h1>
+  <span class="post-meta">4 Jun, 2014</span><br>
+  
+  <span class="post-meta small">
+  
+    1 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>when matching on the final segment of a string, e.g for a file extension, you could use a regular expression:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="s2">"foo.bar"</span> <span class="o">=~</span> <span class="sr">/.*\.bar$/</span>
+<span class="c1"># =&gt; 0</span>
+<span class="o">&gt;</span> <span class="s2">"foo.bar.baz"</span> <span class="o">=~</span> <span class="sr">/.*\.bar$/</span>
+<span class="c1">#=&gt; nil</span></code></pre></figure>
+
+<p>but of course in ruby there’s a much more expressive way</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="s2">"foo.bar"</span><span class="p">.</span><span class="nf">end_with?</span><span class="p">(</span><span class="s2">".bar"</span><span class="p">)</span>
+<span class="c1">#=&gt; true</span>
+<span class="o">&gt;</span> <span class="s2">"foo.bar.baz"</span><span class="p">.</span><span class="nf">end_with?</span><span class="p">(</span><span class="s2">".bar"</span><span class="p">)</span>
+<span class="c1">#=&gt; false</span></code></pre></figure>
+
+<p>you can even pass multiple suffixes as arguments:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="s2">"foo.qux"</span><span class="p">.</span><span class="nf">end_with?</span><span class="p">(</span><span class="s2">"bar"</span><span class="p">,</span> <span class="s2">"baz"</span><span class="p">,</span> <span class="s2">"qux"</span><span class="p">)</span>
+<span class="c1">#=&gt; true</span></code></pre></figure>
+
+<p>oh Ruby how I love you so.</p>
+
+<p><em><a href="http://www.ruby-doc.org/core-2.1.1/String.html#method-i-end_with-3F">api documentation for end_with?</a></em></p>
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'dgmscode';
+    var disqus_identifier = '/blog/2014/06/04/matching-on-a-final-segment-of-a-string';
+    var disqus_title      = 'Matching on a final segment of a string';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      © 2022 Duncan Stuart. 
+      Powered by <a href="https://jekyllrb.com/">Jekyll</a>.
+      Theme based on <a href="https://github.com/johnotander/pixyll">Pixyll</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

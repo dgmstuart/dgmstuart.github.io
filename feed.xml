@@ -1,0 +1,1367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dgms code</title>
+    <description>This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+</description>
+    <link>https://dgmstuart.github.io/</link>
+    <atom:link href="https://dgmstuart.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 08 Jun 2022 23:08:21 +0000</pubDate>
+    <lastBuildDate>Wed, 08 Jun 2022 23:08:21 +0000</lastBuildDate>
+    <generator>Jekyll v4.2.1</generator>
+    
+      <item>
+        <title>Octopress: A Eulogy</title>
+        <description>&lt;p&gt;I recently removed all &lt;a href=&quot;http://octopress.org/&quot;&gt;Octopress&lt;/a&gt; dependencies in this
+blog in favour of native features of the underlying &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;
+static site generator.&lt;/p&gt;
+
+&lt;p&gt;I’d like to share that experience with you, but first I want to share a bit of
+the history (from the perspective of myself as a user of the tool, so please
+take everything with a pinch of salt)&lt;/p&gt;
+
+&lt;p&gt;I first want to say that I really enjoyed the experience of using Octopress.
+It was my first experience of a static site generator, and it allowed me to
+use Vim for blogging, to create and preview posts while offline, and to
+&lt;a href=&quot;https://dgmstuart.github.io/conference-notes/&quot;&gt;liveblog from a bunch of conferences&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It feels like the motivation behind it was a good one: create a
+markdown/static site-based blogging tool that was more fully featured than
+other things available at the time.&lt;/p&gt;
+
+&lt;h3 id=&quot;version-2-framework&quot;&gt;Version 2: “Framework”&lt;/h3&gt;
+
+&lt;p&gt;I started using Octopress at version 2 in 2016, which described itself as:
+&lt;a href=&quot;https://github.com/imathis/octopress&quot;&gt;“an obsessively designed framework for Jekyll blogging”&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;…but as creator
+&lt;a href=&quot;https://github.com/imathis&quot;&gt;Brandon Mathis&lt;/a&gt; would later write, it could also
+be described as:
+&lt;a href=&quot;http://octopress.org/2015/01/15/octopress-3.0-is-coming/&quot;&gt;“basically some guy’s Jekyll blog you can fork and modify”&lt;/a&gt;,
+which meant that getting updates and fixes could be pretty painful.&lt;/p&gt;
+
+&lt;p&gt;It came with a hardcoded list of plugins to extend Jekyll’s functionality
+with a bunch of custom tags that allowed more control over how things like
+&lt;a href=&quot;http://octopress.org/docs/plugins/image-tag/&quot;&gt;images&lt;/a&gt; and
+&lt;a href=&quot;http://octopress.org/docs/plugins/codeblock/&quot;&gt;code blocks&lt;/a&gt;
+were displayed.&lt;/p&gt;
+
+&lt;p&gt;In hindsight it feels like these trying to find a sweet spot between markdown and HTML,
+maybe similar to what
+&lt;a href=&quot;https://wordpress.com/support/shortcodes/&quot;&gt;WordPress shortcodes&lt;/a&gt; do.&lt;/p&gt;
+
+&lt;p&gt;Automation of things like creating posts and running the server were wrapped
+in Rake tasks, which works, but could be a bit fiddly when passing arguments
+like a post name.&lt;/p&gt;
+
+&lt;p&gt;For all it’s issues, it was widely loved and widely used for programming blogs
+including those of
+&lt;a href=&quot;https://pragdave.me/&quot;&gt;Dave Thomas&lt;/a&gt; and
+&lt;a href=&quot;http://blog.davidchelimsky.net/&quot;&gt;David Chelimsky&lt;/a&gt;. A lot of these blogs
+sidestepped some of the issues by just using “the default theme” - ie.
+Brandon’s Jekyll blog.&lt;/p&gt;
+
+&lt;h3 id=&quot;version-3-toolkit&quot;&gt;Version 3: “Toolkit”&lt;/h3&gt;
+
+&lt;p&gt;Version 3 turned things inside-out: it went from being a wrapper around Jekyll
+(largely insulated the user from it), to being a set of jekyll plugins to
+improve the experience of using Jekyll as a blog.&lt;/p&gt;
+
+&lt;p&gt;The main &lt;a href=&quot;https://github.com/octopress/octopress&quot;&gt;octopress/octopress&lt;/a&gt; gem was
+now “just” a command line tool, for initialising a new blog, creating posts,
+deploying etc. No more Rake tasks! This was actually great.&lt;/p&gt;
+
+&lt;p&gt;The code for creating the image and code block tags etc were all moved to
+individual plugins, as were a number of utilities like
+&lt;a href=&quot;https://github.com/octopress/ink&quot;&gt;octopress/ink&lt;/a&gt; and
+&lt;a href=&quot;https://github.com/octopress/filters&quot;&gt;octopress/filters&lt;/a&gt;,
+which (and this is a guess) worked around some of the limitations of Jekyll to
+improve the experience of developing plugins for Jekyll.&lt;/p&gt;
+
+&lt;h3 id=&quot;so-you-think-youre-an-octopress-blogger&quot;&gt;So you think you’re an Octopress blogger?&lt;/h3&gt;
+
+&lt;p&gt;From an architectural design perspective, this was very much the right way to
+go: moving from a monolithic framework tightly coupled to the core engine, to a
+collection of opt-in single-responsibility tools, feels like a great design
+choice: an
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Inversion_of_control&quot;&gt;inversion of control&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, it was pretty confusing for a lot of Octopress users who (myself
+included) didn’t really appreciate that the core templating and building of
+the site was actually Jekyll.&lt;/p&gt;
+
+&lt;p&gt;A common question when Octopress 3 was announced was “how do I upgrade?”, to
+which the realistic answer is “you can’t: you need to
+&lt;em&gt;migrate&lt;/em&gt;”: generate a new Jekyll blog (ideally with the 3.0 version of
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;octopress new&lt;/code&gt;, move over your content, and then try to work out how to
+migrate any customisations you’d made yourself.&lt;/p&gt;
+
+&lt;p&gt;It didn’t help that (as far as I know?) there was never an official
+upgrade/migration guide (I published
+&lt;a href=&quot;https://dgmstuart.github.io/blog/2016/01/22/migrating-from-octopress-2-to-3/&quot;&gt;my own&lt;/a&gt;),
+and that caused some bad feelings among people who didn’t appreciate that Open
+Source Is Hard.&lt;/p&gt;
+
+&lt;h3 id=&quot;fading-into-being-unmaintained&quot;&gt;Fading into being unmaintained&lt;/h3&gt;
+
+&lt;p&gt;While Octopress 2 had been a single application, Octopress 3 was more of a
+concept: while the core tools were ready and some of the plugins were ready
+before others, and maybe some were never completed?&lt;/p&gt;
+
+&lt;p&gt;The last post on the Octopress blog was
+&lt;a href=&quot;http://octopress.org/2015/01/15/octopress-3.0-is-coming/&quot;&gt;the announcement blog for Octopress 3&lt;/a&gt;
+at the beginning of 2015&lt;/p&gt;
+
+&lt;p&gt;The last commit to the main repo was at the beginning of 2016, and most of the
+other repos are older than that.&lt;/p&gt;
+
+&lt;p&gt;It seems like they just quietly became unmaintained. Which is not surprising:
+it seems like a majority of the code on this huge collection of repos was
+written by one person, and it’s the kind of software that a lot of people can
+end up relying on to some extent, but cannot reasonably be monetized.&lt;/p&gt;
+
+&lt;h3 id=&quot;holding-on&quot;&gt;Holding on&lt;/h3&gt;
+
+&lt;p&gt;It’s been possible to continue using Octopress for quite a long time. I have
+a fork which only needed a couple of commits on top of it to keep the toolset
+working.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately continuing to use it meant being stuck on Jekyll 3, and I like
+being up to date with my software where possible, so Octopress had to go.&lt;/p&gt;
+
+&lt;p&gt;Here’s how things are managed now, compared to with the two versions of
+Octopress I used:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;Octopress 2&lt;/th&gt;
+      &lt;th&gt;Octopress 3&lt;/th&gt;
+      &lt;th&gt;Jekyll::Compose&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Core application&lt;/td&gt;
+      &lt;td&gt;Octopress&lt;/td&gt;
+      &lt;td&gt;Jekyll&lt;/td&gt;
+      &lt;td&gt;Jekyll&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Manage posts&lt;/td&gt;
+      &lt;td&gt;Rake task&lt;/td&gt;
+      &lt;td&gt;Octopress cli command&lt;/td&gt;
+      &lt;td&gt;Jekyll cli command&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Build and preview&lt;/td&gt;
+      &lt;td&gt;Rake task&lt;/td&gt;
+      &lt;td&gt;Jekyll cli command&lt;/td&gt;
+      &lt;td&gt;Jekyll cli command&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Deploy&lt;/td&gt;
+      &lt;td&gt;Rake task&lt;/td&gt;
+      &lt;td&gt;octopress-deploy cli command&lt;/td&gt;
+      &lt;td&gt;Github Actions&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;a-couple-of-design-reflections&quot;&gt;A couple of design reflections:&lt;/h2&gt;
+
+&lt;h3 id=&quot;did-i-really-need-it&quot;&gt;Did I really need it?&lt;/h3&gt;
+
+&lt;p&gt;One thing I noticed when removing the other plugins was how (at least today)
+they’re pretty redundant:&lt;/p&gt;
+
+&lt;p&gt;At the time, I didn’t understand Jekyll, so it didn’t occur to me that you can
+of course create basic image tags and code blocks directly in markdown and
+that Jekyll will build pages based on that markdown.&lt;/p&gt;
+
+&lt;p&gt;Sure, the Octopress tags were more configurable, but for the most part I
+wasn’t actually using any of that configuration: I thought that was just the
+way that you add images etc.&lt;/p&gt;
+
+&lt;p&gt;The Octopress 3 core command line tool was super useful though.&lt;/p&gt;
+
+&lt;h3 id=&quot;if-you-cant-beat-them-join-them&quot;&gt;If you can’t beat them, join them&lt;/h3&gt;
+
+&lt;p&gt;Some parts of the Octopress 3 collection of tools looked like they were
+features which really should be in Jekyll core. I wonder what the boundary
+is/should be between submitting a PR to the repo vs adding a plugin.&lt;/p&gt;
+
+&lt;p&gt;Speaking of the command line tools,
+&lt;a href=&quot;https://github.com/jekyll/jekyll-compose&quot;&gt;Jekyll::Compose&lt;/a&gt;
+seems to have actually been around longer than Octopress 3, and seems to have
+been started by probably the secondary contributor to Octopress?&lt;/p&gt;
+
+&lt;h3 id=&quot;avoid-max-version-constraints&quot;&gt;Avoid max version constraints?&lt;/h3&gt;
+
+&lt;p&gt;One of the issues which prevented updates of Octopress dependencies in the
+past was that the Octopress gemspec had an upper version constraint on the
+&lt;a href=&quot;https://github.com/jekyll/mercenary&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll/mercenary&lt;/code&gt;&lt;/a&gt; gem.&lt;/p&gt;
+
+&lt;p&gt;I’ve never really understood why gem maintainers do this: it feels like
+there’s a pre-emptive assumption that future versions which haven’t been
+released yet will be incompatible? I’m not sure that’s true. Without an upper
+restriction surely the flow for an end user is either:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;new version of that dependency gets released&lt;/li&gt;
+  &lt;li&gt;consumers of the gem upgrade that dependency and everything works fine&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Or&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;new version of that dependency gets released&lt;/li&gt;
+  &lt;li&gt;consumers of the gem upgrade that dependency and find that their app breaks&lt;/li&gt;
+  &lt;li&gt;consumers lock the version of the problematic gem in their project
+Gemfiles and submit an issue or PR to try and get the issue fixed.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Either way it feels like less work for the maintainer, since there’s less
+pressure to cut a new gem with an updated version constraint.&lt;/p&gt;
+
+&lt;h3 id=&quot;was-it-rails-ish&quot;&gt;Was it Rails-ish?&lt;/h3&gt;
+
+&lt;p&gt;Clearly Octopress was in some ways inspired by WordPress (the clue’s in the
+name) but I also wonder how much of the approach that Octopress took was
+influenced by Ruby on Rails.&lt;/p&gt;
+
+&lt;p&gt;This is pure speculation (and most likely biased by me having a lot of
+experience with Rails), but here are some obvious concepts like
+&lt;a href=&quot;https://github.com/octopress/asset-pipeline&quot;&gt;octopress/asset-pipeline&lt;/a&gt;
+which have a clear association, and maybe
+&lt;a href=&quot;https://github.com/octopress/hooks&quot;&gt;octopress/hooks&lt;/a&gt;
+recalls Rails’s various life cycle callbacks (though this is more of a
+stretch).&lt;/p&gt;
+
+&lt;p&gt;But also the approach in Octopress 2 of wrapping a bunch of tools into one
+package recalls somewhat the Rails concept
+(&lt;a href=&quot;https://www.youtube.com/watch?v=KJVTM7mE1Cc&quot;&gt;as expressed by DHH&lt;/a&gt;) of a
+backpack containing everything you might need.&lt;/p&gt;
+
+&lt;p&gt;And this reminds me of something I see in the wild quite a lot, and certainly
+that I’ve been guilty of myself in the past: inappropriately following
+patterns seen in Rails framework code, on the basis that “Rails is great and
+therefore this pattern must be great”.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 19 Feb 2022 23:08:00 +0000</pubDate>
+        <link>https://dgmstuart.github.io/blog/2022/02/19/octopress-a-eulogy/</link>
+        <guid isPermaLink="true">https://dgmstuart.github.io/blog/2022/02/19/octopress-a-eulogy/</guid>
+        
+        <category>octopress</category>
+        
+        <category>jekyll</category>
+        
+        
+        <category>octopress</category>
+        
+      </item>
+    
+      <item>
+        <title>Gotcha: Jekyll post generated with wrong date</title>
+        <description>&lt;p&gt;It is said that most of the hard problems of computer science have been
+solved, but two remain: cache invalidation, naming, and off-by-one errors.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://thoughtbot.com/blog/its-about-time-zones&quot;&gt;Timezones&lt;/a&gt; may in theory be
+a solved problem (“‘just’ always work in UTC!”), but it’s one which still comes up
+annoyingly often.&lt;/p&gt;
+
+&lt;h3 id=&quot;building-locally&quot;&gt;Building locally&lt;/h3&gt;
+
+&lt;p&gt;My previous deployment flow for this blog you’re reading right now was to
+build it locally with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll build&lt;/code&gt;, and use
+&lt;a href=&quot;https://github.com/octopress/deploy&quot;&gt;Octopress deploy&lt;/a&gt;
+to deploy it to a separate repo.&lt;/p&gt;
+
+&lt;p&gt;While this was in place, the previous blog post was correctly generated with a
+date of the 18th of February:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dgmstuart.github.io/blog/2022/02/18/building-a-bingo-app-in-react/&quot;&gt;https://dgmstuart.github.io/blog/2022/02/18/building-a-bingo-app-in-react/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;building-on-ci&quot;&gt;Building on CI&lt;/h3&gt;
+
+&lt;p&gt;When I switched to using a
+&lt;a href=&quot;https://github.com/dgmstuart/dgmstuart.github.io/blob/main/.github/workflows/github-pages.yml&quot;&gt;Github action&lt;/a&gt;
+to deploy automatically on push, the post started getting generated with a
+date of the 17th:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dgmstuart.github.io/blog/2022/02/17/building-a-bingo-app-in-react/&quot;&gt;https://dgmstuart.github.io/blog/2022/02/17/building-a-bingo-app-in-react/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This was pretty frustrating: the filename said the 18th:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2022-02-18-building-a-bingo-app-in-react.markdown
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;…and the date in the Jekyll
+&lt;a href=&quot;https://jekyllrb.com/docs/front-matter/&quot;&gt;front-matter&lt;/a&gt;,
+(which I had set manually to be at midnight) was the 18th:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: post
+title: &quot;\&quot;Somebody is upside down!\&quot;: building a bingo app in React&quot;
+date: 2022-02-18 00:00:00 +0100
+comments: true
+categories: [reactjs]
+tags: [reactjs, react]
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;But observant readers will have spotted the problem:&lt;/p&gt;
+
+&lt;p&gt;Previously I was building the site on my local machine, which is in Sweden,
+where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2022-02-18 00:00:00 +0100&lt;/code&gt; is midnight on the 18th.&lt;/p&gt;
+
+&lt;p&gt;But the Github action is running in UTC (as all good servers do), and in UTC
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2022-02-18 00:00:00 +0100&lt;/code&gt; is 23:00 on the 17th.&lt;/p&gt;
+
+&lt;p&gt;Changing the timestamp to midday fixes the issue: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2022-02-18 00:12:00 +0100&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;I should know better: when there’s a problem involving differences between CI
+and local, &lt;em&gt;particularly&lt;/em&gt; when the differences are to do with times, timezones
+are a very likely culprit.&lt;/p&gt;
+
+&lt;p&gt;I guess there are two morals to this story:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;don’t write blog posts close to midnight&lt;/li&gt;
+  &lt;li&gt;don’t arbitrarily set timestamps close to midnight&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This sort of problem was less common when I lived in the UK (except in summer).&lt;/p&gt;
+</description>
+        <pubDate>Sat, 19 Feb 2022 10:53:00 +0000</pubDate>
+        <link>https://dgmstuart.github.io/blog/2022/02/19/gotcha-jekyll-post-generated-with-wrong-date/</link>
+        <guid isPermaLink="true">https://dgmstuart.github.io/blog/2022/02/19/gotcha-jekyll-post-generated-with-wrong-date/</guid>
+        
+        <category>jekyll</category>
+        
+        <category>timezones</category>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>&quot;Somebody is upside down!&quot;: building a bingo app in React</title>
+        <description>&lt;p&gt;TL;DR: I built a small React app which is a bingo card with
+&lt;a href=&quot;https://www.nytimes.com/games/wordle&quot;&gt;Wordle&lt;/a&gt;-style shareable emoji grids.
+You can find it &lt;a href=&quot;https://dgmstuart.github.io/bingo-frontend/&quot;&gt;here&lt;/a&gt;, or view
+the &lt;a href=&quot;https://github.com/dgmstuart/bingo-frontend&quot;&gt;source code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;everyone-shouts-at-the-same-time-starting-a-new-social-game&quot;&gt;“Everyone shouts at the same time”: Starting a new social game&lt;/h2&gt;
+
+&lt;p&gt;Just before the Pandemic started I came up with a concept for a fun activity
+at the friday night social at &lt;a href=&quot;https://wcj.se/&quot;&gt;WCJ&lt;/a&gt;, the swing dance
+association here in Gothenburg. We would watch a bunch of
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Lindy_Hop&quot;&gt;Lindy Hop&lt;/a&gt;
+routines (specifically team performances) and play bingo with the things we
+saw.&lt;/p&gt;
+
+&lt;p&gt;I used the
+&lt;a href=&quot;https://osric.com/bingo-card-generator/?&quot;&gt;bingo card generator at osric.com&lt;/a&gt;
+to print out way too many cards with commonly seen moves and formations, and
+also some silly things like brightly coloured trousers.&lt;/p&gt;
+
+&lt;p&gt;It was fun: we had some beers, I gave out sweets as prizes. We quickly
+realised that yelling stuff out was the most fun part.&lt;/p&gt;
+
+&lt;h2 id=&quot;syncopated-clapping-taking-it-online&quot;&gt;“Syncopated clapping”: Taking it online&lt;/h2&gt;
+
+&lt;p&gt;Then we weren’t able to meet up again for some time, but it had been fun
+running the game so I started working to make
+&lt;a href=&quot;https://www.facebook.com/teamlindybingo&quot;&gt;Team Lindy Bingo Online&lt;/a&gt;
+a reality.&lt;/p&gt;
+
+&lt;p&gt;I built up a
+&lt;a href=&quot;https://www.youtube.com/playlist?list=PLgsIo5h4KQoYzMCvcuBFTy7-qW8VgsFpT&quot;&gt;huge YouTube playlist&lt;/a&gt;
+of notable competitions and performances, refined after each game.&lt;/p&gt;
+
+&lt;p&gt;I found a couple of services with voice chat where you could all watch the
+same video at the same time (all now closed down - presumably due to
+unsustainable pandemic usage levels).&lt;/p&gt;
+
+&lt;p&gt;These services were awkward: they didn’t work on everyone’s computer, and they
+didn’t filter out the video audio from people’s voice channels. But it kind of
+worked: it was fine to have the video volume way down low. Yelling stuff out
+was the most fun part.&lt;/p&gt;
+
+&lt;p&gt;I shared out links like &lt;a href=&quot;https://bit.ly/teamlindybingocard3&quot;&gt;bit.ly/teamlindybingocard3&lt;/a&gt;.
+The card generator was mostly designed to generate cards to print out, so the
+card is at the bottom of a lot of UI , but it kind of worked (note the anchor
+tag at the end of the URL which mostly scrolls you to where the card is).&lt;/p&gt;
+
+&lt;p&gt;While waiting for people to arrive and sort their sound out, I played a
+&lt;a href=&quot;https://www.youtube.com/watch?v=XlUjryOP3LE&quot;&gt;10-hour loop of the Price Is Right theme tune&lt;/a&gt;
+to set that gameshow mood, then (as a matter of tradition) I played this Wild
+short showcase by a Lithuanian group to kick things off:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/JiEF4nkjeP8&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;We played pretty much every week for a few months during that first winter and
+into the spring. There were never a lot of people in the chat, but dancers
+dropped in from all over the world and I had a small group of regulars.&lt;/p&gt;
+
+&lt;p&gt;We came to dread getting a card with “Brightly coloured trousers”.&lt;/p&gt;
+
+&lt;p&gt;We shouted at our screens a lot.&lt;/p&gt;
+
+&lt;p&gt;We debated what “Wedge formation” actually means &lt;em&gt;(it’s a filled-in
+triangle, not a V formation. Don’t @ me)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;We watched a lot of great dancing.&lt;/p&gt;
+
+&lt;h2 id=&quot;itches-the-old-card&quot;&gt;“Itches”: The old card&lt;/h2&gt;
+
+&lt;p&gt;The osric.com bingo cards looked like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/content/osric_bingo_card.png&quot; alt=&quot;&amp;quot;An osric.com bingo card&amp;quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Eventually I tracked down the developer and got a
+&lt;a href=&quot;https://github.com/cherdt/BingoCardGenerator/pull/27&quot;&gt;Pull Request&lt;/a&gt;
+accepted to add a flag which would hide the rest of the UI so that you can
+only see the card. This made the experience pretty reasonable on mobile, so
+you could have the bingo card on your phone while watching the videos on a
+bigger screen.&lt;/p&gt;
+
+&lt;p&gt;The word list was stored in URL query parameters, which came with a couple of
+challenges:&lt;/p&gt;
+
+&lt;p&gt;Firstly, In order to be able to share sane URLs I used the
+&lt;a href=&quot;https://bit.ly&quot;&gt;Bit.ly&lt;/a&gt; URL shortener, and I needed to create a new Bit.ly
+link every time I updated the word list, since on a free account, Bit.ly links
+are not editable. I ended up editing the word list after most games as I
+learned what wasn’t working and what was missing.&lt;/p&gt;
+
+&lt;p&gt;Secondly I fairly quickly hit the 2000 character limit of the length of URL
+that Bit.ly will let you shorten. I’m guessing this limit is partly
+historical: most browsers have extremely large URL limits (tens of thousands
+of characters), but Microsoft browsers used to support a max length of 2048.
+In the end adding a new word meant removing an old one.&lt;/p&gt;
+
+&lt;p&gt;Finally, the word list needed to be formatted as a continuous comma-separated
+string in order to be used with the bingo card generator, which was a bit
+awkward to manage.&lt;/p&gt;
+
+&lt;h2 id=&quot;slow-motion-winding-down&quot;&gt;“Slow motion”: Winding down&lt;/h2&gt;
+
+&lt;p&gt;Running the game every week was a much needed injection of undemanding social
+interaction in an otherwise pretty lonely time. But after a few months,
+interest started to tail off: people got ‘zoom fatigue’ or just struggled to
+enjoy watching an activity they weren’t currently able to do themselves.&lt;/p&gt;
+
+&lt;p&gt;So after 12 games, Team Lindy Bingo Online went on indefinite Hiatus, only
+coming back for a one-off game at the online christmas party in 2021 (during
+which I realised far too late that the new video-watching system I was trying
+out supported a maximum of 8 people with voice chat 🤦).&lt;/p&gt;
+
+&lt;p&gt;But now dancing is starting up again, and I’ll be able to run a game
+in-person soon, armed with the learnings of running it online so many times.&lt;/p&gt;
+
+&lt;h2 id=&quot;square-formation-a-new-card&quot;&gt;“Square Formation”: A new card&lt;/h2&gt;
+
+&lt;p&gt;I worked on a
+&lt;a href=&quot;https://nextjs.org/&quot;&gt;Next.js&lt;/a&gt;
+project at work before the summer and really enjoyed working with
+&lt;a href=&quot;https://www.typescriptlang.org/&quot;&gt;Typescript&lt;/a&gt; and
+modern &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt;, with functional components and hooks.
+I appreciated the clarity of working with immutable state, and the way that
+the compiler points out mistakes before I notice them.&lt;/p&gt;
+
+&lt;p&gt;So I thought I’d have a crack at building a new bingo card in plain React with
+Typescript. After a false start, I initialised an application with:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;npx create-react-app my-app &lt;span class=&quot;nt&quot;&gt;--template&lt;/span&gt; typescript&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;…and remarkably quickly I had an grid of randomised words from a
+&lt;a href=&quot;https://github.com/dgmstuart/bingo-frontend/blob/main/src/wordList.json&quot;&gt;JSON word list&lt;/a&gt;,
+where clicking a cell changed its colour:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-tsx&quot; data-lang=&quot;tsx&quot;&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useState&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;classNames&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;classnames&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Cell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;FC&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;word&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isStamped&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setStamped&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;toggleStamped&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;setStamped&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isStamped&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;classes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;classNames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Cell&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;stamped&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;isStamped&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;td&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;classes&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toggleStamped&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;td&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Cell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;the-snatch-aerial-the-problem-of-state&quot;&gt;“The Snatch (aerial)”: The problem of state&lt;/h3&gt;
+
+&lt;p&gt;Then I ran into the problem that I understand all React developers run into
+sooner or later: managing state.&lt;/p&gt;
+
+&lt;p&gt;In this implementation, each cell is managing its own state with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useState&lt;/code&gt;.
+But now I wanted to add a button to reset the card by clearing all the stamps.&lt;/p&gt;
+
+&lt;p&gt;My Object Oriented brain wanted to approach this by sending a message to all
+the cells to tell them to reset their state. But that’s not how things work in
+React: parent components send &lt;em&gt;props&lt;/em&gt; down to child components, and child
+components fire &lt;em&gt;events&lt;/em&gt; which can be intercepted by their parents.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reset!&lt;/code&gt; is an event-shaped concept: if I send a prop down to a component like
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reset: true&lt;/code&gt;, then when I try to reset the component again, it won’t
+re-render because the value of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reset&lt;/code&gt; has not changed.&lt;/p&gt;
+
+&lt;h3 id=&quot;mid-routine-song-change-an-elegant-solution&quot;&gt;“Mid-routine song change”: An elegant solution?&lt;/h3&gt;
+
+&lt;p&gt;Thankfully I have some helpful and experienced friends and colleagues:
+&lt;a href=&quot;https://github.com/Burgestrand&quot;&gt;@Burgestrand&lt;/a&gt; and
+&lt;a href=&quot;https://github.com/PooSham&quot;&gt;@PooSham&lt;/a&gt; pointed me in the right direction.&lt;/p&gt;
+
+&lt;p&gt;The solution I landed on was to have the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;App&lt;/code&gt; component manage the state with
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useState&lt;/code&gt;, and instead of passing down an array of words to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Grid&lt;/code&gt;
+component, I send down an array of objects which contains both the word, its
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stamped&lt;/code&gt; state, and a toggle function which flips the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stamped&lt;/code&gt; state and
+updates the whole system state to reflect that change.&lt;/p&gt;
+
+&lt;p&gt;I won’t show
+&lt;a href=&quot;https://github.com/dgmstuart/bingo-frontend/tree/main/src&quot;&gt;all the code which makes that work&lt;/a&gt;
+here, but here’s a simplified version of the type definition of the elements
+of that array:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span class=&quot;kd&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CellProps&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;stamped&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;boolean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;toggleStamped&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I’m pretty pleased with the result - I was worried that the code was going to
+be either hacky or hard to wrap my head around, but it’s turned out to be
+quite elegant. Here’s what the new card looks like:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/content/team_lindy_bingo_card.png&quot; alt=&quot;&amp;quot;A Team Lindy Bingo card&amp;quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can have a play for yourself at
+&lt;a href=&quot;https://dgmstuart.github.io/bingo-frontend/&quot;&gt;dgmstuart.github.io/bingo-frontend&lt;/a&gt;
+(best viewed on a phone).&lt;/p&gt;
+
+&lt;h2 id=&quot;a-hat-polishing-and-bikeshedding&quot;&gt;“A hat”: polishing and bikeshedding&lt;/h2&gt;
+
+&lt;p&gt;I’ve since done a bunch of unnecessary polishing and
+&lt;a href=&quot;https://en.wiktionary.org/wiki/bikeshedding&quot;&gt;bikeshedding&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Passed all the hurdles to make it a &lt;a href=&quot;https://web.dev/progressive-web-apps/&quot;&gt;Progressive Web App (PWA)&lt;/a&gt;,
+So it’s installable on phones and in some browsers.&lt;/li&gt;
+  &lt;li&gt;Added icons of different sizes (plus a favicon), so it looks nice if eg. you
+save it to your home screen on your phone.&lt;/li&gt;
+  &lt;li&gt;Test-drove all the code with unit tests written in
+&lt;a href=&quot;https://jestjs.io/&quot;&gt;Jest&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Encapsulated access to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;localStorage&lt;/code&gt; behind
+&lt;a href=&quot;https://github.com/dgmstuart/bingo-frontend/blob/main/src/lib/JsonSession.ts&quot;&gt;a class to handle JSON data&lt;/a&gt;
+and &lt;a href=&quot;https://github.com/dgmstuart/bingo-frontend/blob/main/src/lib/GuaranteedJsonSession.ts&quot;&gt;a class to handle missing data&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Allowed &lt;a href=&quot;https://prettier.io/&quot;&gt;Prettier&lt;/a&gt; to apply its strong opinons on how
+code should be formatted.&lt;/li&gt;
+  &lt;li&gt;Configured a bunch of &lt;a href=&quot;https://eslint.org/&quot;&gt;ESlint&lt;/a&gt; rules.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All unnecessary for sure, but apart from being a learning opportunity it makes me
+happy, and that’s part of what side projects are for.&lt;/p&gt;
+
+&lt;p&gt;But by far the most unnecessary feature I’ve implemented (and one of the most
+fun) is shareable emoji grids.&lt;/p&gt;
+
+&lt;h2 id=&quot;shimmy-shareable-emoji-grids&quot;&gt;“Shimmy”: Shareable emoji grids&lt;/h2&gt;
+&lt;p&gt;At the time of writing, &lt;a href=&quot;https://www.nytimes.com/games/wordle&quot;&gt;Wordle&lt;/a&gt; is a
+big deal: it’s a simple word game that releases one puzzle every day, and it
+just got acquired by the New York Times.&lt;/p&gt;
+
+&lt;p&gt;Its killer feature is that you can share an abstract image of the result of
+your game, but rather than messing about with images, the image is made up of
+emoji, which are just text so can be pasted pretty much anywhere. It’s kind
+of genius. I think they look especially great in Discord:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/content/wordle_emoji_grid.png&quot; alt=&quot;&amp;quot;A Wordle emoji grid&amp;quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So of course I had to implement a similar share button to output an emojified
+bingo card:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/content/team_lindy_bingo_emoji_grid.png&quot; alt=&quot;&amp;quot;A Team Lindy Bingo emoji grid&amp;quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Building the actual grid is pretty simple: it’s just &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;map&lt;/code&gt;ping over the array
+of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CellData&lt;/code&gt; state.
+&lt;a href=&quot;https://github.com/dgmstuart/bingo-frontend/blob/6293523c7c446c56ba89025974c43fe6d23678e1/src/App.test.tsx#L55-L88&quot;&gt;Testing it&lt;/a&gt;
+was a bit more challenging, partly because that involves interacting with the
+clipboard, but maybe that’s a post for another day.&lt;/p&gt;
+
+&lt;p&gt;In the meantime I’m looking forward to being in a room with other dancers and
+shouting “Somebody is on the floor!” some evening soon.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 18 Feb 2022 11:00:00 +0000</pubDate>
+        <link>https://dgmstuart.github.io/blog/2022/02/18/building-a-bingo-app-in-react/</link>
+        <guid isPermaLink="true">https://dgmstuart.github.io/blog/2022/02/18/building-a-bingo-app-in-react/</guid>
+        
+        <category>reactjs</category>
+        
+        <category>react</category>
+        
+        
+        <category>reactjs</category>
+        
+      </item>
+    
+      <item>
+        <title>How to Recover From Rails Database Schema Conflicts When Rebasing</title>
+        <description>&lt;p&gt;This is something which comes up every so often when working on Rails projects
+with a branching git workflow.&lt;/p&gt;
+
+&lt;p&gt;I’ll assume you’re rebasing a feature branch onto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;develop&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The issue occurs when both &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;develop&lt;/code&gt; and your branch contain migrations,
+leading to conflicts in the schema file - at least one conflict over the
+‘version’ declared at the top of the file, and possibly other conflicts.&lt;/p&gt;
+
+&lt;p&gt;This ‘version’ number is a timestamp, and will correspond to the filename of
+the last migration which was added at the time that the schema was generated.&lt;/p&gt;
+
+&lt;p&gt;That’s the property that we need to preserve when rebasing:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The version number in the schema file needs to correspond to the migration
+which was generated last - i.e. the migration with the highest number at the
+beginning of its filename.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;how-not-to-fix-it&quot;&gt;How &lt;em&gt;not&lt;/em&gt; to fix it&lt;/h2&gt;
+
+&lt;p&gt;The temptation is to manually resolve the conflicts by editing the schema.rb
+file. This risks getting into a state where the committed schema is different
+to the ‘schema that would be generated by migrating again’.&lt;/p&gt;
+
+&lt;p&gt;If that ever happens then at some point someone will run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake db:migrate&lt;/code&gt; and
+get a different schema file. When this happens it’s hard to know what the
+correct way to resolve this is.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-fix-it&quot;&gt;How to fix it&lt;/h2&gt;
+
+&lt;p&gt;The robust approach is to rebuild the schema at each stage as follows:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Before rebasing, checkout (and pull!) develop and ensure that the database
+agrees with the version of the schema file on develop. You can do this with
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake db:migrate:status&lt;/code&gt;. Ideally you should see everything as ‘up’&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;if anything is ‘down’ then most likely you haven’t migrated everything on
+develop yet, so running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake db:migrate&lt;/code&gt; should sort this out.&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;if you see any lines like the following, this means that a migration
+which has been applied to your database doesn’t exist on develop and is
+presumably on one of the feature branches. Rails has no way of knowing
+how to rollback this migration, so you need to switch to whichever branch
+added that migration and rollback from there.&lt;/p&gt;
+
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;up     20170210155150  ********** NO FILE ***********
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;You can now switch to your branch and rebase.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;At the first conflict, unstage the schema diff from your new branch:&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; git reset HEAD db/schema.rb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Discard the schema diff from your new branch:&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git checkout db/schema.rb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Rebuild the schema:&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rake db:migrate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Check the resulting schema diff against the original diff on your branch
+(e.g. by looking at the commit on the pull request) - it should be
+identical&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;…with one exception: if the migration you’re adding was created
+&lt;em&gt;before&lt;/em&gt; any of the migrations on develop, then the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;version&lt;/code&gt; in the
+schema file won’t change. This is expected: that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;version&lt;/code&gt; should always
+relate to the most recently generated migration.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;That’s it! You can now continue your rebase.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;background&quot;&gt;Background&lt;/h2&gt;
+
+&lt;p&gt;To understand &lt;em&gt;why&lt;/em&gt; the above approach works, the following insights might be
+useful:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The schema file is constructed from the database, not directly from the
+migrations&lt;/li&gt;
+  &lt;li&gt;When &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake db:migrate&lt;/code&gt; is run, checks a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;schema_migrations&lt;/code&gt; table in the
+database (which contains a list of the timestamps of migrations which have
+been run on this database) and compares that against the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;db/migrations&lt;/code&gt;
+table:. It then runs any migrations which haven’t been run yet, add adds the
+timestamps of those migrations into the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;schema_migrations&lt;/code&gt; table, and
+rebuilds the schema&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake db:migrate:status&lt;/code&gt; shows the difference between &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;schema_migrations&lt;/code&gt; and
+the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;db/migrations&lt;/code&gt; directory, but without running anything.&lt;/li&gt;
+  &lt;li&gt;Schemas in general are mostly reliably built in the same way even if some
+migrations end up being run out of order, because e.g new indexes are added
+in alphabetical order, not in migration order.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 12 Apr 2017 10:49:10 +0000</pubDate>
+        <link>https://dgmstuart.github.io/blog/2017/04/12/how-to-recover-from-rails-database-schema-conflicts-when-rebasing/</link>
+        <guid isPermaLink="true">https://dgmstuart.github.io/blog/2017/04/12/how-to-recover-from-rails-database-schema-conflicts-when-rebasing/</guid>
+        
+        <category>ruby</category>
+        
+        <category>rails</category>
+        
+        <category>git</category>
+        
+        
+        <category>ruby</category>
+        
+        <category>rails</category>
+        
+      </item>
+    
+      <item>
+        <title>Checking Out Branches From Tig</title>
+        <description>&lt;p&gt;I use &lt;a href=&quot;https://github.com/jonas/tig&quot;&gt;tig&lt;/a&gt; for my git tree browser. My normal
+usage is to look at the the commit tree (normally viewing all branches with
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tig --all&lt;/code&gt;) but it’s a powerful tool with a lot of features, some of which
+I’m starting to integrate into my daily work.&lt;/p&gt;
+
+&lt;p&gt;Today I learned how check out a branch directly from tig.&lt;/p&gt;
+
+&lt;p&gt;The first
+step is to switch into ‘refs’ mode with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;r&lt;/code&gt; - this shows a view of all the
+local branches, remote branches and tags:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/content/tig_refs_view.png&quot; alt=&quot;&amp;quot;The tig refs view&amp;quot;&quot; /&gt;
+&lt;em&gt;tig’s ‘refs’ view&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;From any of these you can check out that branch or tag by putting the cursor
+on that line and pressing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;On my team we use long branch names which
+reference a story ID, so checking out with tig is much quicker than typing out
+eg:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git checkout -b branchname origin/branchname
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It’s also possible to check out individual commits (without creating a branch)
+from the normal tig view by putting the cursor over that commit and pressing
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O&lt;/code&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 11 Feb 2016 12:48:36 +0000</pubDate>
+        <link>https://dgmstuart.github.io/blog/2016/02/11/checking-out-branches-from-tig/</link>
+        <guid isPermaLink="true">https://dgmstuart.github.io/blog/2016/02/11/checking-out-branches-from-tig/</guid>
+        
+        <category>tig</category>
+        
+        <category>git</category>
+        
+        
+        <category>git</category>
+        
+      </item>
+    
+      <item>
+        <title>Migrating From Octopress 2 to 3</title>
+        <description>&lt;p&gt;I’ve just migrated this blog from Octopress 2 to 3 and since &lt;a href=&quot;https://github.com/octopress/octoress/issues/29&quot;&gt;there doesn’t seem to be a definitive migration guide yet&lt;/a&gt; (and inspired by a similar post by &lt;a href=&quot;http://samwize.com/2015/09/30/migrating-octopress-2-to-octopress-3/&quot;&gt;@samwize&lt;/a&gt;)
+I wanted to share what I did.&lt;/p&gt;
+
+&lt;p&gt;This was done with Octopress 3.0.11 and Jekyll 3.0.2. You can see the &lt;a href=&quot;https://github.com/dgmstuart/blog_source/commits/master&quot;&gt;actual
+commits on github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The approach is to create a new Octopress 3 blog from scratch, import the exising content, and configure a few things to make that existing content work.&lt;/p&gt;
+
+&lt;h2 id=&quot;set-up-a-new-blog&quot;&gt;Set up a new blog&lt;/h2&gt;
+
+&lt;p&gt;First I need to make sure I have the latest version of Octopress available on my machine:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem update octopress
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now I can make a new blog:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ octopress new blog
+New jekyll site installed in /Users/dxwduncan/dev/Personal/blog.
+Added Octopress scaffold:
+ + _templates/
+ +   draft
+ +   page
+ +   post
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Looking at what that’s given us, some of the directories are familiar from the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source&lt;/code&gt; directory of Octopress 2 sites (e.g. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt;):&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.
+├── _config.yml
+├── _includes
+│   ├── footer.html
+│   ├── head.html
+│   ├── header.html
+│   ├── icon-github.html
+│   ├── icon-github.svg
+│   ├── icon-twitter.html
+│   └── icon-twitter.svg
+├── _layouts
+│   ├── default.html
+│   ├── page.html
+│   └── post.html
+├── _posts
+│   └── 2016-01-21-welcome-to-jekyll.markdown
+├── _sass
+│   ├── _base.scss
+│   ├── _layout.scss
+│   └── _syntax-highlighting.scss
+├── _templates
+│   ├── draft
+│   ├── page
+│   └── post
+├── about.md
+├── css
+│   └── main.scss
+├── feed.xml
+└── index.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I can now preview the site:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd blog
+$ jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here’s what we get:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/content/jekyll_new.png&quot; alt=&quot;&amp;quot;Jekyll new&amp;quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;configuring-gems&quot;&gt;Configuring gems&lt;/h2&gt;
+
+&lt;p&gt;Now I want to add a Gemfile (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle init&lt;/code&gt;) to manage the versions of Jekyll and Octopress:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Gemfile&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;https://rubygems.org&quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'jekyll'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'~&amp;gt; 3.0.2'&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:jekyll_plugins&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'octopress'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'~&amp;gt; 3.0.11'&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now I can start copying over my content. I only have posts and a couple of associated images:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cp -r ../blog_old/source/_posts ./_posts
+$ mkdir images
+$ cp -r ../blog_old/source/images/content ./images/content
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;N.B. the new blog structure doesn’t have an images directory by default&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Now trying to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; I get an error:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Liquid Exception: Liquid syntax error: Unknown tag 'codeblock' in /Users/dxwduncan/dev/Personal/blog/_posts/2014-02-07-getting-to-grips-with-postgres.markdown
+jekyll 3.0.2 | Error:  Liquid syntax error: Unknown tag 'codeblock'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This is because I’m using the &lt;a href=&quot;https://github.com/octopress/codeblock&quot;&gt;codeblock&lt;/a&gt; octopress plugin. There are a couple of different ways of &lt;a href=&quot;https://jekyllrb.com/docs/plugins/&quot;&gt;adding plugins to jekyll&lt;/a&gt; but the one which makes most sense to me is to put them in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here’s the plugins part of my gemfile after adding the required plugins:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Gemfile&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:jekyll_plugins&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'octopress'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'~&amp;gt; 3.0.11'&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'octopress-codeblock'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'~&amp;gt; 1.0'&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'octopress-image-tag'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'~&amp;gt; 1.1'&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Install them with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle install&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Codeblock adds a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.code-highlighter-cache&lt;/code&gt; which needs to be added to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt; which Octopress created for me.&lt;/p&gt;
+
+&lt;h2 id=&quot;deployment&quot;&gt;Deployment&lt;/h2&gt;
+
+&lt;p&gt;Now that I’ve got a working Octopress blog, I can rely on the &lt;a href=&quot;https://github.com/octopress/octopress#deploying-your-site&quot;&gt;standard
+deployment
+instructions&lt;/a&gt;.
+This is pretty nice now!&lt;/p&gt;
+
+&lt;h2 id=&quot;making-it-all-look-nice&quot;&gt;Making it all look nice&lt;/h2&gt;
+
+&lt;p&gt;Now that all the content is imported it’s just a case of editing the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.yml&lt;/code&gt; file (very minimal compared to the Octopress 2 default) and tweaking the templates.&lt;/p&gt;
+
+&lt;p&gt;It doesn’t look like there’s any obvious way to re-use Octopress 2 themes directly - I suppose it would be possible to copy the styles and templates into the right places, but I fancy a change of look anyway so I’m off to have a look at some Jekyll themes. I hope you’ve found this useful.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 22 Jan 2016 00:40:02 +0000</pubDate>
+        <link>https://dgmstuart.github.io/blog/2016/01/22/migrating-from-octopress-2-to-3/</link>
+        <guid isPermaLink="true">https://dgmstuart.github.io/blog/2016/01/22/migrating-from-octopress-2-to-3/</guid>
+        
+        <category>octopress</category>
+        
+        <category>migration</category>
+        
+        
+        <category>octopress</category>
+        
+      </item>
+    
+      <item>
+        <title>Some tools for faster blogging in Octopress</title>
+        <description>&lt;p&gt;I’ve been to a number of conferences and talks recently and I’ve developed a habit
+of live-blogging my notes: getting them up online as quickly as possible.&lt;/p&gt;
+
+&lt;p&gt;More on that in a future post but I want to talk about how I am able to start taking
+notes fast, and publish them even faster (when a talk finishes, lots of people will be
+trying to get out of the row of seats past me!).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;NOTE: The scripts below assume editing with terminal vim. It might be more flexible to switch this out for
+the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$VISUAL&lt;/code&gt; environment variable (?), but if you use a different editor you’ll probably
+just want to replace &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vim&lt;/code&gt; with whatever command you use to boot up your editor - e.g. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;subl&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mvim&lt;/code&gt; etc.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;creating-posts&quot;&gt;Creating posts&lt;/h3&gt;
+&lt;p&gt;The octopress command for creating a post is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake new_post[&quot;The name of my
+post&quot;]&lt;/code&gt;. I’d then typically select the filename it outputs with the mouse,
+paste that into the command line and open it with vim. That’s &lt;em&gt;way&lt;/em&gt; too much
+typing, and any seasoned vim user would wince at the word “mouse”.&lt;/p&gt;
+
+&lt;p&gt;Here’s a function which lets me type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;newpost &quot;The name of my post&quot;&lt;/code&gt; and creates
+the post, isolates it and opens it in one step:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;c&quot;&gt;#  ~/.profile&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;function &lt;/span&gt;newpost&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;BLOG_HOME&lt;/span&gt;:?&lt;span class=&quot;s2&quot;&gt;&quot;Need to set BLOG_HOME to the location of the octopress blog directory&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt; rake new_post[&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$output&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+
+  &lt;span class=&quot;nb&quot;&gt;local &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;return_code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$?&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$return_code&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-eq&lt;/span&gt; 0 &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Get the name of the file which was just created:&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;post_path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'source\/_posts\/.*\.markdown'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$output&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Stash all other posts (for faster generation)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Isolating post...&quot;&lt;/span&gt;
+    rake isolate[&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$post_path&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Open with the cursor at the bottom of the header:&lt;/span&gt;
+    vim &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'normal G'&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$post_path&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;My &lt;a href=&quot;https://github.com/dgmstuart/dotfiles&quot;&gt;dotfiles&lt;/a&gt; are shared between
+multiple machines, so the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BLOG_HOME&lt;/code&gt; environment variable is set in a local
+profile:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;c&quot;&gt;#  ~/.profile&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;BLOG_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/Dev/Personal/blog&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I’m pretty new at shell scripting, so if you know of a way to make this better
+or more robust, please let me know in the comments.&lt;/p&gt;
+
+&lt;h3 id=&quot;isolating-posts&quot;&gt;Isolating Posts&lt;/h3&gt;
+
+&lt;p&gt;Notice in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;newpost&lt;/code&gt; function I’ve got &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake isolate[&quot;$post_path&quot;]&lt;/code&gt; - that’s a
+nifty task provided by Octopress which gets around the fact that when you generate
+your Octopress blog it has to rebuild the entire site (?) which can be very slow.
+Unfortunately it doesn’t seem to be documented, but you can see the source in the
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rakefile&lt;/code&gt; of your Octopress install.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Side note: run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake -T&lt;/code&gt; in your blog directory to see all of the Octopress commands #protip&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake isolate&lt;/code&gt; moves all posts into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source/_stash&lt;/code&gt;, unless they  match the given
+string in their title. This means that when you’re previewing your post with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake preview&lt;/code&gt;
+it’s much faster to re-generate because it’s only having to handle one post each time.&lt;/p&gt;
+
+&lt;p&gt;If you’re running this manually, there’s no need to pass the whole path: you can just
+find one of two words which are unique in the filename of your post and use that - e.g.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake isolate[wizards]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;You can put your stashed posts back with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake integrate&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;listing-and-revisiting-posts&quot;&gt;Listing and revisiting posts&lt;/h3&gt;
+&lt;p&gt;A couple of things I find myself needing to do fairly often:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Make an edit to the post I was most recently editing&lt;/li&gt;
+  &lt;li&gt;Find a post where I can’t remember the title was&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The following aliases achieve that:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;c&quot;&gt;# ~/.profile&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# blogposts: display the list of posts ordered by last modified time&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# %m                           -- Last modified timestamp&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# %N                           -- Quoted File name&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# -exec stat -f &quot;%m %N&quot; {} \;  -- Outputs a timestamp at the beginning of the line for sorting&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# cut -d ' ' -f2-              -- Returns only the second field in a space-delimited string&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;blogposts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'find $BLOG_HOME/source/_posts/* -exec stat -f &quot;%m %N&quot; {} \; | sort -n | cut -d &quot; &quot; -f2-'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;lastpost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'find `blogposts` | tail -1 '&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;epost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'vim `lastpost`'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;deploying&quot;&gt;Deploying&lt;/h3&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gen:deploy&lt;/code&gt; rake task is a built-in alias for running the
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:integrate&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:generate&lt;/code&gt;, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:deploy&lt;/code&gt; tasks, but again, typing
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake gen:deploy&lt;/code&gt; is just too much typing, hence:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;c&quot;&gt;# ~/.profile&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;rgd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'rake gen_deploy'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Fri, 27 Mar 2015 18:48:31 +0000</pubDate>
+        <link>https://dgmstuart.github.io/blog/2015/03/27/some-tools-for-faster-blogging-in-octopress/</link>
+        <guid isPermaLink="true">https://dgmstuart.github.io/blog/2015/03/27/some-tools-for-faster-blogging-in-octopress/</guid>
+        
+        <category>blogging</category>
+        
+        <category>vim</category>
+        
+        
+        <category>octopress</category>
+        
+      </item>
+    
+      <item>
+        <title>Execute ruby code inline in the editor</title>
+        <description>&lt;p&gt;I’ve often wondered how in Ruby screencasts they magically execute code inline
+in the editor, e.g. they type:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reverse&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;…and it magically becomes&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reverse&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; [3, 2, 1]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You can see how effective this is in action in
+&lt;a href=&quot;http://www.rubytapas.com/episodes/11-Method-and-Message&quot;&gt;one of the sample episodes for Ruby Tapas&lt;/a&gt;
+by the wise and excellent &lt;a href=&quot;http://about.avdi.org/&quot;&gt;Avdi Grimm&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Today I learned how. Apparently it’s a Textmate feature called “Execute and
+Update ‘# =&amp;gt;’ Markers” which has been ported over to other editors:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/mmims/sublime-text-2-ruby-markers&quot;&gt;Plugin for Sublime Text2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/t9md/vim-ruby-xmpfilter&quot;&gt;Plugin for Vim&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://devblog.avdi.org/2013/06/24/rubytapas-freebie-xmpfilter/&quot;&gt;Instructions for Emacs&lt;/a&gt;
+(using the
+&lt;a href=&quot;https://rubygems.org/gems/rcodetools/versions/0.8.5.0&quot;&gt;rcodetools&lt;/a&gt; gem)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This also explains why the Sublime Text snippet for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#&lt;/code&gt; expands to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;# =&amp;gt;&lt;/code&gt;. I’d always
+assumed that this was intended to make multiline comments more readable. That
+sounds a bit silly now that I know :)&lt;/p&gt;
+</description>
+        <pubDate>Fri, 27 Mar 2015 15:41:47 +0000</pubDate>
+        <link>https://dgmstuart.github.io/blog/2015/03/27/execute-ruby-code-inline-in-the-editor/</link>
+        <guid isPermaLink="true">https://dgmstuart.github.io/blog/2015/03/27/execute-ruby-code-inline-in-the-editor/</guid>
+        
+        <category>ruby</category>
+        
+        <category>sublime</category>
+        
+        <category>vim</category>
+        
+        
+        <category>tools</category>
+        
+      </item>
+    
+      <item>
+        <title>Unboxed Event notes: &quot;Unstick your digital products&quot;</title>
+        <description>&lt;p&gt;&lt;em&gt;I’m at a &lt;a href=&quot;https://www.eventbrite.co.uk/e/unstick-your-digital-products-rapidly-progress-a-complex-product-or-portfolio-of-stalled-products-tickets-15872783924&quot;&gt;speaker session from Unboxed consulting&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;dave-evans---product-manager-e-commerce-at-macmillan-publishing-group&quot;&gt;&lt;a href=&quot;https://www.linkedin.com/pub/dave-evans/a/311/919&quot;&gt;Dave Evans&lt;/a&gt; - Product Manager (E-commerce) at Macmillan Publishing Group&lt;/h2&gt;
+
+&lt;h3 id=&quot;trust-me-im-a-product-manager-case-study-from-publishing&quot;&gt;“Trust me, I’m a product manager”: case study from publishing&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sales thinking: identify influencers, budget holders etc.&lt;/li&gt;
+  &lt;li&gt;Commercial products: it’s all about profit-and-loss. Non-commercial products
+need different KPIs&lt;/li&gt;
+  &lt;li&gt;Product manager != project manager. Responsible for:
+    &lt;ul&gt;
+      &lt;li&gt;Backlog, vision statement&lt;/li&gt;
+      &lt;li&gt;Roadmap: what questions do we need to answer in the next windows of time&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;“You need to go rogue” - prove concepts on your own without a team&lt;/li&gt;
+  &lt;li&gt;404 test = e.g. buy now button - show it to a % of users, does nothing&lt;/li&gt;
+  &lt;li&gt;Concierge test = build front-end, but handle the back-end manually&lt;/li&gt;
+  &lt;li&gt;Everything in the backlog should be in line with the vision statement&lt;/li&gt;
+  &lt;li&gt;Question for unpicking feature requests which you think might not actually
+be about solving a problem: “What happens if you &lt;em&gt;can’t&lt;/em&gt; build it?”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;glyn-parry--sh24-nhs-collaboration&quot;&gt;&lt;a href=&quot;https://twitter.com/g_parry24/&quot;&gt;Glyn Parry&lt;/a&gt; – SH:24 (NHS collaboration)&lt;/h2&gt;
+
+&lt;h3 id=&quot;how-designing-a-new-experience-in-the-nhs-helped-to-unblock-and-unleash-new-potential&quot;&gt;How designing a new experience in the NHS helped to unblock and unleash new potential&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;His experience: People in localgov/NHS aren’t familiar with agile&lt;/li&gt;
+  &lt;li&gt;Just because they don’t think of thinks in agile terminology doesn’t mean
+they don’t have an agile mindset&lt;/li&gt;
+  &lt;li&gt;Sexual health services in Lambeth&amp;amp;Southwark are very overstretched, and in
+rural areas, round-trip times to visit a clinic might be very long&lt;/li&gt;
+  &lt;li&gt;Online STI kits - convenient but expensive&lt;/li&gt;
+  &lt;li&gt;New service: free, user-focussed&lt;/li&gt;
+  &lt;li&gt;User journeys illustrated with comic-strip style graphics:
+&lt;img src=&quot;https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-15/11055891_730864497033484_1856034297_n.jpg&quot; alt=&quot;@g_parry_24 talking about SH:24 approach&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Identify people in the organisation who have an agile mindset and are quite
+influential&lt;/li&gt;
+  &lt;li&gt;Approach: agile prototyping, building a service piece-by-piece with users&lt;/li&gt;
+  &lt;li&gt;Developing personas&lt;/li&gt;
+  &lt;li&gt;It’s a digital project, but only 25% of the service being provided is
+digital - needs to be recognised&lt;/li&gt;
+  &lt;li&gt;Started with the basic GDS form&lt;/li&gt;
+  &lt;li&gt;Prototyping the kits that people recieve - cardboard and post-its
+    &lt;ul&gt;
+      &lt;li&gt;Started out trying to design engaging packaging for the test kits&lt;/li&gt;
+      &lt;li&gt;through user testing: learned that people don’t want this - they like a
+really simple approach&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Need to think about the user needs of the people receiving the tests as well&lt;/li&gt;
+  &lt;li&gt;Continuous evaluation on multiple different angles: measuring the impact of
+the service on sexual health&lt;/li&gt;
+  &lt;li&gt;Assumptions broken: people don’t actually want their results to be
+super-discreet: they just want to know as quickly and clearly as possible&lt;/li&gt;
+  &lt;li&gt;Prior to alpha - 3 month discovery stage: very intensive working with users&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;will-rowan---product-manager-at-the-ministry-of-justice-interview&quot;&gt;&lt;a href=&quot;https://twitter.com/thecustomer&quot;&gt;Will Rowan&lt;/a&gt; - Product Manager at the Ministry of Justice (interview)&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Managers are more important if they have more responsibilities - therefore
+they’re predjudiced towards bigger projects and bigger products&lt;/li&gt;
+  &lt;li&gt;PRINCE2 documentation is large regardless of project size - again
+predjudicing larger projects&lt;/li&gt;
+  &lt;li&gt;Project example: Multi-car insurance. users not considered, data produced not
+considered, organisational capability to run the service, not considered
+(!!)&lt;/li&gt;
+  &lt;li&gt;On the importance of competitors: “If you’re trying to motivate a project team you need an enemy”&lt;/li&gt;
+  &lt;li&gt;“The more that you can get product in front of people the better” - internal
+and external. The importance of show and tell. “we can show you what’s
+possible” - unlock stakeholder committment: low cost, low-risk “If they can
+quantify the risk they’ll sign it off”&lt;/li&gt;
+  &lt;li&gt;Stakeholders probably don’t believe that you can deliver that much in that
+little time. Chip away at this by sharing what you’re doing and how you’re
+doing it.&lt;/li&gt;
+  &lt;li&gt;Drew the whole of a product on one A2 flipchart - helped to convince
+stakeholders it’s feasible&lt;/li&gt;
+  &lt;li&gt;Attraction of Waterfall is that it lets you sign off the whole budget. In agile
+you’re iterating the budget as well as iterating the project&lt;/li&gt;
+  &lt;li&gt;Getting everyone speaking the same language is important - e.g. training
+stakeholders to not refer to things as ‘portals’ when they’re nothing of the
+sort
+    &lt;ul&gt;
+      &lt;li&gt;If you discover that you’ve got it wrong, or there’s a better term, it
+&lt;em&gt;is&lt;/em&gt; worth changing it all the way down the stack&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;When running agile: Make the work visible - extremely important: whole
+backlog on the wall. Makes it much easier to have a common understanding.
+Always carry whiteboard markers and post-its when in a non-agile environment
+(you won’t find them there).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;richard-stobart--ceo-unboxed-consulting-agile-coach-of-the-year-2014&quot;&gt;&lt;a href=&quot;https://twitter.com/richardstobart&quot;&gt;Richard Stobart&lt;/a&gt; – CEO, Unboxed Consulting, Agile Coach of the Year 2014&lt;/h2&gt;
+
+&lt;h3 id=&quot;techniques-for-overcoming-the-big-7-digital-product-blockers&quot;&gt;Techniques for overcoming the Big 7 digital product blockers&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The trap of 100% utilisation: Can’t move quickly. Grind to a halt.&lt;/li&gt;
+  &lt;li&gt;70% utilisation is about as fast as you can go: helps avoid context-switching&lt;/li&gt;
+  &lt;li&gt;Intuitive thing when you see someone not busy is to make them busy, but this
+slows down all their other projects&lt;/li&gt;
+  &lt;li&gt;If you’ve got spare time, help unblock &lt;em&gt;other people&lt;/em&gt;, or do nothing”: don’t
+add more things to the pipeline&lt;/li&gt;
+  &lt;li&gt;Always be delivering the highest value thing on your most important project&lt;/li&gt;
+  &lt;li&gt;Optimise ‘batch size’ - grouping together features for deploy. Small batches
+= responding to change more quickly. = fixing bugs more easily: if the
+problem is a result of code which was written recently, the devs have that
+conceptual stack in their head.
+    &lt;ul&gt;
+      &lt;li&gt;Not achievable if your deployment process is onerous or slow&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;People used to think of environments like pets: they all had names. Today
+they’re like cattle: set up when you need it, tear down when you’re done.&lt;/li&gt;
+  &lt;li&gt;rightscale + ansible + docker: used to spin up 1000 test servers to test
+releasing a product to all students in China (which was the MVP!!)
+    &lt;ul&gt;
+      &lt;li&gt;Cost £10k to run that test but was trivial to set up&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Creating roll-back-able database migrations: dbdeploy, liquibase etc. - have
+both database schema versions live in parallel, delete the old one when the
+new one is stable&lt;/li&gt;
+  &lt;li&gt;In closed-scope projects, everyone feels like they need to throw in all
+their great feature ideas before the scope window closes - leads to feature
+bloat. Solution: get stakeholders on side, and ensure that the product owner
+controls the backlog&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 25 Mar 2015 09:55:22 +0000</pubDate>
+        <link>https://dgmstuart.github.io/blog/2015/03/25/unboxed-event-notes/</link>
+        <guid isPermaLink="true">https://dgmstuart.github.io/blog/2015/03/25/unboxed-event-notes/</guid>
+        
+        <category>agile</category>
+        
+        
+        <category>liveblog</category>
+        
+      </item>
+    
+      <item>
+        <title>Setting up a Ruby dev environment on Bowery.io</title>
+        <description>&lt;p&gt;&lt;em&gt;EDIT: Apparently it’s not possible to run docker inside a Bowery instance
+because Bowery uses docker and docker has a hard time running inside a docker
+container - see &lt;a href=&quot;https://groups.google.com/forum/#!topic/bowery/WsXWzWghwVc&quot;&gt;this post on the forum&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bowery.io/&quot;&gt;Bowery.io&lt;/a&gt; is a hosted development environment service.
+The idea is that you edit your files locally, but run your code in a cloud-hosted
+&lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt; container, based on an image which can be
+shared and edited by teams.&lt;/p&gt;
+
+&lt;p&gt;It looks like it used to host its own packages and allow environments to be
+set up through a gui, but now the approach is to either install everything by
+hand or use a dockerfile, which I guess makes sense as docker has become more
+and more popular and Bowery’s main audience is going to be quite devvy devs
+who are comfortable using docker.&lt;/p&gt;
+
+&lt;p&gt;I had a go at setting up an environment for ruby development and didn’t really
+find any documentation so here’s what I tried:&lt;/p&gt;
+
+&lt;h2 id=&quot;approach-use-a-dockerfile&quot;&gt;Approach: Use a dockerfile&lt;/h2&gt;
+&lt;p&gt;The simplest way to start your Bowery image with ruby is to use a dockerfile
+which sets ruby up for you. This can be as simple as creating a file called
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; at the root of your project, consisting of this line:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from ruby:2.2.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;…then when you select your code directory for the first time through the
+Bowery app you can click “Yes” on this prompt to initialize your Bowery image
+based on that Dockerfile:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/content/bowery_prompt.png&quot; alt=&quot;&amp;quot;A screenshot of the Bowery prompt&amp;quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;More details about this approach can be found &lt;a href=&quot;http://bowery.io/posts/dockerfile-support/&quot;&gt;on the Bowery blog&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;approach-install-ruby-directly&quot;&gt;Approach: Install ruby directly&lt;/h2&gt;
+&lt;p&gt;Not having ever used docker in anger, my first attempt involved just
+installing ruby manually. The following steps are
+basically a textbook set of steps for installing ruby on a new Ubuntu machine
+(which is what Bowery instances are based on):&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Update apt-get:&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; apt-get update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/sstephenson/ruby-build/wiki#suggested-build-environment&quot;&gt;Install the dependencies for ruby-build&lt;/a&gt;
+using apt-get&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/sstephenson/rbenv&quot;&gt;Install rbenv&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/sstephenson/ruby-build&quot;&gt;Install ruby-build&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install ruby with rbenv:&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; rbenv install 2.2.0
+ rbenv global 2.2.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install bundler:&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; gem install bundler
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;what-about-rails&quot;&gt;What about Rails?&lt;/h2&gt;
+&lt;p&gt;I &lt;em&gt;have&lt;/em&gt; managed to successfully set up a Rails dev environment using Bowery,
+but it ended up being pretty fiddly and I’m not sure I have anything coherent
+enough to blog about.&lt;/p&gt;
+
+&lt;p&gt;I essentially set it up just like any other ubuntu box would be set up (but
+I’m still pretty green at server management - hence fiddly).&lt;/p&gt;
+
+&lt;p&gt;What I was hoping
+to find was a Dockerfile which at least set up Ruby and Postgres, but it seems
+like the normal approach is to run separate Docker containers and link them
+(as in &lt;a href=&quot;http://allenwei.cn/setup-rails-development-environment-with-docker/&quot;&gt;this tutorial&lt;/a&gt;).
+I don’t think this approach applies to Bowery, where a single dockerfile is
+used to initialize the image. I suppose I could run docker on Bowery though? (#meta)&lt;/p&gt;
+
+&lt;p&gt;In any case, here are the additional components which need to be installed to
+run my Rails dev environment:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A Javascript runtime (I installed Node.js with apt-get)&lt;/li&gt;
+  &lt;li&gt;A database (I installed Postgresql with apt-get but had a pain setting it up)&lt;/li&gt;
+  &lt;li&gt;A headless browser for javascript specs (I &lt;a href=&quot;http://phantomjs.org/build.html&quot;&gt;built phantom.js from
+scratch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 28 Feb 2015 01:27:44 +0000</pubDate>
+        <link>https://dgmstuart.github.io/blog/2015/02/28/setting-up-a-ruby-on-rails-dev-environment-on-bowery-dot-io/</link>
+        <guid isPermaLink="true">https://dgmstuart.github.io/blog/2015/02/28/setting-up-a-ruby-on-rails-dev-environment-on-bowery-dot-io/</guid>
+        
+        <category>ruby</category>
+        
+        <category>ubuntu</category>
+        
+        
+        <category>ruby</category>
+        
+      </item>
+    
+  </channel>
+</rss>

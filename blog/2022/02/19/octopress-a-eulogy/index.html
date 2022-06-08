@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Octopress: A Eulogy &#8211; dgms code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+">
+    <meta name="author" content="">
+    <meta name="keywords" content="octopress">
+    <link rel="canonical" href="https://dgmstuart.github.io/blog/2022/02/19/octopress-a-eulogy/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for dgms code" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/styles.css?202206082308" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Octopress: A Eulogy">
+    <meta property="og:description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+">
+    <meta property="og:url" content="https://dgmstuart.github.io/blog/2022/02/19/octopress-a-eulogy/">
+    <meta property="og:site_name" content="dgms code">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="@dgmstuart" />
+    
+    <meta name="twitter:title" content="Octopress: A Eulogy" />
+    <meta name="twitter:description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+" />
+    <meta name="twitter:url" content="https://dgmstuart.github.io/blog/2022/02/19/octopress-a-eulogy/" />
+
+    
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44436648-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="site">
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="https://dgmstuart.github.io" class="site-title">dgms code</a>
+      <nav class="site-nav">
+        <a href="/conference-notes/">Conference notes</a>
+<a href="/about/">About</a>
+<a href="/contact/">Say hello</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-twitter" href="https://twitter.com/dgmstuart"></a>
+    
+    
+      <a class="fa fa-github" href="https://github.com/dgmstuart"></a>
+    
+    
+      <a class="fa fa-stack-overflow" href="https://stackoverflow.com/users/1035431/dgmstuart"></a>
+    
+    
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/duncangmstuart"></a>
+    
+    
+    <a class="fa fa-rss" href="/feed.xml"></a>
+  </div>
+</div>
+<div class="clearfix"></div>
+
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>Octopress: A Eulogy</h1>
+  <span class="post-meta">19 Feb, 2022</span><br>
+  
+  <span class="post-meta small">
+  
+    7 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>I recently removed all <a href="http://octopress.org/">Octopress</a> dependencies in this
+blog in favour of native features of the underlying <a href="https://jekyllrb.com/">Jekyll</a>
+static site generator.</p>
+
+<p>I’d like to share that experience with you, but first I want to share a bit of
+the history (from the perspective of myself as a user of the tool, so please
+take everything with a pinch of salt)</p>
+
+<p>I first want to say that I really enjoyed the experience of using Octopress.
+It was my first experience of a static site generator, and it allowed me to
+use Vim for blogging, to create and preview posts while offline, and to
+<a href="https://dgmstuart.github.io/conference-notes/">liveblog from a bunch of conferences</a>.</p>
+
+<p>It feels like the motivation behind it was a good one: create a
+markdown/static site-based blogging tool that was more fully featured than
+other things available at the time.</p>
+
+<h3 id="version-2-framework">Version 2: “Framework”</h3>
+
+<p>I started using Octopress at version 2 in 2016, which described itself as:
+<a href="https://github.com/imathis/octopress">“an obsessively designed framework for Jekyll blogging”</a></p>
+
+<p>…but as creator
+<a href="https://github.com/imathis">Brandon Mathis</a> would later write, it could also
+be described as:
+<a href="http://octopress.org/2015/01/15/octopress-3.0-is-coming/">“basically some guy’s Jekyll blog you can fork and modify”</a>,
+which meant that getting updates and fixes could be pretty painful.</p>
+
+<p>It came with a hardcoded list of plugins to extend Jekyll’s functionality
+with a bunch of custom tags that allowed more control over how things like
+<a href="http://octopress.org/docs/plugins/image-tag/">images</a> and
+<a href="http://octopress.org/docs/plugins/codeblock/">code blocks</a>
+were displayed.</p>
+
+<p>In hindsight it feels like these trying to find a sweet spot between markdown and HTML,
+maybe similar to what
+<a href="https://wordpress.com/support/shortcodes/">WordPress shortcodes</a> do.</p>
+
+<p>Automation of things like creating posts and running the server were wrapped
+in Rake tasks, which works, but could be a bit fiddly when passing arguments
+like a post name.</p>
+
+<p>For all it’s issues, it was widely loved and widely used for programming blogs
+including those of
+<a href="https://pragdave.me/">Dave Thomas</a> and
+<a href="http://blog.davidchelimsky.net/">David Chelimsky</a>. A lot of these blogs
+sidestepped some of the issues by just using “the default theme” - ie.
+Brandon’s Jekyll blog.</p>
+
+<h3 id="version-3-toolkit">Version 3: “Toolkit”</h3>
+
+<p>Version 3 turned things inside-out: it went from being a wrapper around Jekyll
+(largely insulated the user from it), to being a set of jekyll plugins to
+improve the experience of using Jekyll as a blog.</p>
+
+<p>The main <a href="https://github.com/octopress/octopress">octopress/octopress</a> gem was
+now “just” a command line tool, for initialising a new blog, creating posts,
+deploying etc. No more Rake tasks! This was actually great.</p>
+
+<p>The code for creating the image and code block tags etc were all moved to
+individual plugins, as were a number of utilities like
+<a href="https://github.com/octopress/ink">octopress/ink</a> and
+<a href="https://github.com/octopress/filters">octopress/filters</a>,
+which (and this is a guess) worked around some of the limitations of Jekyll to
+improve the experience of developing plugins for Jekyll.</p>
+
+<h3 id="so-you-think-youre-an-octopress-blogger">So you think you’re an Octopress blogger?</h3>
+
+<p>From an architectural design perspective, this was very much the right way to
+go: moving from a monolithic framework tightly coupled to the core engine, to a
+collection of opt-in single-responsibility tools, feels like a great design
+choice: an
+<a href="https://en.wikipedia.org/wiki/Inversion_of_control">inversion of control</a>.</p>
+
+<p>However, it was pretty confusing for a lot of Octopress users who (myself
+included) didn’t really appreciate that the core templating and building of
+the site was actually Jekyll.</p>
+
+<p>A common question when Octopress 3 was announced was “how do I upgrade?”, to
+which the realistic answer is “you can’t: you need to
+<em>migrate</em>”: generate a new Jekyll blog (ideally with the 3.0 version of
+<code class="language-plaintext highlighter-rouge">octopress new</code>, move over your content, and then try to work out how to
+migrate any customisations you’d made yourself.</p>
+
+<p>It didn’t help that (as far as I know?) there was never an official
+upgrade/migration guide (I published
+<a href="https://dgmstuart.github.io/blog/2016/01/22/migrating-from-octopress-2-to-3/">my own</a>),
+and that caused some bad feelings among people who didn’t appreciate that Open
+Source Is Hard.</p>
+
+<h3 id="fading-into-being-unmaintained">Fading into being unmaintained</h3>
+
+<p>While Octopress 2 had been a single application, Octopress 3 was more of a
+concept: while the core tools were ready and some of the plugins were ready
+before others, and maybe some were never completed?</p>
+
+<p>The last post on the Octopress blog was
+<a href="http://octopress.org/2015/01/15/octopress-3.0-is-coming/">the announcement blog for Octopress 3</a>
+at the beginning of 2015</p>
+
+<p>The last commit to the main repo was at the beginning of 2016, and most of the
+other repos are older than that.</p>
+
+<p>It seems like they just quietly became unmaintained. Which is not surprising:
+it seems like a majority of the code on this huge collection of repos was
+written by one person, and it’s the kind of software that a lot of people can
+end up relying on to some extent, but cannot reasonably be monetized.</p>
+
+<h3 id="holding-on">Holding on</h3>
+
+<p>It’s been possible to continue using Octopress for quite a long time. I have
+a fork which only needed a couple of commits on top of it to keep the toolset
+working.</p>
+
+<p>Unfortunately continuing to use it meant being stuck on Jekyll 3, and I like
+being up to date with my software where possible, so Octopress had to go.</p>
+
+<p>Here’s how things are managed now, compared to with the two versions of
+Octopress I used:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Octopress 2</th>
+      <th>Octopress 3</th>
+      <th>Jekyll::Compose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Core application</td>
+      <td>Octopress</td>
+      <td>Jekyll</td>
+      <td>Jekyll</td>
+    </tr>
+    <tr>
+      <td>Manage posts</td>
+      <td>Rake task</td>
+      <td>Octopress cli command</td>
+      <td>Jekyll cli command</td>
+    </tr>
+    <tr>
+      <td>Build and preview</td>
+      <td>Rake task</td>
+      <td>Jekyll cli command</td>
+      <td>Jekyll cli command</td>
+    </tr>
+    <tr>
+      <td>Deploy</td>
+      <td>Rake task</td>
+      <td>octopress-deploy cli command</td>
+      <td>Github Actions</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="a-couple-of-design-reflections">A couple of design reflections:</h2>
+
+<h3 id="did-i-really-need-it">Did I really need it?</h3>
+
+<p>One thing I noticed when removing the other plugins was how (at least today)
+they’re pretty redundant:</p>
+
+<p>At the time, I didn’t understand Jekyll, so it didn’t occur to me that you can
+of course create basic image tags and code blocks directly in markdown and
+that Jekyll will build pages based on that markdown.</p>
+
+<p>Sure, the Octopress tags were more configurable, but for the most part I
+wasn’t actually using any of that configuration: I thought that was just the
+way that you add images etc.</p>
+
+<p>The Octopress 3 core command line tool was super useful though.</p>
+
+<h3 id="if-you-cant-beat-them-join-them">If you can’t beat them, join them</h3>
+
+<p>Some parts of the Octopress 3 collection of tools looked like they were
+features which really should be in Jekyll core. I wonder what the boundary
+is/should be between submitting a PR to the repo vs adding a plugin.</p>
+
+<p>Speaking of the command line tools,
+<a href="https://github.com/jekyll/jekyll-compose">Jekyll::Compose</a>
+seems to have actually been around longer than Octopress 3, and seems to have
+been started by probably the secondary contributor to Octopress?</p>
+
+<h3 id="avoid-max-version-constraints">Avoid max version constraints?</h3>
+
+<p>One of the issues which prevented updates of Octopress dependencies in the
+past was that the Octopress gemspec had an upper version constraint on the
+<a href="https://github.com/jekyll/mercenary"><code class="language-plaintext highlighter-rouge">jekyll/mercenary</code></a> gem.</p>
+
+<p>I’ve never really understood why gem maintainers do this: it feels like
+there’s a pre-emptive assumption that future versions which haven’t been
+released yet will be incompatible? I’m not sure that’s true. Without an upper
+restriction surely the flow for an end user is either:</p>
+
+<ol>
+  <li>new version of that dependency gets released</li>
+  <li>consumers of the gem upgrade that dependency and everything works fine</li>
+</ol>
+
+<p>Or</p>
+
+<ol>
+  <li>new version of that dependency gets released</li>
+  <li>consumers of the gem upgrade that dependency and find that their app breaks</li>
+  <li>consumers lock the version of the problematic gem in their project
+Gemfiles and submit an issue or PR to try and get the issue fixed.</li>
+</ol>
+
+<p>Either way it feels like less work for the maintainer, since there’s less
+pressure to cut a new gem with an updated version constraint.</p>
+
+<h3 id="was-it-rails-ish">Was it Rails-ish?</h3>
+
+<p>Clearly Octopress was in some ways inspired by WordPress (the clue’s in the
+name) but I also wonder how much of the approach that Octopress took was
+influenced by Ruby on Rails.</p>
+
+<p>This is pure speculation (and most likely biased by me having a lot of
+experience with Rails), but here are some obvious concepts like
+<a href="https://github.com/octopress/asset-pipeline">octopress/asset-pipeline</a>
+which have a clear association, and maybe
+<a href="https://github.com/octopress/hooks">octopress/hooks</a>
+recalls Rails’s various life cycle callbacks (though this is more of a
+stretch).</p>
+
+<p>But also the approach in Octopress 2 of wrapping a bunch of tools into one
+package recalls somewhat the Rails concept
+(<a href="https://www.youtube.com/watch?v=KJVTM7mE1Cc">as expressed by DHH</a>) of a
+backpack containing everything you might need.</p>
+
+<p>And this reminds me of something I see in the wild quite a lot, and certainly
+that I’ve been guilty of myself in the past: inappropriately following
+patterns seen in Rails framework code, on the basis that “Rails is great and
+therefore this pattern must be great”.</p>
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'dgmscode';
+    var disqus_identifier = '/blog/2022/02/19/octopress-a-eulogy';
+    var disqus_title      = 'Octopress: A Eulogy';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      © 2022 Duncan Stuart. 
+      Powered by <a href="https://jekyllrb.com/">Jekyll</a>.
+      Theme based on <a href="https://github.com/johnotander/pixyll">Pixyll</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

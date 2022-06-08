@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>"Somebody is upside down!": building a bingo app in React &#8211; dgms code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+">
+    <meta name="author" content="">
+    <meta name="keywords" content="reactjs">
+    <link rel="canonical" href="https://dgmstuart.github.io/blog/2022/02/18/building-a-bingo-app-in-react/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for dgms code" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/styles.css?202206082308" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="&quot;Somebody is upside down!&quot;: building a bingo app in React">
+    <meta property="og:description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+">
+    <meta property="og:url" content="https://dgmstuart.github.io/blog/2022/02/18/building-a-bingo-app-in-react/">
+    <meta property="og:site_name" content="dgms code">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="@dgmstuart" />
+    
+    <meta name="twitter:title" content=""Somebody is upside down!": building a bingo app in React" />
+    <meta name="twitter:description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+" />
+    <meta name="twitter:url" content="https://dgmstuart.github.io/blog/2022/02/18/building-a-bingo-app-in-react/" />
+
+    
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44436648-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="site">
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="https://dgmstuart.github.io" class="site-title">dgms code</a>
+      <nav class="site-nav">
+        <a href="/conference-notes/">Conference notes</a>
+<a href="/about/">About</a>
+<a href="/contact/">Say hello</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-twitter" href="https://twitter.com/dgmstuart"></a>
+    
+    
+      <a class="fa fa-github" href="https://github.com/dgmstuart"></a>
+    
+    
+      <a class="fa fa-stack-overflow" href="https://stackoverflow.com/users/1035431/dgmstuart"></a>
+    
+    
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/duncangmstuart"></a>
+    
+    
+    <a class="fa fa-rss" href="/feed.xml"></a>
+  </div>
+</div>
+<div class="clearfix"></div>
+
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>"Somebody is upside down!": building a bingo app in React</h1>
+  <span class="post-meta">18 Feb, 2022</span><br>
+  
+  <span class="post-meta small">
+  
+    9 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>TL;DR: I built a small React app which is a bingo card with
+<a href="https://www.nytimes.com/games/wordle">Wordle</a>-style shareable emoji grids.
+You can find it <a href="https://dgmstuart.github.io/bingo-frontend/">here</a>, or view
+the <a href="https://github.com/dgmstuart/bingo-frontend">source code</a>.</p>
+
+<h2 id="everyone-shouts-at-the-same-time-starting-a-new-social-game">“Everyone shouts at the same time”: Starting a new social game</h2>
+
+<p>Just before the Pandemic started I came up with a concept for a fun activity
+at the friday night social at <a href="https://wcj.se/">WCJ</a>, the swing dance
+association here in Gothenburg. We would watch a bunch of
+<a href="https://en.wikipedia.org/wiki/Lindy_Hop">Lindy Hop</a>
+routines (specifically team performances) and play bingo with the things we
+saw.</p>
+
+<p>I used the
+<a href="https://osric.com/bingo-card-generator/?">bingo card generator at osric.com</a>
+to print out way too many cards with commonly seen moves and formations, and
+also some silly things like brightly coloured trousers.</p>
+
+<p>It was fun: we had some beers, I gave out sweets as prizes. We quickly
+realised that yelling stuff out was the most fun part.</p>
+
+<h2 id="syncopated-clapping-taking-it-online">“Syncopated clapping”: Taking it online</h2>
+
+<p>Then we weren’t able to meet up again for some time, but it had been fun
+running the game so I started working to make
+<a href="https://www.facebook.com/teamlindybingo">Team Lindy Bingo Online</a>
+a reality.</p>
+
+<p>I built up a
+<a href="https://www.youtube.com/playlist?list=PLgsIo5h4KQoYzMCvcuBFTy7-qW8VgsFpT">huge YouTube playlist</a>
+of notable competitions and performances, refined after each game.</p>
+
+<p>I found a couple of services with voice chat where you could all watch the
+same video at the same time (all now closed down - presumably due to
+unsustainable pandemic usage levels).</p>
+
+<p>These services were awkward: they didn’t work on everyone’s computer, and they
+didn’t filter out the video audio from people’s voice channels. But it kind of
+worked: it was fine to have the video volume way down low. Yelling stuff out
+was the most fun part.</p>
+
+<p>I shared out links like <a href="https://bit.ly/teamlindybingocard3">bit.ly/teamlindybingocard3</a>.
+The card generator was mostly designed to generate cards to print out, so the
+card is at the bottom of a lot of UI , but it kind of worked (note the anchor
+tag at the end of the URL which mostly scrolls you to where the card is).</p>
+
+<p>While waiting for people to arrive and sort their sound out, I played a
+<a href="https://www.youtube.com/watch?v=XlUjryOP3LE">10-hour loop of the Price Is Right theme tune</a>
+to set that gameshow mood, then (as a matter of tradition) I played this Wild
+short showcase by a Lithuanian group to kick things off:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JiEF4nkjeP8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>We played pretty much every week for a few months during that first winter and
+into the spring. There were never a lot of people in the chat, but dancers
+dropped in from all over the world and I had a small group of regulars.</p>
+
+<p>We came to dread getting a card with “Brightly coloured trousers”.</p>
+
+<p>We shouted at our screens a lot.</p>
+
+<p>We debated what “Wedge formation” actually means <em>(it’s a filled-in
+triangle, not a V formation. Don’t @ me)</em>.</p>
+
+<p>We watched a lot of great dancing.</p>
+
+<h2 id="itches-the-old-card">“Itches”: The old card</h2>
+
+<p>The osric.com bingo cards looked like this:</p>
+
+<p><img src="/images/content/osric_bingo_card.png" alt="&quot;An osric.com bingo card&quot;" /></p>
+
+<p>Eventually I tracked down the developer and got a
+<a href="https://github.com/cherdt/BingoCardGenerator/pull/27">Pull Request</a>
+accepted to add a flag which would hide the rest of the UI so that you can
+only see the card. This made the experience pretty reasonable on mobile, so
+you could have the bingo card on your phone while watching the videos on a
+bigger screen.</p>
+
+<p>The word list was stored in URL query parameters, which came with a couple of
+challenges:</p>
+
+<p>Firstly, In order to be able to share sane URLs I used the
+<a href="https://bit.ly">Bit.ly</a> URL shortener, and I needed to create a new Bit.ly
+link every time I updated the word list, since on a free account, Bit.ly links
+are not editable. I ended up editing the word list after most games as I
+learned what wasn’t working and what was missing.</p>
+
+<p>Secondly I fairly quickly hit the 2000 character limit of the length of URL
+that Bit.ly will let you shorten. I’m guessing this limit is partly
+historical: most browsers have extremely large URL limits (tens of thousands
+of characters), but Microsoft browsers used to support a max length of 2048.
+In the end adding a new word meant removing an old one.</p>
+
+<p>Finally, the word list needed to be formatted as a continuous comma-separated
+string in order to be used with the bingo card generator, which was a bit
+awkward to manage.</p>
+
+<h2 id="slow-motion-winding-down">“Slow motion”: Winding down</h2>
+
+<p>Running the game every week was a much needed injection of undemanding social
+interaction in an otherwise pretty lonely time. But after a few months,
+interest started to tail off: people got ‘zoom fatigue’ or just struggled to
+enjoy watching an activity they weren’t currently able to do themselves.</p>
+
+<p>So after 12 games, Team Lindy Bingo Online went on indefinite Hiatus, only
+coming back for a one-off game at the online christmas party in 2021 (during
+which I realised far too late that the new video-watching system I was trying
+out supported a maximum of 8 people with voice chat 🤦).</p>
+
+<p>But now dancing is starting up again, and I’ll be able to run a game
+in-person soon, armed with the learnings of running it online so many times.</p>
+
+<h2 id="square-formation-a-new-card">“Square Formation”: A new card</h2>
+
+<p>I worked on a
+<a href="https://nextjs.org/">Next.js</a>
+project at work before the summer and really enjoyed working with
+<a href="https://www.typescriptlang.org/">Typescript</a> and
+modern <a href="https://reactjs.org/">React</a>, with functional components and hooks.
+I appreciated the clarity of working with immutable state, and the way that
+the compiler points out mistakes before I notice them.</p>
+
+<p>So I thought I’d have a crack at building a new bingo card in plain React with
+Typescript. After a false start, I initialised an application with:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">npx create-react-app my-app <span class="nt">--template</span> typescript</code></pre></figure>
+
+<p>…and remarkably quickly I had an grid of randomised words from a
+<a href="https://github.com/dgmstuart/bingo-frontend/blob/main/src/wordList.json">JSON word list</a>,
+where clicking a cell changed its colour:</p>
+
+<figure class="highlight"><pre><code class="language-tsx" data-lang="tsx"><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">classNames</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">classnames</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Cell</span><span class="p">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">FC</span><span class="o">&lt;</span><span class="p">{</span> <span class="na">word</span><span class="p">:</span> <span class="kr">string</span> <span class="p">}</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">word</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">[</span><span class="nx">isStamped</span><span class="p">,</span> <span class="nx">setStamped</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+
+  <span class="kd">const</span> <span class="nx">toggleStamped</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setStamped</span><span class="p">(</span><span class="o">!</span><span class="nx">isStamped</span><span class="p">)</span>
+  <span class="p">};</span>
+
+  <span class="kd">var</span> <span class="nx">classes</span> <span class="o">=</span> <span class="nx">classNames</span><span class="p">(</span>
+    <span class="dl">"</span><span class="s2">Cell</span><span class="dl">"</span><span class="p">,</span>
+    <span class="p">{</span> <span class="dl">"</span><span class="s2">stamped</span><span class="dl">"</span><span class="p">:</span> <span class="nx">isStamped</span> <span class="p">}</span>
+  <span class="p">)</span>
+
+  <span class="k">return</span><span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">td</span>
+      <span class="na">className</span><span class="p">=</span><span class="si">{</span><span class="nx">classes</span><span class="si">}</span>
+      <span class="na">onClick</span><span class="p">=</span><span class="si">{</span><span class="nx">toggleStamped</span><span class="si">}</span>
+    <span class="p">&gt;</span>
+      <span class="si">{</span><span class="nx">word</span><span class="si">}</span>
+    <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Cell</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="the-snatch-aerial-the-problem-of-state">“The Snatch (aerial)”: The problem of state</h3>
+
+<p>Then I ran into the problem that I understand all React developers run into
+sooner or later: managing state.</p>
+
+<p>In this implementation, each cell is managing its own state with <code class="language-plaintext highlighter-rouge">useState</code>.
+But now I wanted to add a button to reset the card by clearing all the stamps.</p>
+
+<p>My Object Oriented brain wanted to approach this by sending a message to all
+the cells to tell them to reset their state. But that’s not how things work in
+React: parent components send <em>props</em> down to child components, and child
+components fire <em>events</em> which can be intercepted by their parents.</p>
+
+<p><code class="language-plaintext highlighter-rouge">reset!</code> is an event-shaped concept: if I send a prop down to a component like
+<code class="language-plaintext highlighter-rouge">reset: true</code>, then when I try to reset the component again, it won’t
+re-render because the value of <code class="language-plaintext highlighter-rouge">reset</code> has not changed.</p>
+
+<h3 id="mid-routine-song-change-an-elegant-solution">“Mid-routine song change”: An elegant solution?</h3>
+
+<p>Thankfully I have some helpful and experienced friends and colleagues:
+<a href="https://github.com/Burgestrand">@Burgestrand</a> and
+<a href="https://github.com/PooSham">@PooSham</a> pointed me in the right direction.</p>
+
+<p>The solution I landed on was to have the <code class="language-plaintext highlighter-rouge">App</code> component manage the state with
+<code class="language-plaintext highlighter-rouge">useState</code>, and instead of passing down an array of words to the <code class="language-plaintext highlighter-rouge">Grid</code>
+component, I send down an array of objects which contains both the word, its
+<code class="language-plaintext highlighter-rouge">stamped</code> state, and a toggle function which flips the <code class="language-plaintext highlighter-rouge">stamped</code> state and
+updates the whole system state to reflect that change.</p>
+
+<p>I won’t show
+<a href="https://github.com/dgmstuart/bingo-frontend/tree/main/src">all the code which makes that work</a>
+here, but here’s a simplified version of the type definition of the elements
+of that array:</p>
+
+<figure class="highlight"><pre><code class="language-ts" data-lang="ts"><span class="kd">type</span> <span class="nx">CellProps</span> <span class="o">=</span> <span class="p">{</span> <span class="na">word</span><span class="p">:</span> <span class="kr">string</span><span class="p">,</span> <span class="na">stamped</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">,</span> <span class="na">toggleStamped</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="k">void</span> <span class="p">}</span></code></pre></figure>
+
+<p>I’m pretty pleased with the result - I was worried that the code was going to
+be either hacky or hard to wrap my head around, but it’s turned out to be
+quite elegant. Here’s what the new card looks like:</p>
+
+<p><img src="/images/content/team_lindy_bingo_card.png" alt="&quot;A Team Lindy Bingo card&quot;" /></p>
+
+<p>You can have a play for yourself at
+<a href="https://dgmstuart.github.io/bingo-frontend/">dgmstuart.github.io/bingo-frontend</a>
+(best viewed on a phone).</p>
+
+<h2 id="a-hat-polishing-and-bikeshedding">“A hat”: polishing and bikeshedding</h2>
+
+<p>I’ve since done a bunch of unnecessary polishing and
+<a href="https://en.wiktionary.org/wiki/bikeshedding">bikeshedding</a>.</p>
+
+<ul>
+  <li>Passed all the hurdles to make it a <a href="https://web.dev/progressive-web-apps/">Progressive Web App (PWA)</a>,
+So it’s installable on phones and in some browsers.</li>
+  <li>Added icons of different sizes (plus a favicon), so it looks nice if eg. you
+save it to your home screen on your phone.</li>
+  <li>Test-drove all the code with unit tests written in
+<a href="https://jestjs.io/">Jest</a>.</li>
+  <li>Encapsulated access to <code class="language-plaintext highlighter-rouge">localStorage</code> behind
+<a href="https://github.com/dgmstuart/bingo-frontend/blob/main/src/lib/JsonSession.ts">a class to handle JSON data</a>
+and <a href="https://github.com/dgmstuart/bingo-frontend/blob/main/src/lib/GuaranteedJsonSession.ts">a class to handle missing data</a>.</li>
+  <li>Allowed <a href="https://prettier.io/">Prettier</a> to apply its strong opinons on how
+code should be formatted.</li>
+  <li>Configured a bunch of <a href="https://eslint.org/">ESlint</a> rules.</li>
+</ul>
+
+<p>All unnecessary for sure, but apart from being a learning opportunity it makes me
+happy, and that’s part of what side projects are for.</p>
+
+<p>But by far the most unnecessary feature I’ve implemented (and one of the most
+fun) is shareable emoji grids.</p>
+
+<h2 id="shimmy-shareable-emoji-grids">“Shimmy”: Shareable emoji grids</h2>
+<p>At the time of writing, <a href="https://www.nytimes.com/games/wordle">Wordle</a> is a
+big deal: it’s a simple word game that releases one puzzle every day, and it
+just got acquired by the New York Times.</p>
+
+<p>Its killer feature is that you can share an abstract image of the result of
+your game, but rather than messing about with images, the image is made up of
+emoji, which are just text so can be pasted pretty much anywhere. It’s kind
+of genius. I think they look especially great in Discord:</p>
+
+<p><img src="/images/content/wordle_emoji_grid.png" alt="&quot;A Wordle emoji grid&quot;" /></p>
+
+<p>So of course I had to implement a similar share button to output an emojified
+bingo card:</p>
+
+<p><img src="/images/content/team_lindy_bingo_emoji_grid.png" alt="&quot;A Team Lindy Bingo emoji grid&quot;" /></p>
+
+<p>Building the actual grid is pretty simple: it’s just <code class="language-plaintext highlighter-rouge">map</code>ping over the array
+of <code class="language-plaintext highlighter-rouge">CellData</code> state.
+<a href="https://github.com/dgmstuart/bingo-frontend/blob/6293523c7c446c56ba89025974c43fe6d23678e1/src/App.test.tsx#L55-L88">Testing it</a>
+was a bit more challenging, partly because that involves interacting with the
+clipboard, but maybe that’s a post for another day.</p>
+
+<p>In the meantime I’m looking forward to being in a room with other dancers and
+shouting “Somebody is on the floor!” some evening soon.</p>
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'dgmscode';
+    var disqus_identifier = '/blog/2022/02/18/building-a-bingo-app-in-react';
+    var disqus_title      = '"Somebody is upside down!": building a bingo app in React';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      © 2022 Duncan Stuart. 
+      Powered by <a href="https://jekyllrb.com/">Jekyll</a>.
+      Theme based on <a href="https://github.com/johnotander/pixyll">Pixyll</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

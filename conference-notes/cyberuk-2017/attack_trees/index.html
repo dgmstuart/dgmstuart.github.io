@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Attack Trees Workshop &#8211; dgms code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+">
+    <meta name="author" content="">
+    <meta name="keywords" content="liveblog">
+    <link rel="canonical" href="https://dgmstuart.github.io/conference-notes/cyberuk-2017/attack_trees/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for dgms code" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/styles.css?202206082308" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Attack Trees Workshop">
+    <meta property="og:description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+">
+    <meta property="og:url" content="https://dgmstuart.github.io/conference-notes/cyberuk-2017/attack_trees/">
+    <meta property="og:site_name" content="dgms code">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="@dgmstuart" />
+    
+    <meta name="twitter:title" content="Attack Trees Workshop" />
+    <meta name="twitter:description" content="This is the dev blog of Duncan Graeme MacDonald Stuart - a programmer living living in Gothenburg, Sweden
+" />
+    <meta name="twitter:url" content="https://dgmstuart.github.io/conference-notes/cyberuk-2017/attack_trees/" />
+
+    
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44436648-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="site">
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="https://dgmstuart.github.io" class="site-title">dgms code</a>
+      <nav class="site-nav">
+        <a href="/conference-notes/">Conference notes</a>
+<a href="/about/">About</a>
+<a href="/contact/">Say hello</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-twitter" href="https://twitter.com/dgmstuart"></a>
+    
+    
+      <a class="fa fa-github" href="https://github.com/dgmstuart"></a>
+    
+    
+      <a class="fa fa-stack-overflow" href="https://stackoverflow.com/users/1035431/dgmstuart"></a>
+    
+    
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/duncangmstuart"></a>
+    
+    
+    <a class="fa fa-rss" href="/feed.xml"></a>
+  </div>
+</div>
+<div class="clearfix"></div>
+
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>Attack Trees Workshop</h1>
+  <span class="post-meta">16 Mar, 2017</span><br>
+  
+  <span class="post-meta small">
+  
+    2 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <h2 id="background">Background</h2>
+
+<ul>
+  <li>Started with fault tree analysis (e.g. working out why a braking system
+fails)</li>
+  <li>NCSC started using attack trees to work out what the real problems are</li>
+  <li>Build up the series of things that an attacker needs to do to achieve a
+particular goal
+    <ul>
+      <li>look across the whole business to build up the tree</li>
+    </ul>
+  </li>
+  <li>Helps you to look at the best places to deploy your controls in a
+cost-effective way</li>
+  <li>Great way to do security in Agile</li>
+</ul>
+
+<h2 id="attack-trees-at-student-loans-company">Attack trees at student loans company:</h2>
+
+<ul>
+  <li>Looked around to see what the risk discovery process was. There wasn’t
+anything</li>
+  <li>Desired qualities
+    <ul>
+      <li>critiqueable</li>
+      <li>written down</li>
+      <li>scalable for different projects and different importances of assets</li>
+      <li>repeatable</li>
+    </ul>
+  </li>
+  <li>Needed to justify spending more effort by saying it’d give a really good
+view of risks</li>
+  <li>Needed some way of quantifying risks: which ones do we care about more</li>
+  <li>Iterative: need to keep coming back to it</li>
+  <li>Agile teams like it</li>
+  <li>Mix of people in the room: Business and technical</li>
+  <li>Easy to update</li>
+  <li>Use mindmapping software to capture them</li>
+  <li>Multitasking failures: need different people to take different roles in
+these workshops.</li>
+  <li>For really serious assets, break up the attack trees into different
+topics: steal money, steal data etc.</li>
+  <li>Don’t get hung up on the specific numbers: kill those conversations quickly</li>
+</ul>
+
+<h2 id="workshop">Workshop</h2>
+
+<ul>
+  <li>Scenario: Cloud document sharing service</li>
+  <li>Classes of attack:
+    <ul>
+      <li>steal data</li>
+      <li>break system</li>
+      <li>reputational risk</li>
+    </ul>
+  </li>
+  <li>Next level:
+    <ul>
+      <li>Internal, External
+        <ul>
+          <li>User types within these - employees, bystanders (e.g. cleaner or
+visitor)</li>
+          <li>Personal error
+            <ul>
+              <li>Then the ways that they can get data: install keylogger, steal
+printout, photograph screen etc.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>For attacker: Cost, Complexity, Consequences, Reward
+    <ul>
+      <li>Don’t talk about the Likelihood: the above things break down the reasons
+for likelihood</li>
+    </ul>
+  </li>
+  <li>For victim: Damage</li>
+  <li>Replay: can it be fixed once (patch a vuln) or is it repeatable (stealing a
+mobile phone, phishing)</li>
+  <li>Record Evidence/Rationale against the numbers you chose</li>
+  <li>Get consistency between attack trees by having some of the same people in
+each attack tree</li>
+  <li>Also make the numbers qualitative: what does it <em>mean</em> for an attack to have
+a specific Complexity value?</li>
+  <li>Don’t have a midpoint (people will choose it)</li>
+  <li>6 points is good: too big (10) means you get nitpicking, too small (3) is
+too blunt</li>
+</ul>
+
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'dgmscode';
+    var disqus_identifier = '/conference-notes/cyberuk-2017/attack_trees';
+    var disqus_title      = 'Attack Trees Workshop';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      © 2022 Duncan Stuart. 
+      Powered by <a href="https://jekyllrb.com/">Jekyll</a>.
+      Theme based on <a href="https://github.com/johnotander/pixyll">Pixyll</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>
