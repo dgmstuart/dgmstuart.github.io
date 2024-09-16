@@ -4,11 +4,11 @@ $text-color: $base0;
 $code-background: $base03;
 
 .highlight pre {
+  background: $code-background;
+
   code {
     color: $text-color;
   }
-
-  background: $code-background;
 
   .c { color: $base01 } /* Comment */
   .err { color: $magenta } /* Error */

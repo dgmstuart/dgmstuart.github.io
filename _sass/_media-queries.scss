@@ -46,13 +46,13 @@
 
 @media screen and (min-width: $viewport-medium) {
   html {
-    font-size: $base-font-size * 16/14;
+    font-size: calc($base-font-size * 16 / 14);
   }
 }
 
 @media screen and (min-width: $viewport-large) {
   html {
-    font-size: $base-font-size * 18/14;
+    font-size: calc($base-font-size * 18 / 14);
   }
 }
 
