@@ -1,0 +1,35 @@
+@use "solarized/colours";
+@use "variables";
+
+// Inline code tags
+code {
+  padding: 0.25em 0.5em;
+  font-size: 85%;
+  color: colours.$magenta;
+  background-color: variables.$lighter-gray;
+}
+
+p code {
+  white-space: nowrap;
+}
+
+// code blocks
+.highlight {
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+
+  pre,
+  pre code {
+    font-size: .9em;
+    line-height: 1.25em;
+  }
+
+  pre code {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .p {
+    font-size: inherit;
+  }
+}
