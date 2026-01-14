@@ -1,10 +1,12 @@
+@use "variables";
+
 input,
 select,
 textarea,
 fieldset {
-  font-size: $form-field-font-size;
+  font-size: variables.$form-field-font-size;
   margin-top: 0;
-  margin-bottom: $space-1;
+  margin-bottom: variables.$space-1;
 }
 
 input[type=text],
@@ -20,8 +22,8 @@ input[type=time],
 input[type=url],
 input[type=week] {
   box-sizing: border-box;
-  height: $form-field-height;
-  padding: $form-field-padding-y $form-field-padding-x;
+  height: variables.$form-field-height;
+  padding: variables.$form-field-padding-y variables.$form-field-padding-x;
   vertical-align: middle;
   -webkit-appearance: none;
 }
@@ -29,18 +31,18 @@ input[type=week] {
 select {
   box-sizing: border-box;
   line-height: 1.75;
-  padding: $form-field-padding-y $form-field-padding-x;
+  padding: variables.$form-field-padding-y variables.$form-field-padding-x;
 }
 
 select:not([multiple]) {
-  height: $form-field-height;
+  height: variables.$form-field-height;
   vertical-align: middle;
 }
 
 textarea {
   box-sizing: border-box;
   line-height: 1.75;
-  padding: $form-field-padding-y $form-field-padding-x;
+  padding: variables.$form-field-padding-y variables.$form-field-padding-x;
 }
 
 .form-stacked input,
@@ -53,40 +55,40 @@ textarea {
   background-color: white;
   transition: box-shadow .2s ease;
   border-style: solid;
-  border-width: $border-width;
-  border-color: $border-color;
-  border-radius: $border-radius;
+  border-width: variables.$border-width;
+  border-color: variables.$border-color;
+  border-radius: variables.$border-radius;
 }
 
 .field-light:focus {
   outline: none;
-  border-color: $blue;
-  box-shadow: 0 0 2px rgba($blue,.5);
+  border-color: variables.$blue;
+  box-shadow: 0 0 2px rgba(variables.$blue,.5);
 }
 
 .field-light:disabled {
-  color: $mid-gray;
-  background-color: $darken-2;
+  color: variables.$mid-gray;
+  background-color: variables.$darken-2;
 }
 
 .field-light:read-only:not(select) {
-  background-color: $darken-2;
+  background-color: variables.$darken-2;
 }
 
 .field-light:invalid {
-  border-color: $red;
+  border-color: variables.$red;
 }
 
 .field-light.is-success {
-  border-color: $green;
+  border-color: variables.$green;
 }
 
 .field-light.is-warning {
-  border-color: $yellow;
+  border-color: variables.$yellow;
 }
 
 .field-light.is-error {
-  border-color: $red;
+  border-color: variables.$red;
 }
 
 
@@ -102,5 +104,5 @@ textarea {
 .radio-light:focus,
 .checkbox-light:focus {
   outline: none;
-  box-shadow: 0 0 2px rgba($blue, .5);
+  box-shadow: 0 0 2px rgba(variables.$blue, .5);
 }

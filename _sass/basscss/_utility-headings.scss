@@ -1,37 +1,39 @@
+@use "variables";
+
 /* Basscss Utility Headings */
 
 .h00 {
-  font-size: $h00;
+  font-size: variables.$h00;
 }
 
 .h0 {
-  font-size: $h0;
+  font-size: variables.$h0;
 }
 
-@media #{$breakpoint-md} {
+@media #{variables.$breakpoint-md} {
   .h00-responsive {
-    font-size: $h00-responsive;
+    font-size: variables.$h00-responsive;
   }
 
   .h0-responsive {
-    font-size: $h0-responsive;
+    font-size: variables.$h0-responsive;
   }
 
   .h1-responsive {
-    font-size: $h1-responsive;
+    font-size: variables.$h1-responsive;
   }
 }
 
-@media #{$breakpoint-xl} {
+@media #{variables.$breakpoint-xl} {
   .h00-responsive {
-    font-size: $h00-responsive-max;
+    font-size: variables.$h00-responsive-max;
   }
 
   .h0-responsive {
-    font-size: $h0-responsive-max;
+    font-size: variables.$h0-responsive-max;
   }
 
   .h1-responsive {
-    font-size: $h1-responsive-max;
+    font-size: variables.$h1-responsive-max;
   }
 }

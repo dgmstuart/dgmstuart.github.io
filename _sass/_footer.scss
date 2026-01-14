@@ -1,3 +1,5 @@
+@use "variables";
+
 .site {
   display: -webkit-box;
   display: -webkit-flex;
@@ -19,11 +21,11 @@
 }
 
 footer {
-  background-color: $footer-bg-color;
-  border-top: $footer-border-top;
-  color: $footer-color;
-  font-size: $footer-font-size;
-  font-weight: $footer-font-weight;
-  padding: $footer-padding;
+  background-color: variables.$footer-bg-color;
+  border-top: variables.$footer-border-top;
+  color: variables.$footer-color;
+  font-size: variables.$footer-font-size;
+  font-weight: variables.$footer-font-weight;
+  padding: variables.$footer-padding;
   text-align: center;
 }

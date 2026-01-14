@@ -1,12 +1,14 @@
+@use "variables";
+
 pre,
 pre code {
   background-color: transparent;
-  border-radius: $pre-border-radius;
+  border-radius: variables.$pre-border-radius;
 }
 
 pre,
 code {
-  font-family: $monospace-font-family;
+  font-family: variables.$monospace-font-family;
 }
 
 code {
@@ -18,7 +20,7 @@ pre {
   line-height: 1.11;
   overflow-x: scroll;
   margin-bottom: 0.88em;
-  background-color: $pre-background-color;
+  background-color: variables.$pre-background-color;
 }
 
 .highlight .p {
@@ -46,7 +48,7 @@ pre a::before {
   text-align: right;
   opacity: 0.7;
   display: inline-block;
-  color: $light-gray;
+  color: variables.$light-gray;
   margin-right: 16px;
   font-size: 13px;
   -webkit-touch-callout: none;

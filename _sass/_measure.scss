@@ -1,4 +1,6 @@
+@use "variables";
+
 .measure {
   margin: 0 auto;
-  max-width: $measure-width;
+  max-width: variables.$measure-width;
 }

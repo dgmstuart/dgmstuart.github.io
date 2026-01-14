@@ -1,3 +1,5 @@
+@use "variables";
+
 .highlight {
   -webkit-text-size-adjust: none;
 }
@@ -7,7 +9,7 @@
 .highlight .cm,
 .highlight .cp,
 .highlight .c1 {
-  color: $hljs-comment;
+  color: variables.$hljs-comment;
   font-style: italic;
 }
 
@@ -18,7 +20,7 @@
 .highlight .kr,
 .highlight .kt,
 .highlight .kp {
-  color: $hljs-keyword;
+  color: variables.$hljs-keyword;
 }
 
 .highlight .na,
@@ -32,12 +34,12 @@
 .highlight .nl,
 .highlight .nn,
 .highlight .nx {
-  color: $hljs-name;
+  color: variables.$hljs-name;
 }
 
 .highlight .mi,
 .highlight .il {
-  color: $hljs-number;
+  color: variables.$hljs-number;
 }
 
 .highlight .s,
@@ -52,13 +54,13 @@
 .highlight .sr,
 .highlight .ss,
 .highlight .s1 {
-  color: $hljs-string;
+  color: variables.$hljs-string;
 }
 
 .hljs-title,
 .hljs-id,
 .scss .hljs-preprocessor {
-  color: $hljs-title;
+  color: variables.$hljs-title;
   font-weight: bold;
 }
 
@@ -68,28 +70,28 @@
 
 .highlight .nc,
 .highlight .no {
-  color: $hljs-type;
+  color: variables.$hljs-type;
 }
 
 .highlight .o {
-  color: $hljs-tag;
+  color: variables.$hljs-tag;
   font-weight: normal;
 }
 
 .highlight .nb {
-  color: $hljs-attribute;
+  color: variables.$hljs-attribute;
 }
 
 .highlight .sr {
-  color: $hljs-regexp;
+  color: variables.$hljs-regexp;
 }
 
 .highlight .ss {
-  color: $hljs-symbol;
+  color: variables.$hljs-symbol;
 }
 
 .hljs-built_in {
-  color: $hljs-built-in;
+  color: variables.$hljs-built-in;
 }
 
 .hljs-preprocessor,
@@ -98,22 +100,22 @@
 .hljs-doctype,
 .hljs-shebang,
 .hljs-cdata {
-  color: $hljs-preprocessor;
+  color: variables.$hljs-preprocessor;
   font-weight: bold;
 }
 
 .hljs-deletion {
-  background: $hljs-deletion;
+  background: variables.$hljs-deletion;
 }
 
 .hljs-addition {
-  background: $hljs-addition;
+  background: variables.$hljs-addition;
 }
 
 .diff .hljs-change {
-  background: $hljs-change;
+  background: variables.$hljs-change;
 }
 
 .hljs-chunk {
-  color: $hljs-chunk;
+  color: variables.$hljs-chunk;
 }

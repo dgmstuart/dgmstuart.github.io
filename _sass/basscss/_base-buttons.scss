@@ -1,16 +1,18 @@
+@use "variables";
+
 /* Basscss Base Buttons */
 
 button,
 .button {
-  font-family: $button-font-family;
-  font-size: $button-font-size;
-  font-weight: $button-font-weight;
+  font-family: variables.$button-font-family;
+  font-size: variables.$button-font-size;
+  font-weight: variables.$button-font-weight;
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
   box-sizing: border-box;
-  line-height: $button-line-height;
-  padding: $button-padding-y $button-padding-x;
+  line-height: variables.$button-line-height;
+  padding: variables.$button-padding-y variables.$button-padding-x;
   margin: 0;
   height: auto;
   border: 1px solid transparent;

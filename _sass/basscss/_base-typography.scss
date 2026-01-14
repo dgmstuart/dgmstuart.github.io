@@ -1,8 +1,10 @@
+@use "variables";
+
 /* Basscss Base Typography */
 
 body {
-  font-family: $font-family;
-  line-height: $line-height;
+  font-family: variables.$font-family;
+  line-height: variables.$line-height;
   font-size: 100%;
 }
 
@@ -12,9 +14,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $heading-font-family;
-  font-weight: $heading-font-weight;
-  line-height: $heading-line-height;
+  font-family: variables.$heading-font-family;
+  font-weight: variables.$heading-font-weight;
+  line-height: variables.$heading-line-height;
   margin-top: 1em;
   margin-bottom: .5em;
 }
@@ -23,76 +25,76 @@ p,
 dl,
 ol,
 ul {
-  font-size: $h4;
+  font-size: variables.$h4;
   margin-top: 0;
-  margin-bottom: $space-2;
+  margin-bottom: variables.$space-2;
 }
 
 ol,
 ul {
-  padding-left: $space-3;
+  padding-left: variables.$space-3;
 }
 
 pre,
 code,
 samp {
-  font-family: $monospace-font-family;
+  font-family: variables.$monospace-font-family;
   font-size: inherit;
 }
 
 pre {
   margin-top: 0;
-  margin-bottom: $space-2;
+  margin-bottom: variables.$space-2;
   overflow-x: scroll;
 }
 
 hr {
-  margin-top: $space-3;
-  margin-bottom: $space-3;
+  margin-top: variables.$space-3;
+  margin-bottom: variables.$space-3;
 }
 
 blockquote {
-  margin-top: $space-3;
-  margin-bottom: $space-3;
+  margin-top: variables.$space-3;
+  margin-bottom: variables.$space-3;
   margin-left: 0;
-  padding-left: $space-2;
-  padding-right: $space-2;
+  padding-left: variables.$space-2;
+  padding-right: variables.$space-2;
 }
 
 blockquote,
 blockquote p {
-  font-size: $h3;
+  font-size: variables.$h3;
   font-style: italic;
 }
 
 h1,
 .h1 {
-  font-size: $h1;
+  font-size: variables.$h1;
 }
 
 h2,
 .h2 {
-  font-size: $h2;
+  font-size: variables.$h2;
 }
 
 h3,
 .h3 {
-  font-size: $h3;
+  font-size: variables.$h3;
 }
 
 h4,
 .h4 {
-  font-size: $h4;
+  font-size: variables.$h4;
 }
 
 h5,
 .h5 {
-  font-size: $h5;
+  font-size: variables.$h5;
 }
 
 h6,
 .h6 {
-  font-size: $h6;
+  font-size: variables.$h6;
 }
 
 .list-reset {

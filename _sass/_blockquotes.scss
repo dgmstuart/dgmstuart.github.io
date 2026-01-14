@@ -1,8 +1,10 @@
+@use "variables";
+
 blockquote {
   border-left: 5px solid #7a7a7a;
   font-style: italic;
-  margin-left: $space-1;
-  padding: $space-1;
+  margin-left: variables.$space-1;
+  padding: variables.$space-1;
 }
 
 blockquote footer {

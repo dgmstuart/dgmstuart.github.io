@@ -1,14 +1,18 @@
 ---
 ---
-@import "pixyll";
-@import "solarized";
+@use "sass:meta";
+@use "solarized/colours";
+@use "variables";
+
+@include meta.load-css("pixyll");
+@include meta.load-css("solarized");
 
 // Inline code tags
 code {
   padding: 0.25em 0.5em;
   font-size: 85%;
-  color: $magenta;
-  background-color: $lighter-gray;
+  color: colours.$magenta;
+  background-color: variables.$lighter-gray;
 }
 
 p code {

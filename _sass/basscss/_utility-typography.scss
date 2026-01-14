@@ -1,15 +1,13 @@
+@use "variables";
+
 /* Basscss Utility Typography */
 
 .bold {
-  font-weight: $bold-font-weight;
+  font-weight: variables.$bold-font-weight;
 }
 
 .regular {
   font-weight: normal;
-}
-
-.italic {
-  font-style: italic;
 }
 
 .caps {

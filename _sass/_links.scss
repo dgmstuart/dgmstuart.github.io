@@ -1,9 +1,11 @@
+@use "variables";
+
 a {
-  color: $link-color;
+  color: variables.$link-color;
   background-image: linear-gradient(to top,
     rgba(0,0,0,0) 13%,
-    rgba($link-color,.8) 13%,
-    rgba($link-color,.8) 18%,
+    rgba(variables.$link-color,.8) 13%,
+    rgba(variables.$link-color,.8) 18%,
     rgba(0,0,0,0) 17%
   );
   text-shadow: white 1px 0px 0px, white -1px 0px 0px;
@@ -13,12 +15,12 @@ a:hover,
 a:focus,
 a:active {
   border: 0;
-  color: $link-hover-color;
+  color: variables.$link-hover-color;
   text-decoration: none;
   background-image: linear-gradient(to top,
     rgba(0,0,0,0) 13%,
-    rgba($link-hover-color,.8) 13%,
-    rgba($link-hover-color,.8) 17%,
+    rgba(variables.$link-hover-color,.8) 13%,
+    rgba(variables.$link-hover-color,.8) 17%,
     rgba(0,0,0,0) 17%
   );
   text-shadow: white 1px 0px 0px, white -1px 0px 0px;

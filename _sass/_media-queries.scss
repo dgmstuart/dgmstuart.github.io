@@ -1,11 +1,13 @@
-@media screen and (min-width: $viewport-small) {
+@use "variables";
+
+@media screen and (min-width: variables.$viewport-small) {
   html {
-    font-size: $base-font-size;
+    font-size: variables.$base-font-size;
   }
 
   h1,
   .h1 {
-    font-size: $h1;
+    font-size: variables.$h1;
   }
 
   .site-header {
@@ -17,11 +19,11 @@
   }
 
   .site-header a {
-    font-size: $h4;
+    font-size: variables.$h4;
   }
 
   .site-header .site-title {
-    font-size: $h3;
+    font-size: variables.$h3;
     float: left;
   }
 
@@ -31,8 +33,8 @@
   }
 
   blockquote {
-    margin-left: $space-3;
-    padding: $space-2a $space-3 $space-1;
+    margin-left: variables.$space-3;
+    padding: variables.$space-2a variables.$space-3 variables.$space-1;
   }
 
   .social-icons-left {
@@ -44,21 +46,21 @@
   }
 }
 
-@media screen and (min-width: $viewport-medium) {
+@media screen and (min-width: variables.$viewport-medium) {
   html {
-    font-size: calc($base-font-size * 16 / 14);
+    font-size: calc(variables.$base-font-size * 16 / 14);
   }
 }
 
-@media screen and (min-width: $viewport-large) {
+@media screen and (min-width: variables.$viewport-large) {
   html {
-    font-size: calc($base-font-size * 18 / 14);
+    font-size: calc(variables.$base-font-size * 18 / 14);
   }
 }
 
-@media screen and (min-width: $viewport-large + 14) {
+@media screen and (min-width: variables.$viewport-large + 14) {
   em img {
-    max-width: $measure-width + 14;
+    max-width: variables.$measure-width + 14;
     margin-left: -7em;
   }
 }
