@@ -9,26 +9,24 @@
 * @license MIT
 */
 
-@use 'variables';
-
 @use 'basscss';
 
-@use 'base';
+@use 'pixyll/base';
 
-@use 'links';
-@use 'positions';
-@use 'clearfix';
-@use 'code';
-@use 'forms';
-@use 'typography';
-@use 'header';
-@use 'tables';
-@use 'animations';
-@use 'footer';
-@use 'social-icons';
-@use 'blockquotes';
-@use 'posts';
-@use 'media-queries';
-@use 'gists';
-@use 'measure';
-@use 'pagination';
+@use 'pixyll/links';
+@use 'pixyll/positions';
+@use 'pixyll/clearfix';
+@use 'pixyll/code';
+@use 'pixyll/forms';
+@use 'pixyll/typography';
+@use 'pixyll/header';
+@use 'pixyll/tables';
+@use 'pixyll/animations';
+@use 'pixyll/footer';
+@use 'pixyll/social-icons';
+@use 'pixyll/blockquotes';
+@use 'pixyll/posts';
+@use 'pixyll/media-queries';
+@use 'pixyll/gists';
+@use 'pixyll/measure';
+@use 'pixyll/pagination';
